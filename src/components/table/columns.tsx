@@ -47,21 +47,23 @@ export const useColumns = (): ColumnDef<Garbage>[] => {
           const garbage = row.original;
 
           return (
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Info className="h-4 w-4" />
-                </Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>{garbage.name}</DialogTitle>
-                  <DialogDescription>
-                    分別区分:{garbage.category}
-                  </DialogDescription>
-                </DialogHeader>
-              </DialogContent>
-            </Dialog>
+            <div className="flex justify-end pr-4">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Info className="h-4 w-4" />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>{garbage.name}</DialogTitle>
+                    <DialogDescription>
+                      分別区分:{garbage.category}
+                    </DialogDescription>
+                  </DialogHeader>
+                </DialogContent>
+              </Dialog>
+            </div>
           );
         },
       },
