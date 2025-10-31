@@ -9,7 +9,7 @@ async function seedCategories() {
 
     // Convert JSON data to match the database schema
     const categoriesToInsert = garbageCategoriesData.map((category) => ({
-      id: category.id.toString(), // Convert numeric id to string
+      id: category.id, // Convert numeric id to string
       name: category.name,
     }));
 

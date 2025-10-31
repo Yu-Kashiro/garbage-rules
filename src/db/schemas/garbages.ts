@@ -10,7 +10,7 @@ export const garbageCategories = sqliteTable("garbage_categories", {
 export const garbageItems = sqliteTable("garbage_Items", {
   id: integer("id").primaryKey(),
   name: text("name").notNull(),
-  garbageCategory: text("garbage_category")
+  garbageCategory: integer("garbage_category")
     .notNull()
     .references(() => garbageCategories.id, { onDelete: "cascade" }),
   note: text("note"),
