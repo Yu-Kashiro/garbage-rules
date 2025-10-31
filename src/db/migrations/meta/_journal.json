@@ -22,6 +22,13 @@
       "when": 1761876078734,
       "tag": "0002_fantastic_goliath",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1761891697457,
+      "tag": "0003_sloppy_the_fury",
+      "breakpoints": true
     }
   ]
 }
