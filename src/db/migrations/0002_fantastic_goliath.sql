@@ -1,0 +1,1 @@
+ALTER TABLE `garbage_Items` ADD `note` text;

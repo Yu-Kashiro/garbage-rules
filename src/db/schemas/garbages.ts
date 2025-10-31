@@ -13,5 +13,6 @@ export const garbageItems = sqliteTable("garbage_Items", {
   garbageCategory: text("garbage_category")
     .notNull()
     .references(() => garbageCategories.id, { onDelete: "cascade" }),
+  note: text("note"),
   ...timestamps,
 });
