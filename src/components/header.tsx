@@ -1,12 +1,21 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { useState } from "react";
 
 export const Header = () => {
   const { theme, setTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -15,9 +24,8 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container flex h-14 items-center mx-auto justify-between">
-
         {/* title */}
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center px-2">
           <svg
             className="h-6 w-6"
             viewBox="0 0 24 24"
@@ -34,11 +42,11 @@ export const Header = () => {
             <line x1="10" y1="11" x2="10" y2="17" />
             <line x1="14" y1="11" x2="14" y2="17" />
           </svg>
-          <p>〇〇市のごみ分別方法</p>
+          <p className="text-sm md:text-base">〇〇市のごみ分別方法</p>
         </div>
 
-        {/* auth */}
-        <div className="flex gap-2">
+        {/* Desktop navigation */}
+        <div className="hidden md:flex gap-2">
           {/* Theme Toggle */}
           <Button variant="ghost" size="icon" onClick={toggleTheme}>
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
@@ -57,6 +65,47 @@ export const Header = () => {
           </Button>
         </div>
 
+        {/* Mobile hamburger menu */}
+        <div className="md:hidden">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">メニュー</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px]">
+              <SheetHeader>
+                <SheetTitle>メニュー</SheetTitle>
+              </SheetHeader>
+              <div className="flex flex-col gap-4 mt-6 px-4">
+                {/* Theme Toggle */}
+                <Button
+                  variant="outline"
+                  className="w-full justify-center"
+                  onClick={toggleTheme}
+                >
+                  <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                </Button>
+
+                {/* Login Button */}
+                <Button variant="outline" asChild className="w-full">
+                  <Link href="/login" onClick={() => setIsOpen(false)}>
+                    ログイン
+                  </Link>
+                </Button>
+
+                {/* Sign Up Button */}
+                <Button asChild className="w-full">
+                  <Link href="/signup" onClick={() => setIsOpen(false)}>
+                    新規登録
+                  </Link>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );
