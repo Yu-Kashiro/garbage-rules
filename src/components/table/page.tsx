@@ -1,13 +1,12 @@
-import { columns, Garbage } from "./columns";
+"use client";
+
+import { useColumns, Garbage } from "./columns";
 import { DataTable } from "./data-table";
 import bunbetsuData from "./bunbetsu_data.json";
 
-async function getData(): Promise<Garbage[]> {
-  return bunbetsuData as Garbage[];
-}
-
-export default async function SearchGarbage() {
-  const data = await getData();
+export default function SearchGarbage() {
+  const columns = useColumns();
+  const data = bunbetsuData as Garbage[];
 
   return (
     <div className="py-5">
