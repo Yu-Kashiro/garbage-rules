@@ -1,4 +1,4 @@
-import SearchGarbage from "../components/payments/page";
+import SearchGarbage from "../components/table/page";
 
 export default function Home() {
   return (
