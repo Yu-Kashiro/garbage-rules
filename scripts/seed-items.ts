@@ -1,5 +1,5 @@
 import "dotenv/config";
-import garbageItemsData from "../src/components/garbages/garbage_items.json";
+import garbageItemsData from "../src/components/garbage-data/garbage_items.json";
 import { db } from "../src/db";
 import { garbageItems } from "../src/db/schemas/garbage";
 
