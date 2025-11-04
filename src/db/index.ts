@@ -1,5 +1,5 @@
 import { drizzle } from "drizzle-orm/libsql/web";
-import * as garbageSchema from "./schemas/garbages";
+import * as garbageSchema from "./schemas/garbage";
 // まだ存在しない場合コメントアウト
 // import * as authSchema from "./schemas/auth";
 
