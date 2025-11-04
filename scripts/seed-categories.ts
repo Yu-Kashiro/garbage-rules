@@ -1,6 +1,6 @@
 import "dotenv/config";
 import { db } from "../src/db";
-import { garbageCategories } from "../src/db/schemas/garbages";
+import { garbageCategories } from "../src/db/schemas/garbage";
 import garbageCategoriesData from "../src/components/garbages/garbage_categories.json";
 
 async function seedCategories() {
@@ -16,7 +16,9 @@ async function seedCategories() {
     // Insert categories into the database
     await db.insert(garbageCategories).values(categoriesToInsert);
 
-    console.log(`✓ Successfully inserted ${categoriesToInsert.length} categories`);
+    console.log(
+      `✓ Successfully inserted ${categoriesToInsert.length} categories`
+    );
     console.log("\nInserted categories:");
     categoriesToInsert.forEach((cat) => {
       console.log(`  - ID: ${cat.id}, Name: ${cat.name}`);
