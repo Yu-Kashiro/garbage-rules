@@ -1,12 +1,16 @@
-import "server-only"
+"use cache";
+import "server-only";
 
-import { db } from "@/db"
+import { db } from "@/db";
 import { GarbageItemWithCategory } from "@/types/garbage";
 import { garbageCategories, garbageItems } from "@/db/schemas/garbage";
 import { eq, like } from "drizzle-orm";
-
+import { cacheLife } from "next/cache";
 
 export async function getGarbageItems(): Promise<GarbageItemWithCategory[]> {
+  "use cache";
+  cacheLife("hours");
+
   const result = await db
     .select()
     .from(garbageItems)
@@ -24,9 +28,14 @@ export async function getGarbageItems(): Promise<GarbageItemWithCategory[]> {
     createdAt: row.garbage_Items.createdAt,
     updatedAt: row.garbage_Items.updatedAt,
   }));
-};
+}
 
-export const searchGarbageItem = async (name: string): Promise<GarbageItemWithCategory[]> => {
+export const searchGarbageItem = async (
+  name: string
+): Promise<GarbageItemWithCategory[]> => {
+  "use cache";
+  cacheLife("minutes");
+
   const result = await db
     .select()
     .from(garbageItems)
@@ -45,4 +54,4 @@ export const searchGarbageItem = async (name: string): Promise<GarbageItemWithCa
     createdAt: row.garbage_Items.createdAt,
     updatedAt: row.garbage_Items.updatedAt,
   }));
-}
+};
