@@ -1,5 +1,6 @@
+"use client";
+
 import { GarbageSearchForm } from "@/components/garbage-search-form";
-import { Input } from "@/components/ui/input";
 import {
   Table,
   TableBody,
@@ -8,23 +9,20 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { getGarbageItems, searchGarbageItem } from "@/data/garbage";
-import { createLoader, parseAsString } from "nuqs/server";
+import { useGarbageSearch } from "@/hooks/use-garbage-search";
+import { useQueryState } from "nuqs";
 import { Suspense } from "react";
 
-export const loadSearchParams = createLoader({
-  name: parseAsString.withDefault(""),
-});
+function SearchResults({ name }: { name: string }) {
+  const { results, loading, error } = useGarbageSearch(name);
 
-async function GarbageTable({
-  searchParams,
-}: {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-}) {
-  const { name } = await loadSearchParams(searchParams);
-  const garbageList = name
-    ? await searchGarbageItem(name)
-    : await getGarbageItems();
+  if (loading) {
+    return <div>読み込み中...</div>;
+  }
+
+  if (error) {
+    return <div>エラーが発生しました: {error.message}</div>;
+  }
 
   return (
     <div className="border rounded-md">
@@ -37,7 +35,7 @@ async function GarbageTable({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {garbageList.map((garbage) => (
+          {results.map((garbage) => (
             <TableRow key={garbage.id}>
               <TableCell>{garbage.name}</TableCell>
               <TableCell>{garbage.garbageCategory}</TableCell>
@@ -50,7 +48,12 @@ async function GarbageTable({
   );
 }
 
-export default async function Home({ searchParams }: PageProps<"/">) {
+export default function Home() {
+  const [name] = useQueryState("name", {
+    defaultValue: "",
+    shallow: true,
+  });
+
   return (
     <main className="flex flex-1 items-start justify-center bg-background-main pt-10 md:pt-10">
       <div className="container max-w-3xl px-4 space-y-10">
@@ -58,11 +61,10 @@ export default async function Home({ searchParams }: PageProps<"/">) {
           捨てたいごみを入力してください。
         </h1>
 
-        <Suspense fallback={<Input placeholder="読み込み中..." />}>
-          <GarbageSearchForm />
-        </Suspense>
+        <GarbageSearchForm />
+
         <Suspense fallback={<div>読み込み中...</div>}>
-          <GarbageTable searchParams={searchParams} />
+          <SearchResults name={name} />
         </Suspense>
       </div>
     </main>
