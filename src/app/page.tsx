@@ -48,12 +48,23 @@ function SearchResults({ name }: { name: string }) {
   );
 }
 
-export default function Home() {
+function SearchSection() {
   const [name] = useQueryState("name", {
     defaultValue: "",
     shallow: true,
   });
 
+  return (
+    <>
+      <GarbageSearchForm />
+      <Suspense fallback={<div>読み込み中...</div>}>
+        <SearchResults name={name} />
+      </Suspense>
+    </>
+  );
+}
+
+export default function Home() {
   return (
     <main className="flex flex-1 items-start justify-center bg-background-main pt-10 md:pt-10">
       <div className="container max-w-3xl px-4 space-y-10">
@@ -62,11 +73,7 @@ export default function Home() {
         </h1>
 
         <Suspense>
-          <GarbageSearchForm />
-        </Suspense>
-
-        <Suspense fallback={<div>読み込み中...</div>}>
-          <SearchResults name={name} />
+          <SearchSection />
         </Suspense>
       </div>
     </main>
