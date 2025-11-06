@@ -4,12 +4,13 @@ import "server-only";
 import { db } from "@/db";
 import { GarbageItemWithCategory } from "@/types/garbage";
 import { garbageCategories, garbageItems } from "@/db/schemas/garbage";
-import { eq, like } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import { cacheLife } from "next/cache";
+import Fuse from "fuse.js";
 
 export async function getGarbageItems(): Promise<GarbageItemWithCategory[]> {
   "use cache";
-  cacheLife("hours");
+  cacheLife("days");
 
   const result = await db
     .select()
@@ -34,24 +35,23 @@ export const searchGarbageItem = async (
   name: string
 ): Promise<GarbageItemWithCategory[]> => {
   "use cache";
-  cacheLife("minutes");
+  cacheLife("days");
 
-  const result = await db
-    .select()
-    .from(garbageItems)
-    .innerJoin(
-      garbageCategories,
-      eq(garbageItems.garbageCategory, garbageCategories.id)
-    )
-    .where(like(garbageItems.name, `%${name}%`));
+  // 全てのゴミアイテムを取得
+  const allItems = await getGarbageItems();
 
-  // フラットな構造にマップし、カテゴリIDをカテゴリ名に変換
-  return result.map((row) => ({
-    id: row.garbage_Items.id,
-    name: row.garbage_Items.name,
-    garbageCategory: row.garbage_categories.name,
-    note: row.garbage_Items.note,
-    createdAt: row.garbage_Items.createdAt,
-    updatedAt: row.garbage_Items.updatedAt,
-  }));
+  // Fuse.jsの設定
+  const fuse = new Fuse(allItems, {
+    keys: ["name", "note"], // 名前と備考を検索対象に
+    threshold: 0.3, // 0.3の閾値で適度なあいまい検索
+    distance: 100,
+    minMatchCharLength: 1,
+    includeScore: true,
+  });
+
+  // あいまい検索を実行
+  const results = fuse.search(name);
+
+  // スコア順にソート済みの結果を返す
+  return results.map((result) => result.item);
 };
