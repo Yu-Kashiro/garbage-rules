@@ -1,4 +1,3 @@
-// サービスワーカー - キャッシュ戦略の実装
 // このファイルはブラウザのバックグラウンドで動作し、ネットワークリクエストを管理します
 
 // キャッシュの名前（バージョン管理用）
@@ -8,9 +7,7 @@ const CACHE_NAME = "garbage-rules-v1";
 // アプリの基本的なファイルをここに指定します
 // Note: Next.jsでは静的ファイルは実行時に動的に生成されるため、
 // 事前キャッシュは最小限にし、実際のキャッシュはfetchイベントで行います
-const PRECACHE_URLS = [
-  "/",
-];
+const PRECACHE_URLS = ["/"];
 
 // インストールイベント: サービスワーカーがインストールされたときに実行される
 // ここで事前キャッシュを行います
@@ -51,30 +48,9 @@ self.addEventListener("activate", (event) => {
 });
 
 // フェッチイベント: ネットワークリクエストが発生したときに実行される
-// ここでキャッシュ戦略を実装します
+// すべてのリクエストに「キャッシュ優先」戦略を適用
 self.addEventListener("fetch", (event) => {
-  const url = new URL(event.request.url);
-
-  // Next.jsの内部ファイル(_next/static)は「キャッシュ優先」戦略
-  if (url.pathname.startsWith("/_next/static")) {
-    event.respondWith(cacheFirst(event.request));
-    return;
-  }
-
-  // 画像ファイルは「キャッシュ優先」戦略
-  if (url.pathname.match(/\.(png|jpg|jpeg|svg|gif|webp|ico)$/)) {
-    event.respondWith(cacheFirst(event.request));
-    return;
-  }
-
-  // JSONファイル（データ）は「キャッシュ優先」戦略
-  if (url.pathname.endsWith(".json")) {
-    event.respondWith(cacheFirst(event.request));
-    return;
-  }
-
-  // その他のリクエストは「ネットワーク優先」戦略
-  event.respondWith(networkFirst(event.request));
+  event.respondWith(cacheFirst(event.request));
 });
 
 // キャッシュ優先戦略
@@ -105,43 +81,6 @@ async function cacheFirst(request) {
     // エラーレスポンスを返す
     return new Response("ネットワークエラー", {
       status: 408,
-      headers: { "Content-Type": "text/plain" },
-    });
-  }
-}
-
-// ネットワーク優先戦略
-// まずネットワークから取得を試み、失敗したらキャッシュから返す
-async function networkFirst(request) {
-  try {
-    console.log("[Service Worker] ネットワークから取得:", request.url);
-    const networkResponse = await fetch(request);
-
-    // 成功したらキャッシュに保存
-    if (networkResponse.ok) {
-      const cache = await caches.open(CACHE_NAME);
-      cache.put(request, networkResponse.clone());
-    }
-
-    return networkResponse;
-  } catch {
-    console.log(
-      "[Service Worker] ネットワーク失敗、キャッシュを確認:",
-      request.url
-    );
-
-    // ネットワークが失敗したらキャッシュから探す
-    const cachedResponse = await caches.match(request);
-
-    if (cachedResponse) {
-      console.log("[Service Worker] キャッシュから返却:", request.url);
-      return cachedResponse;
-    }
-
-    // キャッシュにもなければエラー
-    console.error("[Service Worker] キャッシュにもありません:", request.url);
-    return new Response("オフラインです", {
-      status: 503,
       headers: { "Content-Type": "text/plain" },
     });
   }
