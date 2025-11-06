@@ -61,7 +61,9 @@ export default function Home() {
           捨てたいごみを入力してください。
         </h1>
 
-        <GarbageSearchForm />
+        <Suspense>
+          <GarbageSearchForm />
+        </Suspense>
 
         <Suspense fallback={<div>読み込み中...</div>}>
           <SearchResults name={name} />
