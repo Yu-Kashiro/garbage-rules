@@ -5,11 +5,24 @@ import { Input } from "@/components/ui/input";
 import { useQueryState } from "nuqs";
 import { Suspense } from "react";
 
-export default function Home() {
+function SearchInput() {
   const [name, setName] = useQueryState("name", {
     defaultValue: "",
   });
 
+  return (
+    <>
+      <Input
+        value={name}
+        placeholder="例：バッテリー、水筒、茶碗..."
+        onChange={(e) => setName(e.target.value)}
+      />
+      <SearchResults name={name} />
+    </>
+  );
+}
+
+export default function Home() {
   return (
     <main className="flex flex-1 items-start justify-center bg-background-main pt-10 md:pt-10">
       <div className="container max-w-3xl px-4 space-y-10">
@@ -17,13 +30,8 @@ export default function Home() {
           捨てたいごみを入力してください。
         </h1>
 
-        <Input
-          value={name}
-          placeholder="例：バッテリー、水筒、茶碗..."
-          onChange={(e) => setName(e.target.value)}
-        />
         <Suspense fallback={<div>読み込み中...</div>}>
-          <SearchResults name={name} />
+          <SearchInput />
         </Suspense>
       </div>
     </main>
