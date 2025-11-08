@@ -1,6 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 import Fuse from "fuse.js";
 import type { GarbageItemWithCategory } from "@/types/garbage";
+import { garbageFuseOptions } from "@/lib/fuse-config";
 
 export function useGarbageSearch(query: string) {
   const [items, setItems] = useState<GarbageItemWithCategory[]>([]);
@@ -27,13 +28,7 @@ export function useGarbageSearch(query: string) {
 
   const fuse = useMemo(() => {
     if (items.length === 0) return null;
-    return new Fuse(items, {
-      keys: ["name", "note"],
-      threshold: 0.3,
-      distance: 100,
-      minMatchCharLength: 1,
-      includeScore: true,
-    });
+    return new Fuse(items, garbageFuseOptions);
   }, [items]);
 
   const results = useMemo(() => {

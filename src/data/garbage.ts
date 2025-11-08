@@ -7,6 +7,7 @@ import { garbageCategories, garbageItems } from "@/db/schemas/garbage";
 import { eq } from "drizzle-orm";
 import { cacheLife } from "next/cache";
 import Fuse from "fuse.js";
+import { garbageFuseOptions } from "@/lib/fuse-config";
 
 export async function getGarbageItems(): Promise<GarbageItemWithCategory[]> {
   "use cache";
@@ -41,13 +42,7 @@ export const searchGarbageItem = async (
   const allItems = await getGarbageItems();
 
   // Fuse.jsの設定
-  const fuse = new Fuse(allItems, {
-    keys: ["name", "note"], // 名前と備考を検索対象に
-    threshold: 0.3, // 0.3の閾値で適度なあいまい検索
-    distance: 100,
-    minMatchCharLength: 1,
-    includeScore: true,
-  });
+  const fuse = new Fuse(allItems, garbageFuseOptions);
 
   // あいまい検索を実行
   const results = fuse.search(name);
