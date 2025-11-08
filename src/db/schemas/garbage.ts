@@ -7,7 +7,7 @@ export const garbageCategories = sqliteTable("garbage_categories", {
   ...timestamps,
 });
 
-export const garbageItems = sqliteTable("garbage_Items", {
+export const garbageItems = sqliteTable("garbage_items", {
   id: integer("id").primaryKey(),
   name: text("name").notNull(),
   garbageCategory: integer("garbage_category")

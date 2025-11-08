@@ -22,12 +22,12 @@ export async function getGarbageItems(): Promise<GarbageItemWithCategory[]> {
 
   // フラットな構造にマップし、カテゴリIDをカテゴリ名に変換
   return result.map((row) => ({
-    id: row.garbage_Items.id,
-    name: row.garbage_Items.name,
+    id: row.garbage_items.id,
+    name: row.garbage_items.name,
     garbageCategory: row.garbage_categories.name,
-    note: row.garbage_Items.note,
-    createdAt: row.garbage_Items.createdAt,
-    updatedAt: row.garbage_Items.updatedAt,
+    note: row.garbage_items.note,
+    createdAt: row.garbage_items.createdAt,
+    updatedAt: row.garbage_items.updatedAt,
   }));
 }
 
