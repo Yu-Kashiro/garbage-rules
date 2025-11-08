@@ -9,7 +9,7 @@ export type GarbageCategory = typeof garbageCategories.$inferSelect;
 export type GarbageCategoryFormData = z.infer<typeof garbageCategoryFormSchema>;
 
 export type GarbageItem = typeof garbageItems.$inferSelect;
-export type garbageItemFormSchema = z.infer<typeof garbageItemFormSchema>;
+export type GarbageItemFormSchema = z.infer<typeof garbageItemFormSchema>;
 
 // テーブル表示用の型（カテゴリ名を含む）
 export type GarbageItemWithCategory = Omit<GarbageItem, "garbageCategory"> & {
