@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/table";
 import { useGarbageSearch } from "@/hooks/use-garbage-search";
 
-export function SearchResults({ name }: {name: string}) {
+export function SearchResults({ name }: { name: string }) {
   const { results, loading, error } = useGarbageSearch(name);
 
   if (loading) {
@@ -19,6 +19,14 @@ export function SearchResults({ name }: {name: string}) {
 
   if (error) {
     return <div>エラーが発生しました: {error.message}</div>;
+  }
+
+  if (results.length === 0) {
+    return (
+      <div className="border rounded-md p-8 text-center text-muted-foreground">
+        検索結果が見つかりませんでした
+      </div>
+    );
   }
 
   return (
