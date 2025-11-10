@@ -58,12 +58,12 @@ export const Header = () => {
 
           {/* Login Button */}
           <Button variant="outline" asChild>
-            <Link href="/">職員ログイン</Link>
+            <Link href="/login">職員ログイン</Link>
           </Button>
 
           {/* Sign Up Button */}
           <Button asChild>
-            <Link href="/">新規登録</Link>
+            <Link href="/signup">新規登録</Link>
           </Button>
         </div>
 
@@ -93,14 +93,14 @@ export const Header = () => {
 
                 {/* Login Button */}
                 <Button variant="outline" asChild className="w-full">
-                  <Link href="/" onClick={() => setIsOpen(false)}>
+                  <Link href="/login" onClick={() => setIsOpen(false)}>
                     職員ログイン
                   </Link>
                 </Button>
 
                 {/* Sign Up Button */}
                 <Button asChild className="w-full">
-                  <Link href="/" onClick={() => setIsOpen(false)}>
+                  <Link href="/signup" onClick={() => setIsOpen(false)}>
                     新規登録
                   </Link>
                 </Button>
