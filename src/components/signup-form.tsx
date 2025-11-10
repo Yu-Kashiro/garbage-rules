@@ -1,19 +1,18 @@
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+  CardTitle
+} from "@/components/ui/card";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 
 export function SignupForm({
   className,
@@ -22,17 +21,14 @@ export function SignupForm({
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
-        <CardHeader>
-          <CardTitle>Create an account</CardTitle>
-          <CardDescription>
-            Enter your email below to create your account
-          </CardDescription>
+        <CardHeader className="justify-center">
+          <CardTitle>アカウントを作成</CardTitle>
         </CardHeader>
         <CardContent>
           <form>
             <FieldGroup>
               <Field>
-                <FieldLabel htmlFor="email">Email</FieldLabel>
+                <FieldLabel htmlFor="email">メールアドレス</FieldLabel>
                 <Input
                   id="email"
                   type="email"
@@ -41,20 +37,22 @@ export function SignupForm({
                 />
               </Field>
               <Field>
-                <FieldLabel htmlFor="password">Password</FieldLabel>
+                <FieldLabel htmlFor="password">パスワード</FieldLabel>
                 <Input id="password" type="password" required />
               </Field>
               <Field>
-                <FieldLabel htmlFor="confirm-password">Confirm Password</FieldLabel>
+                <FieldLabel htmlFor="confirm-password">
+                  パスワード（確認）
+                </FieldLabel>
                 <Input id="confirm-password" type="password" required />
               </Field>
               <Field>
-                <Button type="submit">Sign up</Button>
+                <Button type="submit">新規登録</Button>
                 <Button variant="outline" type="button">
-                  Sign up with Google
+                  Googleで新規登録
                 </Button>
                 <FieldDescription className="text-center">
-                  Already have an account? <a href="/login">Login</a>
+                  アカウントをお持ちの場合は <a href="/login">ログイン</a>
                 </FieldDescription>
               </Field>
             </FieldGroup>
@@ -62,5 +60,5 @@ export function SignupForm({
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
