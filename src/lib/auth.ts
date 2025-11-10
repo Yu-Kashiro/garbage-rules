@@ -12,6 +12,9 @@ export const auth = betterAuth({
     provider: "sqlite",
     usePlural: true,
   }),
+  emailAndPassword: {
+    enabled: true,
+  },
   advanced: {
     database: {
       generateId: () => nanoid(10),
