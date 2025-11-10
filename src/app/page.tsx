@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { useQueryState } from "nuqs";
 import { Suspense } from "react";
 
-function SearchInput() {
+function SearchTable() {
   const [name, setName] = useQueryState("name", {
     defaultValue: "",
   });
@@ -31,7 +31,7 @@ export default function Home() {
         </h1>
 
         <Suspense fallback={<div>読み込み中...</div>}>
-          <SearchInput />
+          <SearchTable />
         </Suspense>
       </div>
     </main>
