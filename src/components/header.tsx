@@ -8,7 +8,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu, Moon, Sun } from "lucide-react";
+import { authClient } from "@/lib/auth-client";
+import { LogOut, Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState } from "react";
@@ -16,9 +17,14 @@ import { useState } from "react";
 export const Header = () => {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const { data: session, isPending } = authClient.useSession();
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  const handleSignOut = async () => {
+    await authClient.signOut();
   };
 
   return (
@@ -56,15 +62,29 @@ export const Header = () => {
             <span className="sr-only">テーマ切り替え</span>
           </Button>
 
-          {/* Login Button */}
-          <Button variant="outline" asChild>
-            <Link href="/login">職員ログイン</Link>
-          </Button>
+          {!isPending && (
+            <>
+              {session ? (
+                /* Logout Button */
+                <Button variant="outline" onClick={handleSignOut}>
+                  <LogOut className="h-4 w-4 mr-2" />
+                  ログアウト
+                </Button>
+              ) : (
+                <>
+                  {/* Login Button */}
+                  <Button variant="outline" asChild>
+                    <Link href="/login">職員ログイン</Link>
+                  </Button>
 
-          {/* Sign Up Button */}
-          <Button asChild>
-            <Link href="/signup">新規登録</Link>
-          </Button>
+                  {/* Sign Up Button */}
+                  <Button asChild>
+                    <Link href="/signup">新規登録</Link>
+                  </Button>
+                </>
+              )}
+            </>
+          )}
         </div>
 
         {/* Mobile hamburger menu */}
@@ -91,19 +111,40 @@ export const Header = () => {
                   <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                 </Button>
 
-                {/* Login Button */}
-                <Button variant="outline" asChild className="w-full">
-                  <Link href="/login" onClick={() => setIsOpen(false)}>
-                    職員ログイン
-                  </Link>
-                </Button>
+                {!isPending && (
+                  <>
+                    {session ? (
+                      /* Logout Button */
+                      <Button
+                        variant="outline"
+                        className="w-full"
+                        onClick={() => {
+                          setIsOpen(false);
+                          handleSignOut();
+                        }}
+                      >
+                        <LogOut className="h-4 w-4 mr-2" />
+                        ログアウト
+                      </Button>
+                    ) : (
+                      <>
+                        {/* Login Button */}
+                        <Button variant="outline" asChild className="w-full">
+                          <Link href="/login" onClick={() => setIsOpen(false)}>
+                            職員ログイン
+                          </Link>
+                        </Button>
 
-                {/* Sign Up Button */}
-                <Button asChild className="w-full">
-                  <Link href="/signup" onClick={() => setIsOpen(false)}>
-                    新規登録
-                  </Link>
-                </Button>
+                        {/* Sign Up Button */}
+                        <Button asChild className="w-full">
+                          <Link href="/signup" onClick={() => setIsOpen(false)}>
+                            新規登録
+                          </Link>
+                        </Button>
+                      </>
+                    )}
+                  </>
+                )}
               </div>
             </SheetContent>
           </Sheet>
