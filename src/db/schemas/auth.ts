@@ -10,6 +10,7 @@ export const users = sqliteTable("users", {
     .default(false)
     .notNull(),
   image: text("image"),
+  isAnonymous: integer("is_anonymous", { mode: "boolean" }).default(false),
   ...timestamps,
 });
 

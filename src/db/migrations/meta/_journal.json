@@ -43,6 +43,13 @@
       "when": 1762582608779,
       "tag": "0005_yummy_justice",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1762749716295,
+      "tag": "0006_curved_cyclops",
+      "breakpoints": true
     }
   ]
 }
