@@ -1,10 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Field,
   FieldDescription,
@@ -48,9 +43,6 @@ export function SignupForm({
               </Field>
               <Field>
                 <Button type="submit">新規登録</Button>
-                <Button variant="outline" type="button">
-                  Googleで新規登録
-                </Button>
                 <FieldDescription className="text-center">
                   アカウントをお持ちの場合は <a href="/login">ログイン</a>
                 </FieldDescription>

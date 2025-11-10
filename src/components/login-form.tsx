@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -7,12 +9,16 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { authClient } from "@/lib/auth-client";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const router = useRouter();
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
@@ -37,8 +43,16 @@ export function LoginForm({
               </Field>
               <Field>
                 <Button type="submit">ログイン</Button>
-                <Button variant="outline" type="button">
-                  Googleでログイン
+                <Button
+                  variant="outline"
+                  type="button"
+                  onClick={() => {
+                    authClient.signIn.anonymous().then(() => {
+                      router.push("/");
+                    });
+                  }}
+                >
+                  ゲストログイン
                 </Button>
                 <FieldDescription className="text-center">
                   <a href="/signup">新規登録はこちら</a>
