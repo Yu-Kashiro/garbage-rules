@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export function SignupForm({
   className,
@@ -44,7 +45,7 @@ export function SignupForm({
               <Field>
                 <Button type="submit">新規登録</Button>
                 <FieldDescription className="text-center">
-                  アカウントをお持ちの場合は <a href="/login">ログイン</a>
+                  アカウントをお持ちの場合は <Link href="/login">ログイン</Link>
                 </FieldDescription>
               </Field>
             </FieldGroup>

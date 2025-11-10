@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { authClient } from "@/lib/auth-client";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export function LoginForm({
   className,
@@ -55,15 +56,15 @@ export function LoginForm({
                   ゲストログイン
                 </Button>
                 <FieldDescription className="text-center">
-                  <a href="/signup">新規登録はこちら</a>
+                  <Link href="/signup">新規登録はこちら</Link>
                 </FieldDescription>
                 <FieldDescription className="text-center">
-                  <a
+                  <Link
                     href="#"
                     className="inline-block text-sm underline-offset-4 hover:underline"
                   >
                     パスワードをお忘れですか？
-                  </a>
+                  </Link>
                 </FieldDescription>
               </Field>
             </FieldGroup>
