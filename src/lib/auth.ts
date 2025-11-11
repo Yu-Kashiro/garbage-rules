@@ -20,5 +20,5 @@ export const auth = betterAuth({
       generateId: () => nanoid(10),
     },
   },
-  plugins: [nextCookies(), anonymous()],
+  plugins: [anonymous(), nextCookies()],
 });
