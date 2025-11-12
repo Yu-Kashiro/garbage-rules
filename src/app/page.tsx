@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="flex h-content items-start justify-center bg-background-main pt-10 md:pt-10">
       <div className="container max-w-3xl px-4 space-y-10">
-        <h1 className="text-center text-xl font-bold md:text-4xl">
+        <h1 className="text-center text-xl font-bold md:text-3xl">
           捨てたいごみを入力してください。
         </h1>
 
