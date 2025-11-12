@@ -9,15 +9,17 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { authClient } from "@/lib/auth-client";
-import { LogOut, Menu, Moon, Sun } from "lucide-react";
+import { LogOut, Menu, Moon, Sun, UserPlus } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export const Header = () => {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const { data: session, isPending } = authClient.useSession();
+  const router = useRouter();
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -25,6 +27,7 @@ export const Header = () => {
 
   const handleSignOut = async () => {
     await authClient.signOut();
+    router.push("/");
   };
 
   return (
@@ -65,11 +68,18 @@ export const Header = () => {
           {!isPending && (
             <>
               {session ? (
-                /* Logout Button */
-                <Button variant="outline" onClick={handleSignOut}>
-                  <LogOut className="h-4 w-4 mr-2" />
-                  ログアウト
-                </Button>
+                <>
+                  {/* Admin Register Button */}
+                  <Button variant="outline" asChild>
+                    <Link href="/admin/register">ごみ情報追加</Link>
+                  </Button>
+
+                  {/* Logout Button */}
+                  <Button variant="outline" onClick={handleSignOut}>
+                    <LogOut className="h-4 w-4 mr-2" />
+                    ログアウト
+                  </Button>
+                </>
               ) : (
                 <>
                   {/* Login Button */}
@@ -114,18 +124,30 @@ export const Header = () => {
                 {!isPending && (
                   <>
                     {session ? (
-                      /* Logout Button */
-                      <Button
-                        variant="outline"
-                        className="w-full"
-                        onClick={() => {
-                          setIsOpen(false);
-                          handleSignOut();
-                        }}
-                      >
-                        <LogOut className="h-4 w-4 mr-2" />
-                        ログアウト
-                      </Button>
+                      <>
+                        {/* Admin Register Button */}
+                        <Button variant="outline" asChild className="w-full">
+                          <Link
+                            href="/admin/register"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            ごみ情報追加
+                          </Link>
+                        </Button>
+
+                        {/* Logout Button */}
+                        <Button
+                          variant="outline"
+                          className="w-full"
+                          onClick={() => {
+                            setIsOpen(false);
+                            handleSignOut();
+                          }}
+                        >
+                          <LogOut className="h-4 w-4 mr-2" />
+                          ログアウト
+                        </Button>
+                      </>
                     ) : (
                       <>
                         {/* Login Button */}
