@@ -9,6 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { useGarbageSearch } from "@/hooks/use-garbage-search";
+import { ScrollArea } from "./ui/scroll-area";
 
 export function SearchResults({ name }: { name: string }) {
   const { results, loading, error } = useGarbageSearch(name);
@@ -30,7 +31,7 @@ export function SearchResults({ name }: { name: string }) {
   }
 
   return (
-    <div className="border rounded-md">
+    <ScrollArea className="border rounded-md h-table-scroll">
       <Table>
         <TableHeader>
           <TableRow>
@@ -49,6 +50,6 @@ export function SearchResults({ name }: { name: string }) {
           ))}
         </TableBody>
       </Table>
-    </div>
+    </ScrollArea>
   );
 }

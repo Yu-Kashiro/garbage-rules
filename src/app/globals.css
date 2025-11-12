@@ -42,6 +42,15 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --spacing-content: calc(100dvh - 57px - 53px);
+  --height-header: 3.5rem; /* Header h-14 = 56px */
+  --height-footer: 3.3125rem; /* Footer = 約53px */
+  --height-main-padding: 2.5rem; /* pt-10 = 40px */
+  --height-title-section: 6rem; /* h1 + space-y-10 = 約96px */
+  --height-input: 2.5rem; /* Input = 約40px */
+  --height-extra-spacing: 2.5rem; /* 余白 = 40px */
+  --height-table-scroll: calc(100dvh - var(--height-header) - var(--height-footer) - var(--height-main-padding) - var(--height-title-section) - var(--height-input) - var(--height-extra-spacing));
 }
 
 :root {
