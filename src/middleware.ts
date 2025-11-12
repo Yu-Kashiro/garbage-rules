@@ -26,9 +26,8 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      * - llms.txt (LLM documentation file)
-     * - sw.js (service worker script)
      * - images and other static assets
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|llms.txt|sw\\.js|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|llms.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 };
