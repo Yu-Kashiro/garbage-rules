@@ -1,12 +1,21 @@
-"use cache";
 import "server-only";
 
 import { db } from "@/db";
 import { garbageCategories, garbageItems } from "@/db/schemas/garbage";
-import { GarbageItemWithCategory } from "@/types/garbage";
+import { GarbageCategory, GarbageItemWithCategory } from "@/types/garbage";
 import { eq } from "drizzle-orm";
 import { cacheLife } from "next/cache";
 
+// カテゴリーの一覧取得
+export async function getGarbageCategories(): Promise<GarbageCategory[]> {
+  "use cache";
+  cacheLife("days");
+
+  const result = await db.select().from(garbageCategories);
+  return result;
+}
+
+// ごみ品目一覧取得
 export async function getGarbageItems(): Promise<GarbageItemWithCategory[]> {
   "use cache";
   cacheLife("days");
