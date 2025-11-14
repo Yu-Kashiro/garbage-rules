@@ -1,0 +1,80 @@
+"use server";
+
+import { db } from "@/db";
+import { garbageCategories, garbageItems } from "@/db/schemas/garbage";
+import { verifySession } from "@/lib/session";
+import type {
+  GarbageCategoryFormData,
+  GarbageItemFormSchema,
+} from "@/types/garbage";
+import { garbageCategoryFormSchema } from "@/zod/garbage";
+import { eq } from "drizzle-orm";
+import { revalidatePath } from "next/cache";
+
+// カテゴリー新規登録
+export async function createGarbageCategory(formData: GarbageCategoryFormData) {
+  const data = garbageCategoryFormSchema.parse(formData);
+  await verifySession();
+
+  try {
+    await db.insert(garbageCategories).values({ ...data });
+    revalidatePath("/admin/data/category");
+  } catch (error) {
+    console.error("Failed to create garbage category:", error);
+    throw new Error("ごみ分別区分の登録に失敗しました");
+  }
+}
+
+// カテゴリー修正
+export async function updateGarbageCategory(
+  id: number,
+  formData: GarbageCategoryFormData
+) {
+  const data = garbageCategoryFormSchema.parse(formData);
+  await verifySession();
+
+  try {
+    await db
+      .update(garbageCategories)
+      .set({ ...data })
+      .where(eq(garbageCategories.id, id));
+    revalidatePath("/admin/data/category");
+  } catch (error) {
+    console.error("ごみ分別区分の更新に失敗しました。:", error);
+    throw new Error("ごみ分別区分の更新に失敗しました");
+  }
+}
+
+// カテゴリー削除
+export async function deleteGarbageCategory(id: number) {
+  await verifySession();
+  try {
+    await db.delete(garbageCategories).where(eq(garbageCategories.id, id));
+    revalidatePath("/admin/data/category");
+  } catch (error) {
+    console.error("ごみ分別区分の削除に失敗しました。:", error);
+    throw new Error("ごみ分別区分の削除に失敗しました");
+  }
+}
+
+// ごみ品目新規登録
+export async function createGarbageItem(data: GarbageItemFormSchema) {
+  try {
+    await db.insert(garbageItems).values({
+      name: data.name,
+      garbageCategory: data.garbageCategory,
+      note: data.note || null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    revalidatePath("/admin/data");
+  } catch (error) {
+    console.error("Failed to create garbage item:", error);
+    throw new Error("ごみ品目の登録に失敗しました");
+  }
+}
+
+// ごみ品目修正
+
+// ごみ品目削除
