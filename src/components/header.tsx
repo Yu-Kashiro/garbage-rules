@@ -9,7 +9,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { authClient } from "@/lib/auth-client";
-import { LogOut, Menu, Moon, Sun, UserPlus } from "lucide-react";
+import { LogOut, Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -71,7 +71,7 @@ export const Header = () => {
                 <>
                   {/* Admin Register Button */}
                   <Button variant="outline" asChild>
-                    <Link href="/admin/register">ごみ情報追加</Link>
+                    <Link href="/admin/data">ごみ情報編集</Link>
                   </Button>
 
                   {/* Logout Button */}
@@ -128,10 +128,10 @@ export const Header = () => {
                         {/* Admin Register Button */}
                         <Button variant="outline" asChild className="w-full">
                           <Link
-                            href="/admin/register"
+                            href="/admin/data"
                             onClick={() => setIsOpen(false)}
                           >
-                            ごみ情報追加
+                            ごみ情報編集
                           </Link>
                         </Button>
 
