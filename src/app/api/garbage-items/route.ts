@@ -6,9 +6,9 @@ export async function GET() {
     const items = await getGarbageItems();
     return NextResponse.json(items);
   } catch (error) {
-    console.error("Failed to fetch garbage items:", error);
+    console.error("ごみ品目一覧の取得に失敗しました:", error);
     return NextResponse.json(
-      { error: "Failed to fetch garbage items" },
+      { error: "ごみ品目一覧の取得に失敗しました" },
       { status: 500 }
     );
   }
