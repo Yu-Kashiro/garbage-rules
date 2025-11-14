@@ -8,10 +8,10 @@ export default function RegisterPage() {
         <h1 className="text-center text-xl font-bold md:text-3xl">分別区分</h1>
         <div className="flex flex-col md:flex-row gap-4">
           <Button variant="outline" className="flex-1 h-24 text-xl" asChild>
-            <Link href="/admin/data/category">新規登録</Link>
+            <Link href="/admin/data/category/new">新規登録</Link>
           </Button>
           <Button variant="outline" className="flex-1 h-24 text-xl" asChild>
-            <Link href="/admin/data/item">編集・削除</Link>
+            <Link href="/admin/data/category">編集・削除</Link>
           </Button>
         </div>
       </div>
@@ -20,7 +20,7 @@ export default function RegisterPage() {
         <h1 className="text-center text-xl font-bold md:text-3xl">ごみ品目</h1>
         <div className="flex flex-col md:flex-row gap-4">
           <Button variant="outline" className="flex-1 h-24 text-xl" asChild>
-            <Link href="/admin/data/category">新規登録</Link>
+            <Link href="/admin/data/item/new">新規登録</Link>
           </Button>
           <Button variant="outline" className="flex-1 h-24 text-xl" asChild>
             <Link href="/admin/data/item">編集・削除</Link>
