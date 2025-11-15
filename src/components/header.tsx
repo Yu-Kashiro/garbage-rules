@@ -71,7 +71,7 @@ export const Header = () => {
                 <>
                   {/* Admin Register Button */}
                   <Button variant="outline" asChild>
-                    <Link href="/admin/data">ごみ情報編集</Link>
+                    <Link href="/admin">管理者メニュー</Link>
                   </Button>
 
                   {/* Logout Button */}
@@ -128,10 +128,10 @@ export const Header = () => {
                         {/* Admin Register Button */}
                         <Button variant="outline" asChild className="w-full">
                           <Link
-                            href="/admin/data"
+                            href="/admin"
                             onClick={() => setIsOpen(false)}
                           >
-                            ごみ情報編集
+                            管理者メニュー
                           </Link>
                         </Button>
 
