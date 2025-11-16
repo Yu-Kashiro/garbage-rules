@@ -18,7 +18,7 @@ export async function createGarbageCategory(formData: GarbageCategoryFormData) {
 
   try {
     await db.insert(garbageCategories).values({ ...data });
-    revalidatePath("/admin/data/category");
+    revalidatePath("/admin/data/categories");
   } catch (error) {
     console.error("Failed to create garbage category:", error);
     throw new Error("ごみ分別区分の登録に失敗しました");
@@ -38,7 +38,7 @@ export async function updateGarbageCategory(
       .update(garbageCategories)
       .set({ ...data })
       .where(eq(garbageCategories.id, id));
-    revalidatePath("/admin/data/category");
+    revalidatePath("/admin/data/categories");
   } catch (error) {
     console.error("ごみ分別区分の更新に失敗しました。:", error);
     throw new Error("ごみ分別区分の更新に失敗しました");
@@ -50,7 +50,7 @@ export async function deleteGarbageCategory(id: number) {
   await verifySession();
   try {
     await db.delete(garbageCategories).where(eq(garbageCategories.id, id));
-    revalidatePath("/admin/data/category");
+    revalidatePath("/admin/data/categories");
   } catch (error) {
     console.error("ごみ分別区分の削除に失敗しました。:", error);
     throw new Error("ごみ分別区分の削除に失敗しました");
@@ -59,6 +59,8 @@ export async function deleteGarbageCategory(id: number) {
 
 // ごみ品目新規登録
 export async function createGarbageItem(data: GarbageItemFormSchema) {
+  await verifySession();
+
   try {
     await db.insert(garbageItems).values({
       name: data.name,
@@ -68,7 +70,7 @@ export async function createGarbageItem(data: GarbageItemFormSchema) {
       updatedAt: new Date(),
     });
 
-    revalidatePath("/admin/data");
+    revalidatePath("/admin/data/items");
   } catch (error) {
     console.error("Failed to create garbage item:", error);
     throw new Error("ごみ品目の登録に失敗しました");
@@ -76,5 +78,38 @@ export async function createGarbageItem(data: GarbageItemFormSchema) {
 }
 
 // ごみ品目修正
+export async function updateGarbageItem(
+  id: number,
+  data: GarbageItemFormSchema
+) {
+  await verifySession();
+
+  try {
+    await db
+      .update(garbageItems)
+      .set({
+        name: data.name,
+        garbageCategory: data.garbageCategory,
+        note: data.note || null,
+        updatedAt: new Date(),
+      })
+      .where(eq(garbageItems.id, id));
+    revalidatePath("/admin/data/items");
+  } catch (error) {
+    console.error("ごみ品目の更新に失敗しました。:", error);
+    throw new Error("ごみ品目の更新に失敗しました");
+  }
+}
 
 // ごみ品目削除
+export async function deleteGarbageItem(id: number) {
+  await verifySession();
+
+  try {
+    await db.delete(garbageItems).where(eq(garbageItems.id, id));
+    revalidatePath("/admin/data/items");
+  } catch (error) {
+    console.error("ごみ品目の削除に失敗しました。:", error);
+    throw new Error("ごみ品目の削除に失敗しました");
+  }
+}
