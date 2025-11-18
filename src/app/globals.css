@@ -50,7 +50,14 @@
   --height-title-section: 6rem; /* h1 + space-y-10 = 約96px */
   --height-input: 2.5rem; /* Input = 約40px */
   --height-extra-spacing: 2.5rem; /* 余白 = 40px */
-  --height-table-scroll: calc(100dvh - var(--height-header) - var(--height-footer) - var(--height-main-padding) - var(--height-title-section) - var(--height-input) - var(--height-extra-spacing));
+  --height-without-header: calc(
+    100dvh - var(--height-header)
+  ); /* ヘッダーの高さを除いた高さ */
+  --height-table-scroll: calc(
+    100dvh - var(--height-header) - var(--height-footer) -
+      var(--height-main-padding) - var(--height-title-section) -
+      var(--height-input) - var(--height-extra-spacing)
+  );
 }
 
 :root {
