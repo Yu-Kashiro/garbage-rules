@@ -8,22 +8,67 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { getCacheData, setCacheData } from "@/lib/cache-client";
 import { GarbageItemWithCategory } from "@/types/garbage";
 import { useQueryState } from "nuqs";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-export function GarbageItemsTable({
-  items,
-}: {
-  items: GarbageItemWithCategory[];
-}) {
+export function GarbageItemsTable() {
   const [search] = useQueryState("q", {
     defaultValue: "",
   });
+  const [items, setItems] = useState<GarbageItemWithCategory[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchGarbageItems = async () => {
+      const cacheUrl = "/api/garbage-items";
+
+      try {
+        // まずキャッシュからデータを取得
+        const cachedData = await getCacheData<GarbageItemWithCategory[]>(
+          cacheUrl
+        );
+
+        if (cachedData) {
+          // キャッシュにデータがあれば使用
+          setItems(cachedData);
+          setIsLoading(false);
+          return;
+        }
+
+        // キャッシュにデータがない場合はAPIからフェッチ
+        const response = await fetch(cacheUrl);
+        if (!response.ok) {
+          throw new Error("データの取得に失敗しました");
+        }
+
+        const data = await response.json();
+
+        // データをstateとキャッシュに保存
+        setItems(data);
+        await setCacheData(cacheUrl, data);
+      } catch (error) {
+        console.error("ごみ品目一覧の取得に失敗しました:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchGarbageItems();
+  }, []);
 
   const filteredGarbageItems = useMemo(() => {
     return items?.filter((garbageItem) => garbageItem.name.includes(search));
   }, [items, search]);
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center py-8">
+        <p className="text-muted-foreground">読み込み中...</p>
+      </div>
+    );
+  }
 
   return (
     <Table>

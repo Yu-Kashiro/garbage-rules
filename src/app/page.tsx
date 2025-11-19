@@ -1,11 +1,9 @@
 import { GarbageItemsTable } from "@/components/garbage-items-table";
 import { SearchForm } from "@/components/search-form";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { getGarbageItems } from "@/data/garbage";
 import { Suspense } from "react";
 
-export default async function GarbageRulesPage() {
-  const garbageItems = await getGarbageItems();
+export default function GarbageRulesPage() {
 
   return (
     <ScrollArea className="border rounded-md h-content">
@@ -17,7 +15,7 @@ export default async function GarbageRulesPage() {
 
           <Suspense>
             <SearchForm />
-            <GarbageItemsTable items={garbageItems} />
+            <GarbageItemsTable />
           </Suspense>
         </div>
       </main>
