@@ -22,12 +22,10 @@ export function GarbageItemsTable() {
 
   useEffect(() => {
     const fetchGarbageItems = async () => {
-      const cacheUrl = "/api/garbage-items";
-
       try {
         // まずキャッシュからデータを取得
         const cachedData = await getCacheData<GarbageItemWithCategory[]>(
-          cacheUrl
+          "/api/garbage-items"
         );
 
         if (cachedData) {
@@ -38,7 +36,7 @@ export function GarbageItemsTable() {
         }
 
         // キャッシュにデータがない場合はAPIからフェッチ
-        const response = await fetch(cacheUrl);
+        const response = await fetch("/api/garbage-items");
         if (!response.ok) {
           throw new Error("データの取得に失敗しました");
         }
@@ -47,7 +45,7 @@ export function GarbageItemsTable() {
 
         // データをstateとキャッシュに保存
         setItems(data);
-        await setCacheData(cacheUrl, data);
+        await setCacheData("/api/garbage-items", data);
       } catch (error) {
         console.error("ごみ品目一覧の取得に失敗しました:", error);
       } finally {
