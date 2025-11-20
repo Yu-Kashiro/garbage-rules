@@ -8,7 +8,7 @@ import {
   GarbageItemWithCategory,
 } from "@/types/garbage";
 import { eq } from "drizzle-orm";
-import { cacheLife } from "next/cache";
+import { cacheLife, cacheTag } from "next/cache";
 
 // カテゴリーの一覧取得
 export async function getGarbageCategories(): Promise<GarbageCategory[]> {
@@ -23,6 +23,7 @@ export async function getGarbageCategories(): Promise<GarbageCategory[]> {
 export async function getGarbageItems(): Promise<GarbageItemWithCategory[]> {
   "use cache";
   cacheLife("days");
+  cacheTag("garbage-items");
 
   const result = await db
     .select()
@@ -43,10 +44,11 @@ export async function getGarbageItems(): Promise<GarbageItemWithCategory[]> {
   }));
 }
 
-// ごみ品目一覧取得（管理画面用）
+// ごみ品目一覧取得(管理画面用)
 export async function getGarbageItemsWithId(): Promise<GarbageItem[]> {
   "use cache";
   cacheLife("days");
+  cacheTag("garbage-items-admin");
 
   const result = await db.select().from(garbageItems);
   return result;

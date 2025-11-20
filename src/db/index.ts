@@ -1,6 +1,7 @@
 import { drizzle } from "drizzle-orm/libsql/web";
 import * as garbageSchema from "./schemas/garbage";
 import * as authSchema from "./schemas/auth";
+import * as cacheSchema from "./schemas/cache";
 
 export const db = drizzle({
   connection: {
@@ -12,5 +13,6 @@ export const db = drizzle({
   schema: {
     ...authSchema,
     ...garbageSchema,
+    ...cacheSchema,
   },
 });

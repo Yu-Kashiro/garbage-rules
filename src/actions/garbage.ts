@@ -2,6 +2,7 @@
 
 import { db } from "@/db";
 import { garbageCategories, garbageItems } from "@/db/schemas/garbage";
+import { updateCacheVersion } from "@/lib/cache";
 import { verifySession } from "@/lib/session";
 import type {
   GarbageCategoryFormData,
@@ -9,7 +10,7 @@ import type {
 } from "@/types/garbage";
 import { garbageCategoryFormSchema } from "@/zod/garbage";
 import { eq } from "drizzle-orm";
-import { revalidatePath } from "next/cache";
+import { revalidatePath, updateTag } from "next/cache";
 
 // カテゴリー新規登録
 export async function createGarbageCategory(formData: GarbageCategoryFormData) {
@@ -19,6 +20,7 @@ export async function createGarbageCategory(formData: GarbageCategoryFormData) {
   try {
     await db.insert(garbageCategories).values({ ...data });
     revalidatePath("/admin/data/categories");
+    revalidatePath("/");
   } catch (error) {
     console.error("Failed to create garbage category:", error);
     throw new Error("ごみ分別区分の登録に失敗しました");
@@ -39,6 +41,7 @@ export async function updateGarbageCategory(
       .set({ ...data })
       .where(eq(garbageCategories.id, id));
     revalidatePath("/admin/data/categories");
+    revalidatePath("/");
   } catch (error) {
     console.error("ごみ分別区分の更新に失敗しました。:", error);
     throw new Error("ごみ分別区分の更新に失敗しました");
@@ -51,6 +54,7 @@ export async function deleteGarbageCategory(id: number) {
   try {
     await db.delete(garbageCategories).where(eq(garbageCategories.id, id));
     revalidatePath("/admin/data/categories");
+    revalidatePath("/");
   } catch (error) {
     console.error("ごみ分別区分の削除に失敗しました。:", error);
     throw new Error("ごみ分別区分の削除に失敗しました");
@@ -69,8 +73,9 @@ export async function createGarbageItem(data: GarbageItemFormSchema) {
       createdAt: new Date(),
       updatedAt: new Date(),
     });
-
-    revalidatePath("/admin/data/items");
+    updateCacheVersion();
+    updateTag("garbage-items");
+    updateTag("garbage-items-admin");
   } catch (error) {
     console.error("Failed to create garbage item:", error);
     throw new Error("ごみ品目の登録に失敗しました");
@@ -94,7 +99,9 @@ export async function updateGarbageItem(
         updatedAt: new Date(),
       })
       .where(eq(garbageItems.id, id));
-    revalidatePath("/admin/data/items");
+    updateCacheVersion();
+    updateTag("garbage-items");
+    updateTag("garbage-items-admin");
   } catch (error) {
     console.error("ごみ品目の更新に失敗しました。:", error);
     throw new Error("ごみ品目の更新に失敗しました");
@@ -107,7 +114,9 @@ export async function deleteGarbageItem(id: number) {
 
   try {
     await db.delete(garbageItems).where(eq(garbageItems.id, id));
-    revalidatePath("/admin/data/items");
+    updateCacheVersion();
+    updateTag("garbage-items");
+    updateTag("garbage-items-admin");
   } catch (error) {
     console.error("ごみ品目の削除に失敗しました。:", error);
     throw new Error("ごみ品目の削除に失敗しました");
