@@ -7,7 +7,23 @@ async function seedItems() {
   try {
     console.log("Starting to seed garbage items...");
 
-    await db.insert(garbageItems).values(garbageItemsData);
+    for (const item of garbageItemsData) {
+      await db
+        .insert(garbageItems)
+        .values(item)
+        .onConflictDoUpdate({
+          target: garbageItems.id,
+          set: {
+            name: item.name,
+            garbageCategory: item.garbageCategory,
+            note: item.note,
+            search: item.search,
+            updatedAt: new Date(),
+          },
+        });
+    }
+
+    console.log(`Successfully seeded ${garbageItemsData.length} garbage items`);
   } catch (error) {
     console.error("Error seeding items:", error);
     process.exit(1);
