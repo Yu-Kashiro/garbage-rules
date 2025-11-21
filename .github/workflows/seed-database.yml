@@ -1,7 +1,17 @@
 name: Seed Database
 
 on:
-  workflow_dispatch: # 手動実行を可能にする
+  workflow_dispatch:
+    inputs:
+      seed_type:
+        description: 'Seed type'
+        required: true
+        type: choice
+        options:
+          - 'both'
+          - 'categories'
+          - 'items'
+        default: 'both'
 
 jobs:
   seed:
@@ -26,12 +36,14 @@ jobs:
         run: pnpm install
 
       - name: Seed categories
+        if: ${{ github.event.inputs.seed_type == 'categories' || github.event.inputs.seed_type == 'both' }}
         env:
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
         run: pnpm run seed:categories
 
       - name: Seed items
+        if: ${{ github.event.inputs.seed_type == 'items' || github.event.inputs.seed_type == 'both' }}
         env:
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
