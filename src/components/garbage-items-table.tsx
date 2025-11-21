@@ -118,7 +118,7 @@ export function GarbageItemsTable() {
                       <Button
                         variant="ghost"
                         size="icon"
-                        className="h-8 w-8"
+                        className="h-auto w-auto p-0"
                         aria-label="備考を表示"
                       >
                         <Info className="h-4 w-4" />
@@ -127,7 +127,7 @@ export function GarbageItemsTable() {
                     <DialogContent>
                       <DialogHeader>
                         <DialogTitle>{garbageItem.name}</DialogTitle>
-                        <DialogDescription className="">
+                        <DialogDescription className="text-left whitespace-pre-wrap">
                           {garbageItem.note}
                         </DialogDescription>
                       </DialogHeader>
