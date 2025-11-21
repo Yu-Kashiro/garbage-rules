@@ -1,0 +1,1 @@
+ALTER TABLE `garbage_items` ADD `search` text;

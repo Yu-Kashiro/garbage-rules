@@ -57,6 +57,13 @@
       "when": 1763513893097,
       "tag": "0007_steep_king_bedlam",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1763704228131,
+      "tag": "0008_light_boom_boom",
+      "breakpoints": true
     }
   ]
 }
