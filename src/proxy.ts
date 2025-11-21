@@ -3,7 +3,7 @@ import { getSessionCookie } from "better-auth/cookies";
 
 const publicRoutes = ["/", "/login", "/signup" ];
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const sessionCookie = getSessionCookie(request);
   const isPrivateRoute = !publicRoutes.includes(request.nextUrl.pathname);
 
