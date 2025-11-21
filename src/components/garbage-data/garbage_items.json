@@ -3,4530 +3,5285 @@
     "id": 1,
     "name": "ＩＣレコーダ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "あいしーれこーだ"
   },
   {
     "id": 2,
     "name": "ＩＨ調理器",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "あいえいちちょうりき"
   },
   {
     "id": 3,
     "name": "アイスノン",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "あいすのん"
   },
   {
     "id": 4,
     "name": "アイスピック",
     "garbageCategory": 15,
-    "note": "とがった部分は厚紙やダンボールなどで包んでください"
+    "note": "とがった部分は厚紙やダンボールなどで包んでください",
+    "search": "あいすぴっく"
   },
   {
     "id": 5,
     "name": "アイロン",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "あいろん"
   },
   {
     "id": 6,
     "name": "アイロン台",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "あいろんだい"
   },
   {
     "id": 7,
     "name": "アクセサリー（金属製）",
     "garbageCategory": 15,
-    "note": "貝・骨製、プラスチック製のものは可燃ごみです"
+    "note": "貝・骨製、プラスチック製のものは可燃ごみです",
+    "search": "あくせさりー（きんぞくせい）"
   },
   {
     "id": 8,
     "name": "油（食用）",
     "garbageCategory": 2,
-    "note": "固化処理するか、紙や古布に染み込ませてください"
+    "note": "固化処理するか、紙や古布に染み込ませてください",
+    "search": "あぶら（しょくよう）"
   },
   {
     "id": 9,
     "name": "油で汚れた紙、布",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "あぶらでよごれたかみ、ぬの"
   },
   {
     "id": 10,
     "name": "油類（灯油・ガソリン・オイル類）",
     "garbageCategory": 4,
-    "note": "交換した所、販売店等に問い合わせてください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "交換した所、販売店等に問い合わせてください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "あぶらるい（とうゆ・がそりん・おいるるい）"
   },
   {
     "id": 11,
     "name": "雨樋（塩ビ製）",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "あめとい（しおびせい）"
   },
   {
     "id": 12,
     "name": "編み機",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "あみき"
   },
   {
     "id": 13,
     "name": "網戸（網）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "あみど（あみ）"
   },
   {
     "id": 14,
     "name": "網戸（金属枠）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "あみど（きんぞくわく）"
   },
   {
     "id": 15,
     "name": "アルバム（のり付き紙製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "あるばむ（のりつきしせい）"
   },
   {
     "id": 16,
     "name": "アルミガード（飛散防止）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "あるみがーど（ひさんぼうし）"
   },
   {
     "id": 17,
     "name": "アルミ缶（飲料缶）",
     "garbageCategory": 16,
-    "note": "中身を抜き、軽く水洗いしてください"
+    "note": "中身を抜き、軽く水洗いしてください",
+    "search": "あるみかん（いんりょうかん）"
   },
   {
     "id": 18,
     "name": "アルミシート",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "あるみしーと"
   },
   {
     "id": 19,
     "name": "アルミ箔、アルミホイル",
     "garbageCategory": 15,
-    "note": "汚れのひどいものは可燃ごみに出してください"
+    "note": "汚れのひどいものは可燃ごみに出してください",
+    "search": "あるみはく、あるみほいる"
   },
   {
     "id": 20,
     "name": "アンテナ",
     "garbageCategory": 11,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。業者が交換したものは収集できません。"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。業者が交換したものは収集できません。",
+    "search": "あんてな"
   },
   {
     "id": 21,
     "name": "衣装ケース（プラスチック製）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。金属製のものは資源物（金属類）に出してください。"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。金属製のものは資源物（金属類）に出してください。",
+    "search": "いしょうけーす（ぷらすちっくせい）"
   },
   {
     "id": 22,
     "name": "いす",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "いす"
   },
   {
     "id": 23,
     "name": "板ガラス",
     "garbageCategory": 5,
-    "note": "危なくないよう、箱などに入れ『ガラス危険』と表示してください"
+    "note": "危なくないよう、箱などに入れ『ガラス危険』と表示してください",
+    "search": "いたがらす"
   },
   {
     "id": 24,
     "name": "板切れ端",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです"
+    "note": "５０ｃｍを超えるものは破砕ごみです",
+    "search": "いたきれはし"
   },
   {
     "id": 25,
     "name": "一輪車（子供用・運動用）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "いちりんしゃ（こどもよう・うんどうよう）"
   },
   {
     "id": 26,
     "name": "一輪車（手押し運搬用）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "いちりんしゃ（ておしうんぱんよう）"
   },
   {
     "id": 27,
     "name": "一升びん",
     "garbageCategory": 7,
-    "note": "できるだけ販売店に返してください"
+    "note": "できるだけ販売店に返してください",
+    "search": "いちしょうびん"
   },
   {
     "id": 28,
     "name": "一斗缶",
     "garbageCategory": 15,
-    "note": "中身は使い切ってください"
+    "note": "中身は使い切ってください",
+    "search": "いちとかん"
   },
   {
     "id": 29,
     "name": "イヤホン",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "いやほん"
   },
   {
     "id": 30,
     "name": "衣類",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "いるい"
   },
   {
     "id": 31,
     "name": "衣類乾燥機",
     "garbageCategory": 4,
-    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf"
+    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf",
+    "search": "いるいかんそうき"
   },
   {
     "id": 32,
     "name": "入れ歯",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "いれば"
   },
   {
     "id": 33,
     "name": "印鑑",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "いんかん"
   },
   {
     "id": 34,
     "name": "インクカートリッジ（パソコン用）",
     "garbageCategory": 2,
-    "note": "販売店や地区市民センターの回収箱などもご利用ください"
+    "note": "販売店や地区市民センターの回収箱などもご利用ください",
+    "search": "いんくかーとりっじ（ぱそこんよう）"
   },
   {
     "id": 35,
     "name": "インクリボン（ワープロ用含む）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "いんくりぼん（わーぷろようふくむ）"
   },
   {
     "id": 36,
     "name": "印刷機（トナー含む）",
     "garbageCategory": 11,
-    "note": "事業活動で発生したものは収集・処理しません"
+    "note": "事業活動で発生したものは収集・処理しません",
+    "search": "いんさつき（となーふくむ）"
   },
   {
     "id": 37,
     "name": "飲料用紙パック（牛乳・ジュース）",
     "garbageCategory": 13,
-    "note": "開いて十字にひもでしばってください。内側が銀色のものは可燃ごみに出してください。"
+    "note": "開いて十字にひもでしばってください。内側が銀色のものは可燃ごみに出してください。",
+    "search": "いんりょうようしぱっく（ぎゅうにゅう・じゅーす）"
   },
   {
     "id": 38,
     "name": "植木鉢（プラスチック製）",
     "garbageCategory": 2,
-    "note": "土は取り除いてください"
+    "note": "土は取り除いてください",
+    "search": "うえきばち（ぷらすちっくせい）"
   },
   {
     "id": 39,
     "name": "植木鉢（素焼き）",
     "garbageCategory": 5,
-    "note": "土は取り除いてください"
+    "note": "土は取り除いてください",
+    "search": "うえきばち（すやき）"
   },
   {
     "id": 40,
     "name": "ウェットティッシュ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "うぇっとてぃっしゅ"
   },
   {
     "id": 41,
     "name": "ウォータサーバー",
     "garbageCategory": 3,
-    "note": "販売店などに引き取りを依頼するか、四日市市クリーンセンターへ持ち込んでください"
+    "note": "販売店などに引き取りを依頼するか、四日市市クリーンセンターへ持ち込んでください",
+    "search": "うぉーたさーばー"
   },
   {
     "id": 42,
     "name": "ウォータージャグ",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "うぉーたーじゃぐ"
   },
   {
     "id": 43,
     "name": "浮き輪",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "うきわ"
   },
   {
     "id": 44,
     "name": "うちわ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "うちわ"
   },
   {
     "id": 45,
     "name": "腕時計",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "うでどけい"
   },
   {
     "id": 46,
     "name": "乳母車",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "うばぐるま"
   },
   {
     "id": 47,
     "name": "羽毛布団",
     "garbageCategory": 5,
-    "note": "1ｍ以下になるよう小さくたたんで、ひもでしばってください"
+    "note": "1ｍ以下になるよう小さくたたんで、ひもでしばってください",
+    "search": "うもうふとん"
   },
   {
     "id": 48,
     "name": "エアークッション",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "えあーくっしょん"
   },
   {
     "id": 49,
     "name": "エアコン（家庭用）",
     "garbageCategory": 4,
-    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf"
+    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf",
+    "search": "えあこん（かていよう）"
   },
   {
     "id": 50,
     "name": "映写機",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "えいしゃき"
   },
   {
     "id": 51,
     "name": "液晶テレビ",
     "garbageCategory": 4,
-    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf"
+    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf",
+    "search": "えきしょうてれび"
   },
   {
     "id": 52,
     "name": "枝・葉類",
     "garbageCategory": 2,
-    "note": "週後半の収集日に出してください。多量の場合は四日市市クリーンセンターへ直接持ち込んでください。"
+    "note": "週後半の収集日に出してください。多量の場合は四日市市クリーンセンターへ直接持ち込んでください。",
+    "search": "えだ・はるい"
   },
   {
     "id": 53,
     "name": "枝きりばさみ",
     "garbageCategory": 15,
-    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください"
+    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください",
+    "search": "えだきりばさみ"
   },
   {
     "id": 54,
     "name": "絵の具のチューブ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "えのぐのちゅーぶ"
   },
   {
     "id": 55,
     "name": "絵の具のパレット",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "えのぐのぱれっと"
   },
   {
     "id": 56,
     "name": "絵筆",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "えふで"
   },
   {
     "id": 57,
     "name": "絵本",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "えほん"
   },
   {
     "id": 58,
     "name": "ＭＤ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "md"
   },
   {
     "id": 59,
     "name": "ＭＤプレイヤー（携帯型）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "mdぷれいやー（けいたいがた）"
   },
   {
     "id": 60,
     "name": "ＭＰ３プレイヤー",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "mpさんぷれいやー"
   },
   {
     "id": 61,
     "name": "LED電球",
     "garbageCategory": 14,
-    "note": null
+    "note": null,
+    "search": "ledでんきゅう"
   },
   {
     "id": 62,
     "name": "ＬＰＧボンベ類",
     "garbageCategory": 4,
-    "note": "販売店等に引き取りを依頼してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "販売店等に引き取りを依頼してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "lpgぼんべるい"
   },
   {
     "id": 63,
     "name": "エレクトーン",
     "garbageCategory": 3,
-    "note": "販売店等に引き取りを依頼するか、四日市市クリーンセンターへ持ち込んでください"
+    "note": "販売店等に引き取りを依頼するか、四日市市クリーンセンターへ持ち込んでください",
+    "search": "えれくとーん"
   },
   {
     "id": 64,
     "name": "園芸用支柱",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは破砕ごみです"
+    "note": "プラスチック製のものは破砕ごみです",
+    "search": "えんげいようしちゅう"
   },
   {
     "id": 65,
     "name": "エンジンオイル",
     "garbageCategory": 4,
-    "note": "交換した所、販売店等に問い合わせてください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "交換した所、販売店等に問い合わせてください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "えんじんおいる"
   },
   {
     "id": 66,
     "name": "延長コード",
     "garbageCategory": 15,
-    "note": "まとめてしばってください。テーブルタップなどは外さなくて結構です。"
+    "note": "まとめてしばってください。テーブルタップなどは外さなくて結構です。",
+    "search": "えんちょうこーど"
   },
   {
     "id": 67,
     "name": "鉛筆、鉛筆の削りかす",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "えんぴつ、えんぴつのけずりかす"
   },
   {
     "id": 68,
     "name": "鉛筆削り器（手動）",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "えんぴつけずりき（しゅどう）"
   },
   {
     "id": 69,
     "name": "鉛筆削り器（電動）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "えんぴつけずりき（でんどう）"
   },
   {
     "id": 70,
     "name": "オーディオラック",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "おーでぃおらっく"
   },
   {
     "id": 71,
     "name": "オートバイ（原付自転車含む）",
     "garbageCategory": 4,
-    "note": "廃棄二輪車取扱店等に引き取りを依頼してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "廃棄二輪車取扱店等に引き取りを依頼してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "おーとばい（げんつきじてんしゃふくむ）"
   },
   {
     "id": 72,
     "name": "オートバイのバッテリー（原付自転車用を含む）",
     "garbageCategory": 10,
-    "note": null
+    "note": null,
+    "search": "おーとばいのばってりー（げんつきじてんしゃようをふくむ）"
   },
   {
     "id": 73,
     "name": "オーブントースター",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "おーぶんとーすたー"
   },
   {
     "id": 74,
     "name": "オーブンレンジ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "おーぶんれんじ"
   },
   {
     "id": 75,
     "name": "オイルヒーター",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "おいるひーたー"
   },
   {
     "id": 76,
     "name": "王冠",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "おうかん"
   },
   {
     "id": 77,
     "name": "桶",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "おけ"
   },
   {
     "id": 78,
     "name": "おしりふき",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "おしりふき"
   },
   {
     "id": 79,
     "name": "お玉（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものや木製のものは可燃ごみです"
+    "note": "プラスチック製のものや木製のものは可燃ごみです",
+    "search": "おたま（きんぞくせい）"
   },
   {
     "id": 80,
     "name": "お茶の缶",
     "garbageCategory": 15,
-    "note": "中身を使い切ってください。プラスチック製の中ぶたは可燃ごみに出してください。"
+    "note": "中身を使い切ってください。プラスチック製の中ぶたは可燃ごみに出してください。",
+    "search": "おちゃのかん"
   },
   {
     "id": 81,
     "name": "おねしょシーツ（ペット用含む）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "おねしょしーつ（ぺっとようふくむ）"
   },
   {
     "id": 82,
     "name": "斧【おの】",
     "garbageCategory": 15,
-    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください"
+    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください",
+    "search": "おの【おの】"
   },
   {
     "id": 83,
     "name": "折り畳みベット",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "おりたたみべっと"
   },
   {
     "id": 84,
     "name": "おまる（プラスチック製）",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "おまる（ぷらすちっくせい）"
   },
   {
     "id": 85,
     "name": "おむつ",
     "garbageCategory": 2,
-    "note": "汚物はトイレに流してください"
+    "note": "汚物はトイレに流してください",
+    "search": "おむつ"
   },
   {
     "id": 86,
     "name": "おむつカバー",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "おむつかばー"
   },
   {
     "id": 87,
     "name": "おもちゃ（プラスチック製）",
     "garbageCategory": 2,
-    "note": "電動のものは電池を抜いて資源物（小型家電）に出してください"
+    "note": "電動のものは電池を抜いて資源物（小型家電）に出してください",
+    "search": "おもちゃ（ぷらすちっくせい）"
   },
   {
     "id": 88,
     "name": "おもり（釣具）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "おもり（つりぐ）"
   },
   {
     "id": 89,
     "name": "オルガン",
     "garbageCategory": 3,
-    "note": "販売店等に引き取りを依頼するか、四日市市クリーンセンターへ持ち込んでください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "販売店等に引き取りを依頼するか、四日市市クリーンセンターへ持ち込んでください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "おるがん"
   },
   {
     "id": 90,
     "name": "おろしがね（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです。陶磁器製のものは破砕ごみです。"
+    "note": "プラスチック製のものは可燃ごみです。陶磁器製のものは破砕ごみです。",
+    "search": "おろしがね（きんぞくせい）"
   },
   {
     "id": 91,
     "name": "音楽プレーヤー（携帯型）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "おんがくぷれーやー（けいたいがた）"
   },
   {
     "id": 92,
     "name": "温度計",
     "garbageCategory": 5,
-    "note": "水銀計は資源物（乾電池・水銀体温計）です"
+    "note": "水銀計は資源物（乾電池・水銀体温計）です",
+    "search": "おんどけい"
   },
   {
     "id": 93,
     "name": "温風器",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "ゆたかふうき"
   },
   {
     "id": 94,
     "name": "ガーゼ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "がーぜ"
   },
   {
     "id": 95,
     "name": "カーテン（レース含む）",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "かーてん（れーすふくむ）"
   },
   {
     "id": 96,
     "name": "カーテンレール",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "かーてんれーる"
   },
   {
     "id": 97,
     "name": "カーペット",
     "garbageCategory": 5,
-    "note": "十字にしばって出してください"
+    "note": "十字にしばって出してください",
+    "search": "かーぺっと"
   },
   {
     "id": 98,
     "name": "カーボン紙",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かーぼんし"
   },
   {
     "id": 99,
     "name": "カーボンヒーター",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "かーぼんひーたー"
   },
   {
     "id": 100,
     "name": "貝殻",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かいがら"
   },
   {
     "id": 101,
     "name": "懐中電灯",
     "garbageCategory": 11,
-    "note": "電池は抜いてください"
+    "note": "電池は抜いてください",
+    "search": "かいちゅうでんとう"
   },
   {
     "id": 102,
     "name": "買い物袋",
     "garbageCategory": 2,
-    "note": "全体が布製のものは資源物（布・衣類）です。紙製のものは資源物（雑誌・雑紙）に出してください。"
+    "note": "全体が布製のものは資源物（布・衣類）です。紙製のものは資源物（雑誌・雑紙）に出してください。",
+    "search": "かいものぶくろ"
   },
   {
     "id": 103,
     "name": "カイロ（使い捨て）",
     "garbageCategory": 2,
-    "note": "一度反応させ、熱が冷めてから出してください"
+    "note": "一度反応させ、熱が冷めてから出してください",
+    "search": "かいろ（つかいすて）"
   },
   {
     "id": 104,
     "name": "鏡",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "かがみ"
   },
   {
     "id": 105,
     "name": "鍵",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "かぎ"
   },
   {
     "id": 106,
     "name": "額縁（木製）",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです。金属製のものは資源物（金属類）に出してください。"
+    "note": "５０ｃｍを超えるものは破砕ごみです。金属製のものは資源物（金属類）に出してください。",
+    "search": "がくぶち（もくせい）"
   },
   {
     "id": 107,
     "name": "傘",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "かさ"
   },
   {
     "id": 108,
     "name": "加湿器",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "かしつき"
   },
   {
     "id": 109,
     "name": "菓子の缶",
     "garbageCategory": 15,
-    "note": "中をからにしてください"
+    "note": "中をからにしてください",
+    "search": "かしのかん"
   },
   {
     "id": 110,
     "name": "菓子箱",
     "garbageCategory": 13,
-    "note": "開いて十字にひもでしばってください"
+    "note": "開いて十字にひもでしばってください",
+    "search": "かしばこ"
   },
   {
     "id": 111,
     "name": "菓子袋（ビニール加工製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かしぶくろ（びにーるかこうせい）"
   },
   {
     "id": 112,
     "name": "ガス炊飯器",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "がすすいはんき"
   },
   {
     "id": 113,
     "name": "ガスストーブ",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "がすすとーぶ"
   },
   {
     "id": 114,
     "name": "ガステーブル（ガスコンロ）",
     "garbageCategory": 15,
-    "note": "電池は抜いてください"
+    "note": "電池は抜いてください",
+    "search": "がすてーぶる（がすこんろ）"
   },
   {
     "id": 115,
     "name": "ガスレンジ",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "がすれんじ"
   },
   {
     "id": 116,
     "name": "ガスファンヒーター",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "がすふぁんひーたー"
   },
   {
     "id": 117,
     "name": "ガスマット（レンジカバー）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "がすまっと（れんじかばー）"
   },
   {
     "id": 118,
     "name": "カセットテープ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かせっとてーぷ"
   },
   {
     "id": 119,
     "name": "カセットデッキ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "かせっとでっき"
   },
   {
     "id": 120,
     "name": "カセットフィルム",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かせっとふぃるむ"
   },
   {
     "id": 121,
     "name": "カセットボンベ（卓上用）",
     "garbageCategory": 8,
-    "note": "中身は使い切ってください"
+    "note": "中身は使い切ってください",
+    "search": "かせっとぼんべ（たくじょうよう）"
   },
   {
     "id": 122,
     "name": "カタログ",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "かたろぐ"
   },
   {
     "id": 123,
     "name": "カッターナイフ",
     "garbageCategory": 15,
-    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください"
+    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください",
+    "search": "かったーないふ"
   },
   {
     "id": 124,
     "name": "カッターの刃",
     "garbageCategory": 15,
-    "note": "ふた付きの缶に入れてください"
+    "note": "ふた付きの缶に入れてください",
+    "search": "かったーのは"
   },
   {
     "id": 125,
     "name": "カット綿",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かっとめん"
   },
   {
     "id": 126,
     "name": "合羽【かっぱ】",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かっぱ【かっぱ】"
   },
   {
     "id": 127,
     "name": "カップラーメン容器、上ぶた",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かっぷらーめんようき、うえぶた"
   },
   {
     "id": 128,
     "name": "かつら",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かつら"
   },
   {
     "id": 129,
     "name": "蚊取りマット",
     "garbageCategory": 11,
-    "note": "マットは可燃ごみです"
+    "note": "マットは可燃ごみです",
+    "search": "かとりまっと"
   },
   {
     "id": 130,
     "name": "金網",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "かなあみ"
   },
   {
     "id": 131,
     "name": "かなづち",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "かなづち"
   },
   {
     "id": 132,
     "name": "かばん",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです"
+    "note": "５０ｃｍを超えるものは破砕ごみです",
+    "search": "かばん"
   },
   {
     "id": 133,
     "name": "画板（木製）",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです"
+    "note": "５０ｃｍを超えるものは破砕ごみです",
+    "search": "がばん（もくせい）"
   },
   {
     "id": 134,
     "name": "画鋲",
     "garbageCategory": 15,
-    "note": "ふた付きの缶に入れてください"
+    "note": "ふた付きの缶に入れてください",
+    "search": "がびょう"
   },
   {
     "id": 135,
     "name": "花瓶（ガラス製、陶磁器製）",
     "garbageCategory": 5,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "かびん（がらすせい、とうじきせい）"
   },
   {
     "id": 136,
     "name": "鎌【かま】",
     "garbageCategory": 15,
-    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください"
+    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください",
+    "search": "かま【かま】"
   },
   {
     "id": 137,
     "name": "紙くず",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かみくず"
   },
   {
     "id": 138,
     "name": "紙コップ・紙皿",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かみこっぷ・しさら"
   },
   {
     "id": 139,
     "name": "かみそり（金属製）",
     "garbageCategory": 15,
-    "note": "ふた付きの缶に入れてください"
+    "note": "ふた付きの缶に入れてください",
+    "search": "かみそり（きんぞくせい）"
   },
   {
     "id": 140,
     "name": "紙粘土",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かみねんど"
   },
   {
     "id": 141,
     "name": "髪の毛",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かみのけ"
   },
   {
     "id": 142,
     "name": "紙パック（掃除機用）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かみぱっく（そうじきよう）"
   },
   {
     "id": 143,
     "name": "紙ひも",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かみひも"
   },
   {
     "id": 144,
     "name": "紙袋",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "かみぶくろ"
   },
   {
     "id": 145,
     "name": "ガムテープ（紙・布製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "がむてーぷ（かみ・ぬのせい）"
   },
   {
     "id": 146,
     "name": "カメラ",
     "garbageCategory": 11,
-    "note": "電池は抜いてください"
+    "note": "電池は抜いてください",
+    "search": "かめら"
   },
   {
     "id": 147,
     "name": "カメラのフィルム",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かめらのふぃるむ"
   },
   {
     "id": 148,
     "name": "蚊帳（麻・木綿製）",
     "garbageCategory": 2,
-    "note": "５０ｃｍ以下にして、ひもでしばるか、指定袋に入れてください"
+    "note": "５０ｃｍ以下にして、ひもでしばるか、指定袋に入れてください",
+    "search": "かや（あさ・もめんせい）"
   },
   {
     "id": 149,
     "name": "画用紙",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "がようし"
   },
   {
     "id": 150,
     "name": "カラーボックス（木製）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "からーぼっくす（もくせい）"
   },
   {
     "id": 151,
     "name": "ガラス食器",
     "garbageCategory": 5,
-    "note": "割れたものは箱などに入れ、『ガラス危険』と表示してください"
+    "note": "割れたものは箱などに入れ、『ガラス危険』と表示してください",
+    "search": "がらすしょっき"
   },
   {
     "id": 152,
     "name": "ガラス調度品",
     "garbageCategory": 5,
-    "note": "割れたものは箱などに入れ、『ガラス危険』と表示してください"
+    "note": "割れたものは箱などに入れ、『ガラス危険』と表示してください",
+    "search": "がらすちょうどひん"
   },
   {
     "id": 153,
     "name": "ガラス戸（木枠）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。金属製枠のものは資源物（金属類）に出してください。"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。金属製枠のものは資源物（金属類）に出してください。",
+    "search": "がらすと（きわく）"
   },
   {
     "id": 154,
     "name": "ガラスの破片",
     "garbageCategory": 5,
-    "note": "危なくないよう箱などに入れ、『ガラス危険』と表示してください"
+    "note": "危なくないよう箱などに入れ、『ガラス危険』と表示してください",
+    "search": "がらすのはへん"
   },
   {
     "id": 155,
     "name": "カレンダー",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "かれんだー"
   },
   {
     "id": 156,
     "name": "カレンダーのとじ部分（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "かれんだーのとじぶぶん（きんぞくせい）"
   },
   {
     "id": 157,
     "name": "革靴",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かわぐつ"
   },
   {
     "id": 158,
     "name": "革ジャンパー",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "かわじゃんぱー"
   },
   {
     "id": 159,
     "name": "革製品（衣類以外）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かわせいひん（いるいいがい）"
   },
   {
     "id": 160,
     "name": "缶（飲料缶）",
     "garbageCategory": 16,
-    "note": "中身を抜き、軽く水洗いしてください"
+    "note": "中身を抜き、軽く水洗いしてください",
+    "search": "かん（いんりょうかん）"
   },
   {
     "id": 161,
     "name": "缶（飲料缶以外）",
     "garbageCategory": 15,
-    "note": "中身を使い切り、軽く水洗いしてください"
+    "note": "中身を使い切り、軽く水洗いしてください",
+    "search": "かん（いんりょうかんいがい）"
   },
   {
     "id": 162,
     "name": "缶（スプレー缶）",
     "garbageCategory": 8,
-    "note": "中身を使い切ってください"
+    "note": "中身を使い切ってください",
+    "search": "かん（すぷれーかん）"
   },
   {
     "id": 163,
     "name": "缶（一斗缶）",
     "garbageCategory": 15,
-    "note": "中身を使い切ってください"
+    "note": "中身を使い切ってください",
+    "search": "かん（いちとかん）"
   },
   {
     "id": 164,
     "name": "換気扇",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "かんきせん"
   },
   {
     "id": 165,
     "name": "缶切、缶切器（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "かんせつ、かんせつき（きんぞくせい）"
   },
   {
     "id": 166,
     "name": "感光紙（青焼）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かんこうし（あおしょう）"
   },
   {
     "id": 167,
     "name": "乾燥剤",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かんそうざい"
   },
   {
     "id": 168,
     "name": "乾電池",
     "garbageCategory": 10,
-    "note": "透明または半透明の袋に入れて「乾電池・水銀体温計」と表示してください"
+    "note": "透明または半透明の袋に入れて「乾電池・水銀体温計」と表示してください",
+    "search": "かんでんち"
   },
   {
     "id": 169,
     "name": "感熱紙",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "かんねつし"
   },
   {
     "id": 170,
     "name": "キーボード（楽器）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "きーぼーど（がっき）"
   },
   {
     "id": 171,
     "name": "キーボード（パソコンの入力機器）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "きーぼーど（ぱそこんのにゅうりょくきき）"
   },
   {
     "id": 172,
     "name": "木くず",
     "garbageCategory": 2,
-    "note": "太さ５ｃｍ以下のものは、長さ５０ｃｍ以下にして週後半の収集日に出してください。太さ５ｃｍを超えるもの(２０ｃｍ以下)は長さ１ｍ以下にして破砕ごみに出してください。多量の場合は四日市市クリーンセンターへ直接持ち込んでください。"
+    "note": "太さ５ｃｍ以下のものは、長さ５０ｃｍ以下にして週後半の収集日に出してください。太さ５ｃｍを超えるもの(２０ｃｍ以下)は長さ１ｍ以下にして破砕ごみに出してください。多量の場合は四日市市クリーンセンターへ直接持ち込んでください。",
+    "search": "きくず"
   },
   {
     "id": 173,
     "name": "ギター",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ぎたー"
   },
   {
     "id": 174,
     "name": "木槌【きづち】",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです"
+    "note": "５０ｃｍを超えるものは破砕ごみです",
+    "search": "きつち【きづち】"
   },
   {
     "id": 175,
     "name": "キッチンマット",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "きっちんまっと"
   },
   {
     "id": 176,
     "name": "着物・着物の帯",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "きもの・きもののおび"
   },
   {
     "id": 177,
     "name": "脚立（金属製）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "きゃたつ（きんぞくせい）"
   },
   {
     "id": 178,
     "name": "キャビネット（金属製）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "きゃびねっと（きんぞくせい）"
   },
   {
     "id": 179,
     "name": "キャンプ用テーブル（アルミ製）",
     "garbageCategory": 15,
-    "note": "折りたたみができないものは、粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "折りたたみができないものは、粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "きゃんぷようてーぶる（あるみせい）"
   },
   {
     "id": 180,
     "name": "急須（陶磁器製）",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "きゅうす（とうじきせい）"
   },
   {
     "id": 181,
     "name": "牛乳パック",
     "garbageCategory": 13,
-    "note": "開いて十字にひもでしばってください。内側が銀色のものは可燃ごみに出してください。"
+    "note": "開いて十字にひもでしばってください。内側が銀色のものは可燃ごみに出してください。",
+    "search": "ぎゅうにゅうぱっく"
   },
   {
     "id": 182,
     "name": "牛乳びん",
     "garbageCategory": 7,
-    "note": "できるだけ販売店に返してください"
+    "note": "できるだけ販売店に返してください",
+    "search": "ぎゅうにゅうびん"
   },
   {
     "id": 183,
     "name": "吸盤",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "きゅうばん"
   },
   {
     "id": 184,
     "name": "強化ガラス",
     "garbageCategory": 5,
-    "note": "割れたものは箱などに入れ、『ガラス危険』と表示してください"
+    "note": "割れたものは箱などに入れ、『ガラス危険』と表示してください",
+    "search": "きょうかがらす"
   },
   {
     "id": 185,
     "name": "鏡台（ドレッサー）",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "きょうだい（どれっさー）"
   },
   {
     "id": 186,
     "name": "きり",
     "garbageCategory": 15,
-    "note": "とがった部分を厚紙やダンボールなどで包んでください"
+    "note": "とがった部分を厚紙やダンボールなどで包んでください",
+    "search": "きり"
   },
   {
     "id": 187,
     "name": "金魚鉢",
     "garbageCategory": 5,
-    "note": "割れたものは箱などに入れ、『ガラス危険』と表示してください"
+    "note": "割れたものは箱などに入れ、『ガラス危険』と表示してください",
+    "search": "きんぎょばち"
   },
   {
     "id": 188,
     "name": "金庫",
     "garbageCategory": 3,
-    "note": "四日市市クリーンセンターへ持ち込んでください。手提げ用の金庫は資源物（金属）に出してください。ttps://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "四日市市クリーンセンターへ持ち込んでください。手提げ用の金庫は資源物（金属）に出してください。ttps://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "きんこ"
   },
   {
     "id": 189,
     "name": "金属キャップ（ふた）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "きんぞくきゃっぷ（ふた）"
   },
   {
     "id": 190,
     "name": "クーハン（籐製）",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです"
+    "note": "５０ｃｍを超えるものは破砕ごみです",
+    "search": "くーはん（とうせい）"
   },
   {
     "id": 191,
     "name": "クーラー（エアコン）",
     "garbageCategory": 4,
-    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf"
+    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf",
+    "search": "くーらー（えあこん）"
   },
   {
     "id": 192,
     "name": "クーラーボックス",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "くーらーぼっくす"
   },
   {
     "id": 193,
     "name": "空気入れ（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のもの、ホース部分は可燃ごみです"
+    "note": "プラスチック製のもの、ホース部分は可燃ごみです",
+    "search": "くうきいれ（きんぞくせい）"
   },
   {
     "id": 194,
     "name": "空気清浄機",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "くうきせいじょうき"
   },
   {
     "id": 195,
     "name": "釘",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "くぎ"
   },
   {
     "id": 196,
     "name": "草・花",
     "garbageCategory": 2,
-    "note": "週後半の収集日に出してください。多量の場合は四日市市クリーンセンターへ直接持ち込んでください。"
+    "note": "週後半の収集日に出してください。多量の場合は四日市市クリーンセンターへ直接持ち込んでください。",
+    "search": "くさ・はな"
   },
   {
     "id": 197,
     "name": "草刈り機（家庭用）",
     "garbageCategory": 15,
-    "note": "刃の部分は外し、厚紙やダンボールなどで包み、『刃物危険』と表示してください。１ｍを超えるものは原形のままでは集積場に出せません。電動のものは資源物（小型家電）に出してください。燃料は必ず抜いてください。"
+    "note": "刃の部分は外し、厚紙やダンボールなどで包み、『刃物危険』と表示してください。１ｍを超えるものは原形のままでは集積場に出せません。電動のものは資源物（小型家電）に出してください。燃料は必ず抜いてください。",
+    "search": "くさかりき（かていよう）"
   },
   {
     "id": 198,
     "name": "鎖（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "くさり（きんぞくせい）"
   },
   {
     "id": 199,
     "name": "櫛（木・竹製）",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "くし（き・たけせい）"
   },
   {
     "id": 200,
     "name": "串（木・竹製）",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です。先端は折ってください。"
+    "note": "金属製のものは資源物（金属類）です。先端は折ってください。",
+    "search": "くし（き・たけせい）"
   },
   {
     "id": 201,
     "name": "薬（液体のものを除く）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "くすり（えきたいのものをのぞく）"
   },
   {
     "id": 202,
     "name": "くだもの、くだものの皮",
     "garbageCategory": 2,
-    "note": "水分をよく切ってください"
+    "note": "水分をよく切ってください",
+    "search": "くだもの、くだもののかわ"
   },
   {
     "id": 203,
     "name": "果物などを入れたネット",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "くだものなどをいれたねっと"
   },
   {
     "id": 204,
     "name": "口紅のケース",
     "garbageCategory": 2,
-    "note": "中身は使い切ってください"
+    "note": "中身は使い切ってください",
+    "search": "くちべにのけーす"
   },
   {
     "id": 205,
     "name": "靴",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "くつ"
   },
   {
     "id": 206,
     "name": "クッキングペーパー",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "くっきんぐぺーぱー"
   },
   {
     "id": 207,
     "name": "くつ下",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "くつした"
   },
   {
     "id": 208,
     "name": "クッション",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです"
+    "note": "５０ｃｍを超えるものは破砕ごみです",
+    "search": "くっしょん"
   },
   {
     "id": 209,
     "name": "首輪",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "くびわ"
   },
   {
     "id": 210,
     "name": "クリーニング仕上げ袋",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "くりーにんぐしあげぶくろ"
   },
   {
     "id": 211,
     "name": "クリスマスツリー",
     "garbageCategory": 2,
-    "note": "電飾は資源物（小型家電）です"
+    "note": "電飾は資源物（小型家電）です",
+    "search": "くりすますつりー"
   },
   {
     "id": 212,
     "name": "クリスマスツリーの装飾品",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "くりすますつりーのそうしょくひん"
   },
   {
     "id": 213,
     "name": "クリップ（金属製）",
     "garbageCategory": 15,
-    "note": "ふた付きの缶に入れてください。プラスチック製のものは可燃ごみです。"
+    "note": "ふた付きの缶に入れてください。プラスチック製のものは可燃ごみです。",
+    "search": "くりっぷ（きんぞくせい）"
   },
   {
     "id": 214,
     "name": "車椅子",
     "garbageCategory": 15,
-    "note": "電動式のものは取扱店等に問い合わせてください"
+    "note": "電動式のものは取扱店等に問い合わせてください",
+    "search": "くるまいす"
   },
   {
     "id": 215,
     "name": "クレヨン",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "くれよん"
   },
   {
     "id": 216,
     "name": "グローブ（革製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぐろーぶ（かわせい）"
   },
   {
     "id": 217,
     "name": "グローランプ",
     "garbageCategory": 14,
-    "note": null
+    "note": null,
+    "search": "ぐろーらんぷ"
   },
   {
     "id": 218,
     "name": "鍬【くわ】",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "くわ【くわ】"
   },
   {
     "id": 219,
     "name": "軍手（布製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぐんて（ぬのせい）"
   },
   {
     "id": 220,
     "name": "ゲーム機",
     "garbageCategory": 11,
-    "note": "電池は抜いてください"
+    "note": "電池は抜いてください",
+    "search": "げーむき"
   },
   {
     "id": 221,
     "name": "ゲームソフト",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "げーむそふと"
   },
   {
     "id": 222,
     "name": "蛍光管",
     "garbageCategory": 14,
-    "note": "LEDを含みます。割れないように保護カバーなどに入れてください。"
+    "note": "LEDを含みます。割れないように保護カバーなどに入れてください。",
+    "search": "けいこうかん"
   },
   {
     "id": 223,
     "name": "珪藻土バスマット",
     "garbageCategory": 5,
-    "note": "集積場に出す場合は袋を二重にするなど必ず養生してください"
+    "note": "集積場に出す場合は袋を二重にするなど必ず養生してください",
+    "search": "けいそうどばすまっと"
   },
   {
     "id": 224,
     "name": "携帯電話",
     "garbageCategory": 11,
-    "note": "個人情報など削除したうえで出してください。販売店が行っているモバイルリサイクルもご活用ください。"
+    "note": "個人情報など削除したうえで出してください。販売店が行っているモバイルリサイクルもご活用ください。",
+    "search": "けいたいでんわ"
   },
   {
     "id": 225,
     "name": "毛糸",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "けいと"
   },
   {
     "id": 226,
     "name": "消しゴム",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "けしごむ"
   },
   {
     "id": 227,
     "name": "化粧品の容器（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "けしょうひんのようき（きんぞくせい）"
   },
   {
     "id": 228,
     "name": "化粧品のびん",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "けしょうひんのびん"
   },
   {
     "id": 229,
     "name": "下駄",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "げた"
   },
   {
     "id": 230,
     "name": "下駄箱",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "げたばこ"
   },
   {
     "id": 231,
     "name": "血圧計",
     "garbageCategory": 11,
-    "note": "水銀血圧計は集積場には出せませんので、環境事業課にご相談ください"
+    "note": "水銀血圧計は集積場には出せませんので、環境事業課にご相談ください",
+    "search": "けつあつけい"
   },
   {
     "id": 232,
     "name": "玄関泥落としマット（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "げんかんどろおとしまっと（きんぞくせい）"
   },
   {
     "id": 233,
     "name": "玄関マット（化学繊維）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "げんかんまっと（かがくせんい）"
   },
   {
     "id": 234,
     "name": "剣山",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "けんざん"
   },
   {
     "id": 235,
     "name": "原付自転車",
     "garbageCategory": 4,
-    "note": "廃棄二輪車取扱店等に引き取りを依頼してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "廃棄二輪車取扱店等に引き取りを依頼してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "げんつきじてんしゃ"
   },
   {
     "id": 236,
     "name": "顕微鏡",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "けんびきょう"
   },
   {
     "id": 237,
     "name": "ゴーグル",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ごーぐる"
   },
   {
     "id": 238,
     "name": "コーヒーメーカー",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "こーひーめーかー"
   },
   {
     "id": 239,
     "name": "碁石",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ごいし"
   },
   {
     "id": 240,
     "name": "光学ドライブ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "こうがくどらいぶ"
   },
   {
     "id": 241,
     "name": "工具類（金属製）",
     "garbageCategory": 15,
-    "note": "事業活動で発生したものは収集しません"
+    "note": "事業活動で発生したものは収集しません",
+    "search": "こうぐるい（きんぞくせい）"
   },
   {
     "id": 242,
     "name": "氷かき器",
     "garbageCategory": 2,
-    "note": "電動のものは資源物（小型家電）です"
+    "note": "電動のものは資源物（小型家電）です",
+    "search": "こおりかきき"
   },
   {
     "id": 243,
     "name": "氷枕",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "こおりまくら"
   },
   {
     "id": 244,
     "name": "黒板",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。５０ｃｍ以下に壊せば、可燃ごみに出すことができます。"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。５０ｃｍ以下に壊せば、可燃ごみに出すことができます。",
+    "search": "こくばん"
   },
   {
     "id": 245,
     "name": "ござ（室内用）",
     "garbageCategory": 5,
-    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください"
+    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください",
+    "search": "ござ（しつないよう）"
   },
   {
     "id": 246,
     "name": "こたつ（ホームこたつ）",
     "garbageCategory": 11,
-    "note": "脚は外してください。天板は破砕ごみです。１ｍを超えるものは原形のままでは集積場に出せません。"
+    "note": "脚は外してください。天板は破砕ごみです。１ｍを超えるものは原形のままでは集積場に出せません。",
+    "search": "こたつ（ほーむこたつ）"
   },
   {
     "id": 247,
     "name": "こたつ掛けぶとん",
     "garbageCategory": 5,
-    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください"
+    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください",
+    "search": "こたつかけぶとん"
   },
   {
     "id": 248,
     "name": "こたつ掛け毛布",
     "garbageCategory": 12,
-    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください"
+    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください",
+    "search": "こたつかけもうふ"
   },
   {
     "id": 249,
     "name": "コップ（ガラス製）",
     "garbageCategory": 5,
-    "note": "ガラス製以外のものは可燃ごみです"
+    "note": "ガラス製以外のものは可燃ごみです",
+    "search": "こっぷ（がらすせい）"
   },
   {
     "id": 250,
     "name": "粉薬の包装パック（ビニール加工紙）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "こぐすりのほうそうぱっく（びにーるかこうし）"
   },
   {
     "id": 251,
     "name": "ごみ箱（プラスチック製）",
     "garbageCategory": 5,
-    "note": "５０ｃｍ以下のものは可燃ごみです。金属製のものは資源物（金属類）に出してください。"
+    "note": "５０ｃｍ以下のものは可燃ごみです。金属製のものは資源物（金属類）に出してください。",
+    "search": "ごみばこ（ぷらすちっくせい）"
   },
   {
     "id": 252,
     "name": "ゴム製品",
     "garbageCategory": 2,
-    "note": "タイヤは収集・処理しません"
+    "note": "タイヤは収集・処理しません",
+    "search": "ごむせいひん"
   },
   {
     "id": 253,
     "name": "米びつ（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは破砕ごみです。"
+    "note": "プラスチック製のものは破砕ごみです。",
+    "search": "こめびつ（きんぞくせい）"
   },
   {
     "id": 254,
     "name": "コルク",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "こるく"
   },
   {
     "id": 255,
     "name": "ゴルフクラブ",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "ごるふくらぶ"
   },
   {
     "id": 256,
     "name": "ゴルフバッグ",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ごるふばっぐ"
   },
   {
     "id": 257,
     "name": "コンクリート類",
     "garbageCategory": 5,
-    "note": "土のう袋に入れて片手で持てる量を２袋程度ずつ出してください。業者が解体したものは収集・処理できません。"
+    "note": "土のう袋に入れて片手で持てる量を２袋程度ずつ出してください。業者が解体したものは収集・処理できません。",
+    "search": "こんくりーとるい"
   },
   {
     "id": 258,
     "name": "コンタクトレンズ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "こんたくとれんず"
   },
   {
     "id": 259,
     "name": "コンパクト",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "こんぱくと"
   },
   {
     "id": 260,
     "name": "コンポスター",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "こんぽすたー"
   },
   {
     "id": 261,
     "name": "サーフボード",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "さーふぼーど"
   },
   {
     "id": 262,
     "name": "座椅子（家具調、ソファータイプを除く）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。家具調、ソファータイプのものは粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。家具調、ソファータイプのものは粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "ざいす（かぐちょう、そふぁーたいぷをのぞく）"
   },
   {
     "id": 263,
     "name": "サイドボード",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "さいどぼーど"
   },
   {
     "id": 264,
     "name": "財布",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "さいふ"
   },
   {
     "id": 265,
     "name": "サインペン",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "さいんぺん"
   },
   {
     "id": 266,
     "name": "座卓",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "ざたく"
   },
   {
     "id": 267,
     "name": "雑誌",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "ざっし"
   },
   {
     "id": 268,
     "name": "殺虫剤のスプレー缶",
     "garbageCategory": 8,
-    "note": "中身を使い切ってください"
+    "note": "中身を使い切ってください",
+    "search": "さっちゅうざいのすぷれーかん"
   },
   {
     "id": 269,
     "name": "ざぶとん",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです。複数の場合は十字にひもでしばってください。"
+    "note": "５０ｃｍを超えるものは破砕ごみです。複数の場合は十字にひもでしばってください。",
+    "search": "ざぶとん"
   },
   {
     "id": 270,
     "name": "皿（ガラス製、陶磁器製）",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "さら（がらすせい、とうじきせい）"
   },
   {
     "id": 271,
     "name": "皿（プラスチック製、紙製、木製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "さら（ぷらすちっくせい、かみせい、もくせい）"
   },
   {
     "id": 272,
     "name": "皿（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "さら（きんぞくせい）"
   },
   {
     "id": 273,
     "name": "ざる類（プラスチック製）",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です。木・竹製のものは可燃ごみに出してください。"
+    "note": "金属製のものは資源物（金属類）です。木・竹製のものは可燃ごみに出してください。",
+    "search": "ざるるい（ぷらすちっくせい）"
   },
   {
     "id": 274,
     "name": "サングラス（プラスチック製）",
     "garbageCategory": 2,
-    "note": "金属製のフレームは資源物（金属類）です"
+    "note": "金属製のフレームは資源物（金属類）です",
+    "search": "さんぐらす（ぷらすちっくせい）"
   },
   {
     "id": 275,
     "name": "サンダル",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "さんだる"
   },
   {
     "id": 276,
     "name": "三輪車（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは破砕ごみです。"
+    "note": "プラスチック製のものは破砕ごみです。",
+    "search": "さんりんしゃ（きんぞくせい）"
   },
   {
     "id": 277,
     "name": "シーツ",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "しーつ"
   },
   {
     "id": 278,
     "name": "ＣＤソフト（ケース含む）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "しーでぃーそふと（けーすふくむ）"
   },
   {
     "id": 279,
     "name": "ＣＤラジカセ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "しーでぃーらじかせ"
   },
   {
     "id": 280,
     "name": "シート（ビニール製）",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです。小さくたたんで、ひもでしばってください。"
+    "note": "５０ｃｍを超えるものは破砕ごみです。小さくたたんで、ひもでしばってください。",
+    "search": "しーと（びにーるせい）"
   },
   {
     "id": 281,
     "name": "シール",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "しーる"
   },
   {
     "id": 282,
     "name": "地下たび",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ちかたび"
   },
   {
     "id": 283,
     "name": "磁気カード",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "じきかーど"
   },
   {
     "id": 284,
     "name": "敷きパッド",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "しきぱっど"
   },
   {
     "id": 285,
     "name": "磁気マット",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "じきまっと"
   },
   {
     "id": 286,
     "name": "磁気マットレス",
     "garbageCategory": 5,
-    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください。スプリングマットレスは粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください。スプリングマットレスは粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "じきまっとれす"
   },
   {
     "id": 287,
     "name": "磁石",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "じしゃく"
   },
   {
     "id": 288,
     "name": "辞書・辞典",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "じしょ・じてん"
   },
   {
     "id": 289,
     "name": "下着",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "したぎ"
   },
   {
     "id": 290,
     "name": "シップ薬",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "しっぷやく"
   },
   {
     "id": 291,
     "name": "自転車（電動アシスト自転車含む）",
     "garbageCategory": 15,
-    "note": "電動アシスト自転車のバッテリーは外して資源物（乾電池・水銀体温計）に出してください"
+    "note": "電動アシスト自転車のバッテリーは外して資源物（乾電池・水銀体温計）に出してください",
+    "search": "じてんしゃ（でんどうあしすとじてんしゃふくむ）"
   },
   {
     "id": 292,
     "name": "自動車用タイヤチェーン",
     "garbageCategory": 15,
-    "note": "ゴム製、プラスチック製のものは破砕ごみです"
+    "note": "ゴム製、プラスチック製のものは破砕ごみです",
+    "search": "じどうしゃようたいやちぇーん"
   },
   {
     "id": 293,
     "name": "竹刀【しない】",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "しない【しない】"
   },
   {
     "id": 294,
     "name": "シャープペンシル",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "しゃーぷぺんしる"
   },
   {
     "id": 295,
     "name": "写真",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "しゃしん"
   },
   {
     "id": 296,
     "name": "しゃもじ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "しゃもじ"
   },
   {
     "id": 297,
     "name": "ジャングルジム（プラスチック製）",
     "garbageCategory": 5,
-    "note": "木製のものは、５０ｃｍ以下に壊せば可燃ごみに出すことができます。紙製のものは可燃ごみです。１ｍを超えるものは原形のままでは集積場に出せません。"
+    "note": "木製のものは、５０ｃｍ以下に壊せば可燃ごみに出すことができます。紙製のものは可燃ごみです。１ｍを超えるものは原形のままでは集積場に出せません。",
+    "search": "じゃんぐるじむ（ぷらすちっくせい）"
   },
   {
     "id": 298,
     "name": "シャンプーの容器",
     "garbageCategory": 2,
-    "note": "中身を使い切り、軽く水洗いしてください"
+    "note": "中身を使い切り、軽く水洗いしてください",
+    "search": "しゃんぷーのようき"
   },
   {
     "id": 299,
     "name": "ジューサーミキサー",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "じゅーさーみきさー"
   },
   {
     "id": 300,
     "name": "シュレッダー紙ごみ",
     "garbageCategory": 2,
-    "note": "四日市市指定ごみ収集袋に入れ、空気を抜いてください"
+    "note": "四日市市指定ごみ収集袋に入れ、空気を抜いてください",
+    "search": "しゅれっだーしごみ"
   },
   {
     "id": 301,
     "name": "じゅうたん",
     "garbageCategory": 5,
-    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください"
+    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください",
+    "search": "じゅうたん"
   },
   {
     "id": 302,
     "name": "充電器",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "じゅうでんき"
   },
   {
     "id": 303,
     "name": "充電式電池",
     "garbageCategory": 10,
-    "note": "販売店等に設置されている回収箱も利用してください"
+    "note": "販売店等に設置されている回収箱も利用してください",
+    "search": "じゅうでんしきでんち"
   },
   {
     "id": 304,
     "name": "収納ケース（プラスチック製）",
     "garbageCategory": 5,
-    "note": "５０ｃｍ以下のものは可燃ごみです。金属製のものは資源物（金属類）に出してください。"
+    "note": "５０ｃｍ以下のものは可燃ごみです。金属製のものは資源物（金属類）に出してください。",
+    "search": "しゅうのうけーす（ぷらすちっくせい）"
   },
   {
     "id": 305,
     "name": "１６mmフィルム",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "いちろくmmふぃるむ"
   },
   {
     "id": 306,
     "name": "消火器",
     "garbageCategory": 4,
-    "note": "特定窓口に引取を依頼してください。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "特定窓口に引取を依頼してください。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "しょうかき"
   },
   {
     "id": 307,
     "name": "定規（木製）",
     "garbageCategory": 2,
-    "note": "５０ｃｍ以下のものを出してください。金属製のものは資源物（金属類）です。"
+    "note": "５０ｃｍ以下のものを出してください。金属製のものは資源物（金属類）です。",
+    "search": "じょうぎ（もくせい）"
   },
   {
     "id": 308,
     "name": "将棋のこま",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "しょうぎのこま"
   },
   {
     "id": 309,
     "name": "錠剤のシート（プラスチック製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "じょうざいのしーと（ぷらすちっくせい）"
   },
   {
     "id": 310,
     "name": "障子戸（木製）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "しょうじと（もくせい）"
   },
   {
     "id": 311,
     "name": "消臭スプレー",
     "garbageCategory": 8,
-    "note": "中身を使い切ってください"
+    "note": "中身を使い切ってください",
+    "search": "しょうにおいすぷれー"
   },
   {
     "id": 312,
     "name": "浄水器",
     "garbageCategory": 11,
-    "note": "電気を使わないものは破砕ごみです。電気を使わず、５０ｃｍ以下のものは可燃ごみです。"
+    "note": "電気を使わないものは破砕ごみです。電気を使わず、５０ｃｍ以下のものは可燃ごみです。",
+    "search": "じょうすいき"
   },
   {
     "id": 313,
     "name": "焼酎の容器（ペットボトル）",
     "garbageCategory": 1,
-    "note": "キャップ、ラベルを取り、水洗いしてください"
+    "note": "キャップ、ラベルを取り、水洗いしてください",
+    "search": "しょうちゅうのようき（ぺっとぼとる）"
   },
   {
     "id": 314,
     "name": "照明器具",
     "garbageCategory": 11,
-    "note": "電球や蛍光管は資源物（蛍光管）です"
+    "note": "電球や蛍光管は資源物（蛍光管）です",
+    "search": "しょうめいきぐ"
   },
   {
     "id": 315,
     "name": "しょうゆの容器（ペットボトル）",
     "garbageCategory": 1,
-    "note": "キャップ、ラベルを取り、水洗いしてください"
+    "note": "キャップ、ラベルを取り、水洗いしてください",
+    "search": "しょうゆのようき（ぺっとぼとる）"
   },
   {
     "id": 316,
     "name": "ジョウロ（プラスチック製）",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "じょうろ（ぷらすちっくせい）"
   },
   {
     "id": 317,
     "name": "食用油の容器（プラスチック製）",
     "garbageCategory": 2,
-    "note": "中身は使い切ってください。金属製のものは資源物（金属類）です。"
+    "note": "中身は使い切ってください。金属製のものは資源物（金属類）です。",
+    "search": "しょくようゆのようき（ぷらすちっくせい）"
   },
   {
     "id": 318,
     "name": "除湿機",
     "garbageCategory": 11,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "じょしめき"
   },
   {
     "id": 319,
     "name": "除湿剤",
     "garbageCategory": 2,
-    "note": "ケース内に溜まった水は抜いてください"
+    "note": "ケース内に溜まった水は抜いてください",
+    "search": "じょしめざい"
   },
   {
     "id": 320,
     "name": "書籍",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "しょせき"
   },
   {
     "id": 321,
     "name": "食器（プラスチック製）",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "しょっき（ぷらすちっくせい）"
   },
   {
     "id": 322,
     "name": "食器（陶磁器・ガラス製）",
     "garbageCategory": 5,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "しょっき（とうじき・がらすせい）"
   },
   {
     "id": 323,
     "name": "食器乾燥機",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "しょっきかんそうき"
   },
   {
     "id": 324,
     "name": "食器洗浄機",
     "garbageCategory": 11,
-    "note": "業者が交換したものは収集・処理できません"
+    "note": "業者が交換したものは収集・処理できません",
+    "search": "しょっきせんじょうき"
   },
   {
     "id": 325,
     "name": "食器棚",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "しょっきたな"
   },
   {
     "id": 326,
     "name": "食品トレイ（白色）",
     "garbageCategory": 2,
-    "note": "できるだけスーパーなどの回収ボックスを利用してください"
+    "note": "できるだけスーパーなどの回収ボックスを利用してください",
+    "search": "しょくひんとれい（はくしょく）"
   },
   {
     "id": 327,
     "name": "食品トレイ（色柄）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "しょくひんとれい（いろがら）"
   },
   {
     "id": 328,
     "name": "シルバーカー",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "しるばーかー"
   },
   {
     "id": 329,
     "name": "新聞紙",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください。新聞チラシと一緒にしばってください。"
+    "note": "十字にひもでしばってください。新聞チラシと一緒にしばってください。",
+    "search": "しんぶんし"
   },
   {
     "id": 330,
     "name": "スーツケース",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "すーつけーす"
   },
   {
     "id": 331,
     "name": "水槽",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "すいそう"
   },
   {
     "id": 332,
     "name": "水筒（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "すいとう（きんぞくせい）"
   },
   {
     "id": 333,
     "name": "炊飯器",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "すいはんき"
   },
   {
     "id": 334,
     "name": "スカーフ",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "すかーふ"
   },
   {
     "id": 335,
     "name": "スキー板、スキー靴",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "すきーばん、すきーくつ"
   },
   {
     "id": 336,
     "name": "スキーウェア",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "すきーうぇあ"
   },
   {
     "id": 337,
     "name": "スキーストック（金属製）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "すきーすとっく（きんぞくせい）"
   },
   {
     "id": 338,
     "name": "スキー手袋",
     "garbageCategory": 12,
-    "note": null
+    "note": null,
+    "search": "すきーてぶくろ"
   },
   {
     "id": 339,
     "name": "スケートボード",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "すけーとぼーど"
   },
   {
     "id": 340,
     "name": "スコップ（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです。１mを超えるものは原形のままでは集積場に出せません。"
+    "note": "プラスチック製のものは可燃ごみです。１mを超えるものは原形のままでは集積場に出せません。",
+    "search": "すこっぷ（きんぞくせい）"
   },
   {
     "id": 341,
     "name": "すずり",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "すずり"
   },
   {
     "id": 342,
     "name": "すだれ（木・竹製）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。５０ｃｍ以下に切断すれば、可燃ごみに出すことができます。"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。５０ｃｍ以下に切断すれば、可燃ごみに出すことができます。",
+    "search": "すだれ（き・たけせい）"
   },
   {
     "id": 343,
     "name": "スタンプ台（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "すたんぷだい（きんぞくせい）"
   },
   {
     "id": 344,
     "name": "ステレオ",
     "garbageCategory": 11,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "すてれお"
   },
   {
     "id": 345,
     "name": "ストーブ",
     "garbageCategory": 15,
-    "note": "灯油・電池は必ず抜いてください"
+    "note": "灯油・電池は必ず抜いてください",
+    "search": "すとーぶ"
   },
   {
     "id": 346,
     "name": "ストッキング",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "すとっきんぐ"
   },
   {
     "id": 347,
     "name": "ストラップ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "すとらっぷ"
   },
   {
     "id": 348,
     "name": "スニーカー",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "すにーかー"
   },
   {
     "id": 349,
     "name": "スノーボード",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "すのーぼーど"
   },
   {
     "id": 350,
     "name": "すのこ",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです。１ｍを超えるものは原形のままでは集積場に出せません。"
+    "note": "５０ｃｍを超えるものは破砕ごみです。１ｍを超えるものは原形のままでは集積場に出せません。",
+    "search": "すのこ"
   },
   {
     "id": 351,
     "name": "スパナ",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "すぱな"
   },
   {
     "id": 352,
     "name": "スピーカー",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "すぴーかー"
   },
   {
     "id": 353,
     "name": "スプーン（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック・木・竹製のものは可燃ごみです"
+    "note": "プラスチック・木・竹製のものは可燃ごみです",
+    "search": "すぷーん（きんぞくせい）"
   },
   {
     "id": 354,
     "name": "スプリングマットレス",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "すぷりんぐまっとれす"
   },
   {
     "id": 355,
     "name": "スプレー缶",
     "garbageCategory": 8,
-    "note": "中身を使い切ってください"
+    "note": "中身を使い切ってください",
+    "search": "すぷれーかん"
   },
   {
     "id": 356,
     "name": "すべり台（幼児用）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "すべりだい（ようじよう）"
   },
   {
     "id": 357,
     "name": "スポンジ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "すぽんじ"
   },
   {
     "id": 358,
     "name": "スマートフォン",
     "garbageCategory": 11,
-    "note": "個人情報など削除したうえで出してください。販売店が行っているモバイルリサイクルもご活用ください。"
+    "note": "個人情報など削除したうえで出してください。販売店が行っているモバイルリサイクルもご活用ください。",
+    "search": "すまーとふぉん"
   },
   {
     "id": 359,
     "name": "炭",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "すみ"
   },
   {
     "id": 360,
     "name": "墨",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "すみ"
   },
   {
     "id": 361,
     "name": "すりガラス",
     "garbageCategory": 5,
-    "note": "箱などに入れ『ガラス危険』と表示してください"
+    "note": "箱などに入れ『ガラス危険』と表示してください",
+    "search": "すりがらす"
   },
   {
     "id": 362,
     "name": "すり鉢",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "すりばち"
   },
   {
     "id": 363,
     "name": "スリッパ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "すりっぱ"
   },
   {
     "id": 364,
     "name": "セーター",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "せーたー"
   },
   {
     "id": 365,
     "name": "生理用品",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "せいりようひん"
   },
   {
     "id": 366,
     "name": "石油ストーブ",
     "garbageCategory": 15,
-    "note": "灯油・電池は必ず抜いてください"
+    "note": "灯油・電池は必ず抜いてください",
+    "search": "せきゆすとーぶ"
   },
   {
     "id": 367,
     "name": "石油ポンプ",
     "garbageCategory": 2,
-    "note": "電動のものは電池を抜いて資源物（小型家電）に出してください"
+    "note": "電動のものは電池を抜いて資源物（小型家電）に出してください",
+    "search": "せきゆぽんぷ"
   },
   {
     "id": 368,
     "name": "せっけん",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "せっけん"
   },
   {
     "id": 369,
     "name": "接着剤",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "せっちゃくざい"
   },
   {
     "id": 370,
     "name": "せともの",
     "garbageCategory": 5,
-    "note": "割れたものは箱などに入れ、『割れ物危険』と表示してください"
+    "note": "割れたものは箱などに入れ、『割れ物危険』と表示してください",
+    "search": "せともの"
   },
   {
     "id": 371,
     "name": "背広",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "せびろ"
   },
   {
     "id": 372,
     "name": "セラミックファンヒーター",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "せらみっくふぁんひーたー"
   },
   {
     "id": 373,
     "name": "セロハンテープ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "せろはんてーぷ"
   },
   {
     "id": 374,
     "name": "扇子（木製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "おうぎ（もくせい）"
   },
   {
     "id": 375,
     "name": "洗濯機",
     "garbageCategory": 4,
-    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf"
+    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf",
+    "search": "せんたくき"
   },
   {
     "id": 376,
     "name": "洗濯バサミ（プラスチック製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "せんたくばさみ（ぷらすちっくせい）"
   },
   {
     "id": 377,
     "name": "剪定した庭木",
     "garbageCategory": 2,
-    "note": "太さ５ｃｍ以下のものは、長さ５０ｃｍ以下にして週後半の収集日に出してください。太さ５ｃｍを超えるもの(２０ｃｍ以下)は長さ１ｍ以下にして破砕ごみに出してください。多量の場合は四日市市クリーンセンターへ直接持ち込んでください。"
+    "note": "太さ５ｃｍ以下のものは、長さ５０ｃｍ以下にして週後半の収集日に出してください。太さ５ｃｍを超えるもの(２０ｃｍ以下)は長さ１ｍ以下にして破砕ごみに出してください。多量の場合は四日市市クリーンセンターへ直接持ち込んでください。",
+    "search": "せんていしたにわき"
   },
   {
     "id": 378,
     "name": "栓抜き（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "せんぬき（きんぞくせい）"
   },
   {
     "id": 379,
     "name": "扇風機",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "せんぷうき"
   },
   {
     "id": 380,
     "name": "千枚とおし",
     "garbageCategory": 15,
-    "note": "とがった部分を厚紙やダンボールなどで包んでください"
+    "note": "とがった部分を厚紙やダンボールなどで包んでください",
+    "search": "せんまいとおし"
   },
   {
     "id": 381,
     "name": "洗剤の上ぶた（プラスチック製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "せんざいのうえぶた（ぷらすちっくせい）"
   },
   {
     "id": 382,
     "name": "洗剤のスプーン（プラスチック製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "せんざいのすぷーん（ぷらすちっくせい）"
   },
   {
     "id": 383,
     "name": "洗剤の箱",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "せんざいのはこ"
   },
   {
     "id": 384,
     "name": "センサーライト",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "せんさーらいと"
   },
   {
     "id": 385,
     "name": "洗面器（プラスチック製）",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "せんめんき（ぷらすちっくせい）"
   },
   {
     "id": 386,
     "name": "ソースの容器（プラスチック製）",
     "garbageCategory": 2,
-    "note": "中身を使い切り、軽く水洗いしてください"
+    "note": "中身を使い切り、軽く水洗いしてください",
+    "search": "そーすのようき（ぷらすちっくせい）"
   },
   {
     "id": 387,
     "name": "造花",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぞうか"
   },
   {
     "id": 388,
     "name": "双眼鏡",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "そうがんきょう"
   },
   {
     "id": 389,
     "name": "ぞうきん",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぞうきん"
   },
   {
     "id": 390,
     "name": "掃除機",
     "garbageCategory": 11,
-    "note": "掃除機の紙パック、掃除機のごみは可燃ごみです"
+    "note": "掃除機の紙パック、掃除機のごみは可燃ごみです",
+    "search": "そうじき"
   },
   {
     "id": 391,
     "name": "掃除機の紙パック、掃除機のごみ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "そうじきのかみぱっく、そうじきのごみ"
   },
   {
     "id": 392,
     "name": "ぞうり（革製、ビニール製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぞうり（かわせい、びにーるせい）"
   },
   {
     "id": 393,
     "name": "ソファー",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "そふぁー"
   },
   {
     "id": 394,
     "name": "そり（子供用玩具）（プラスチック製）",
     "garbageCategory": 5,
-    "note": "５０ｃｍ以下のものは可燃ごみです。金属製のものは資源物（金属類）に出してください。"
+    "note": "５０ｃｍ以下のものは可燃ごみです。金属製のものは資源物（金属類）に出してください。",
+    "search": "そり（こどもようおもちゃ）（ぷらすちっくせい）"
   },
   {
     "id": 395,
     "name": "そろばん（木製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "そろばん（もくせい）"
   },
   {
     "id": 396,
     "name": "体温計（電子）",
     "garbageCategory": 11,
-    "note": "電池は抜いてください。水銀体温計は資源物（乾電池・水銀体温計）です。"
+    "note": "電池は抜いてください。水銀体温計は資源物（乾電池・水銀体温計）です。",
+    "search": "たいおんけい（でんし）"
   },
   {
     "id": 397,
     "name": "体重計",
     "garbageCategory": 11,
-    "note": "電池は抜いてください"
+    "note": "電池は抜いてください",
+    "search": "たいじゅうけい"
   },
   {
     "id": 398,
     "name": "タイヤ",
     "garbageCategory": 4,
-    "note": "交換した所、販売店等に引き取りを依頼してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "交換した所、販売店等に引き取りを依頼してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "たいや"
   },
   {
     "id": 399,
     "name": "タイヤチェーン",
     "garbageCategory": 15,
-    "note": "ゴム製、プラスチック製のものは破砕ごみです"
+    "note": "ゴム製、プラスチック製のものは破砕ごみです",
+    "search": "たいやちぇーん"
   },
   {
     "id": 400,
     "name": "タイヤホイール",
     "garbageCategory": 15,
-    "note": "ホイールカバーがプラスチック製のものは破砕ごみです"
+    "note": "ホイールカバーがプラスチック製のものは破砕ごみです",
+    "search": "たいやほいーる"
   },
   {
     "id": 401,
     "name": "タイル",
     "garbageCategory": 5,
-    "note": "土のう袋に入れて片手で持てる量を２袋程度ずつ出してください。多量の場合は環境事業課に相談してください。業者が解体したものは収集・処理できません。"
+    "note": "土のう袋に入れて片手で持てる量を２袋程度ずつ出してください。多量の場合は環境事業課に相談してください。業者が解体したものは収集・処理できません。",
+    "search": "たいる"
   },
   {
     "id": 402,
     "name": "タオル（汚れの少ないもの）",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "たおる（よごれのすくないもの）"
   },
   {
     "id": 403,
     "name": "タオルケット",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "たおるけっと"
   },
   {
     "id": 404,
     "name": "畳",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "たたみ"
   },
   {
     "id": 405,
     "name": "脱脂綿",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "だっしめん"
   },
   {
     "id": 406,
     "name": "脱臭剤",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "だっしゅうざい"
   },
   {
     "id": 407,
     "name": "タッパー",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "たっぱー"
   },
   {
     "id": 408,
     "name": "タバコの銀紙、箱、吸殻（フィルター含む）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "たばこのぎんがみ、はこ、すいがら（ふぃるたーふくむ）"
   },
   {
     "id": 409,
     "name": "タブレットPC",
     "garbageCategory": 11,
-    "note": "個人情報など削除したうえで出してください。ＰＣリサイクルもご活用ください。ガイドブックの２２頁を参照してください。"
+    "note": "個人情報など削除したうえで出してください。ＰＣリサイクルもご活用ください。ガイドブックの２２頁を参照してください。",
+    "search": "たぶれっとpc"
   },
   {
     "id": 410,
     "name": "卵のから",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "たまごのから"
   },
   {
     "id": 411,
     "name": "卵のパック",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "たまごのぱっく"
   },
   {
     "id": 412,
     "name": "たわし類",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "たわしるい"
   },
   {
     "id": 413,
     "name": "炭酸ガスシリンダー（ボンベ）",
     "garbageCategory": 4,
-    "note": "詳しい内容は、以下のURLより四日市市ホームページをご確認ください。https://www.city.yokkaichi.lg.jp/www/contents/1625212753933/index.html"
+    "note": "詳しい内容は、以下のURLより四日市市ホームページをご確認ください。https://www.city.yokkaichi.lg.jp/www/contents/1625212753933/index.html",
+    "search": "たんさんがすしりんだー（ぼんべ）"
   },
   {
     "id": 414,
     "name": "たんす",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "たんす"
   },
   {
     "id": 415,
     "name": "ダンベル（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "だんべる（きんぞくせい）"
   },
   {
     "id": 416,
     "name": "ダンボール",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "だんぼーる"
   },
   {
     "id": 417,
     "name": "地球儀",
     "garbageCategory": 5,
-    "note": "５０ｃｍ以下のものは可燃ごみです"
+    "note": "５０ｃｍ以下のものは可燃ごみです",
+    "search": "ちきゅうぎ"
   },
   {
     "id": 418,
     "name": "チャイルドシート",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ちゃいるどしーと"
   },
   {
     "id": 419,
     "name": "茶がら",
     "garbageCategory": 2,
-    "note": "水分をよく切ってください"
+    "note": "水分をよく切ってください",
+    "search": "ちゃがら"
   },
   {
     "id": 420,
     "name": "茶碗",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ちゃわん"
   },
   {
     "id": 421,
     "name": "注射針、注射器（在宅治療用）",
     "garbageCategory": 4,
-    "note": "医療機関等へ返却してください。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "医療機関等へ返却してください。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "ちゅうしゃはり、ちゅうしゃき（ざいたくちりょうよう）"
   },
   {
     "id": 422,
     "name": "調味料びん",
     "garbageCategory": 7,
-    "note": "中身を使い切り、キャップを取り軽く水洗いしてください"
+    "note": "中身を使い切り、キャップを取り軽く水洗いしてください",
+    "search": "ちょうみりょうびん"
   },
   {
     "id": 423,
     "name": "調味料の容器（プラスチック製）",
     "garbageCategory": 2,
-    "note": "中身を使い切り、軽く水洗いしてください"
+    "note": "中身を使い切り、軽く水洗いしてください",
+    "search": "ちょうみりょうのようき（ぷらすちっくせい）"
   },
   {
     "id": 424,
     "name": "チョーク",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ちょーく"
   },
   {
     "id": 425,
     "name": "チラシ（広告）",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください。新聞紙と一緒にしばってください。"
+    "note": "十字にひもでしばってください。新聞紙と一緒にしばってください。",
+    "search": "ちらし（こうこく）"
   },
   {
     "id": 426,
     "name": "ちり紙",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ちりがみ"
   },
   {
     "id": 427,
     "name": "ちりとり（プラスチック製）",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "ちりとり（ぷらすちっくせい）"
   },
   {
     "id": 428,
     "name": "机",
     "garbageCategory": 6,
-    "note": null
+    "note": null,
+    "search": "つくえ"
   },
   {
     "id": 429,
     "name": "土",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ど"
   },
   {
     "id": 430,
     "name": "つっぱり棒",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原型のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原型のままでは集積場に出せません",
+    "search": "つっぱりぼう"
   },
   {
     "id": 431,
     "name": "壷（陶磁器製）",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "つぼ（とうじきせい）"
   },
   {
     "id": 432,
     "name": "つまようじ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "つまようじ"
   },
   {
     "id": 433,
     "name": "積木",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "つみき"
   },
   {
     "id": 434,
     "name": "つめ切り（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "つめぎり（きんぞくせい）"
   },
   {
     "id": 435,
     "name": "釣り糸",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "つりいと"
   },
   {
     "id": 436,
     "name": "釣竿",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "つりざお"
   },
   {
     "id": 437,
     "name": "釣りリール（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "つりりーる（きんぞくせい）"
   },
   {
     "id": 438,
     "name": "テープ（ビニール製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "てーぷ（びにーるせい）"
   },
   {
     "id": 439,
     "name": "テープカッター",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "てーぷかったー"
   },
   {
     "id": 440,
     "name": "テーブル",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "てーぶる"
   },
   {
     "id": 441,
     "name": "テーブルクロス（布製）",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "てーぶるくろす（ぬのせい）"
   },
   {
     "id": 442,
     "name": "ディスプレイ（パソコン用）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "でぃすぷれい（ぱそこんよう）"
   },
   {
     "id": 443,
     "name": "ティッシュペーパー",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "てぃっしゅぺーぱー"
   },
   {
     "id": 444,
     "name": "ティッシュの外箱",
     "garbageCategory": 13,
-    "note": "開いて十字にひもでしばってください。ビニール部分は外してください。"
+    "note": "開いて十字にひもでしばってください。ビニール部分は外してください。",
+    "search": "てぃっしゅのそとばこ"
   },
   {
     "id": 445,
     "name": "ＤＶＤソフト（ケース含む）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "dvdそふと（けーすふくむ）"
   },
   {
     "id": 446,
     "name": "ＤＶＤレコーダー（プレーヤー）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "dvdれこーだー（ぷれーやー）"
   },
   {
     "id": 447,
     "name": "手提げ金庫",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "てさげきんこ"
   },
   {
     "id": 448,
     "name": "デジタルオーディオプレーヤー",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "でじたるおーでぃおぷれーやー"
   },
   {
     "id": 449,
     "name": "デスクマット",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです"
+    "note": "５０ｃｍを超えるものは破砕ごみです",
+    "search": "ですくまっと"
   },
   {
     "id": 450,
     "name": "鉄アレイ",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "てつあれい"
   },
   {
     "id": 451,
     "name": "テニスラケット",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "てにすらけっと"
   },
   {
     "id": 452,
     "name": "手袋",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "てぶくろ"
   },
   {
     "id": 453,
     "name": "テレビ",
     "garbageCategory": 4,
-    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf"
+    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf",
+    "search": "てれび"
   },
   {
     "id": 454,
     "name": "テレビゲーム本体",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "てれびげーむほんたい"
   },
   {
     "id": 455,
     "name": "テレビ台",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "てれびだい"
   },
   {
     "id": 456,
     "name": "テレフォンカード",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "てれふぉんかーど"
   },
   {
     "id": 457,
     "name": "電気あんか",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "でんきあんか"
   },
   {
     "id": 458,
     "name": "電気カーペット",
     "garbageCategory": 11,
-    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください"
+    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください",
+    "search": "でんきかーぺっと"
   },
   {
     "id": 459,
     "name": "電気工具（金属製）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "でんきこうぐ（きんぞくせい）"
   },
   {
     "id": 460,
     "name": "電気ストーブ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "でんきすとーぶ"
   },
   {
     "id": 461,
     "name": "電気髭剃り",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "でんきひげすり"
   },
   {
     "id": 462,
     "name": "電気ポット",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "でんきぽっと"
   },
   {
     "id": 463,
     "name": "電気毛布",
     "garbageCategory": 11,
-    "note": "『電気毛布』と表示してください"
+    "note": "『電気毛布』と表示してください",
+    "search": "でんきもうふ"
   },
   {
     "id": 464,
     "name": "電球（LEDを含む）",
     "garbageCategory": 14,
-    "note": "割れないように保護カバーなどに入れてください"
+    "note": "割れないように保護カバーなどに入れてください",
+    "search": "でんきゅう（ledをふくむ）"
   },
   {
     "id": 465,
     "name": "電子辞書",
     "garbageCategory": 11,
-    "note": "電池は抜いてください"
+    "note": "電池は抜いてください",
+    "search": "でんしじしょ"
   },
   {
     "id": 466,
     "name": "電子たばこ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "でんしたばこ"
   },
   {
     "id": 467,
     "name": "電子レンジ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "でんしれんじ"
   },
   {
     "id": 468,
     "name": "電線・電気コード",
     "garbageCategory": 15,
-    "note": "まとめてしばってください。ＡＣアダプターなどは外さなくて結構です。"
+    "note": "まとめてしばってください。ＡＣアダプターなどは外さなくて結構です。",
+    "search": "でんせん・でんきこーど"
   },
   {
     "id": 469,
     "name": "天体望遠鏡",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "てんたいぼうえんきょう"
   },
   {
     "id": 470,
     "name": "電卓",
     "garbageCategory": 11,
-    "note": "電池が外せるものは外してください"
+    "note": "電池が外せるものは外してください",
+    "search": "でんたく"
   },
   {
     "id": 471,
     "name": "点滴パック及びチューブ類（在宅治療用）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "てんてきぱっくおよびちゅーぶるい（ざいたくちりょうよう）"
   },
   {
     "id": 472,
     "name": "テント（家庭用）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "てんと（かていよう）"
   },
   {
     "id": 473,
     "name": "電動歯ブラシ",
     "garbageCategory": 11,
-    "note": "電池は抜いてください"
+    "note": "電池は抜いてください",
+    "search": "でんどうはぶらし"
   },
   {
     "id": 474,
     "name": "電動マッサージ機（いす式）",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "でんどうまっさーじき（いすしき）"
   },
   {
     "id": 475,
     "name": "てんぷらガード",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "てんぷらがーど"
   },
   {
     "id": 476,
     "name": "てんぷら油",
     "garbageCategory": 2,
-    "note": "固化処理するか、紙や古布に染み込ませてください"
+    "note": "固化処理するか、紙や古布に染み込ませてください",
+    "search": "てんぷらゆ"
   },
   {
     "id": 477,
     "name": "電話機",
     "garbageCategory": 11,
-    "note": "電池は抜いてください"
+    "note": "電池は抜いてください",
+    "search": "でんわき"
   },
   {
     "id": 478,
     "name": "電話帳",
     "garbageCategory": 13,
-    "note": "できるだけ業者に回収を依頼してください"
+    "note": "できるだけ業者に回収を依頼してください",
+    "search": "でんわちょう"
   },
   {
     "id": 479,
     "name": "トースター",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "とーすたー"
   },
   {
     "id": 480,
     "name": "砥石【といし】",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "といし【といし】"
   },
   {
     "id": 481,
     "name": "陶磁器類",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "とうじきるい"
   },
   {
     "id": 482,
     "name": "籐製品",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです。１ｍを超えるものは原形のままでは集積場に出せません。"
+    "note": "５０ｃｍを超えるものは破砕ごみです。１ｍを超えるものは原形のままでは集積場に出せません。",
+    "search": "とうせいひん"
   },
   {
     "id": 483,
     "name": "透析パック及びチューブ類（在宅治療用）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "とうせきぱっくおよびちゅーぶるい（ざいたくちりょうよう）"
   },
   {
     "id": 484,
     "name": "とうふパック",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "とうふぱっく"
   },
   {
     "id": 485,
     "name": "時計",
     "garbageCategory": 11,
-    "note": "電池が外せるものは外してください"
+    "note": "電池が外せるものは外してください",
+    "search": "とけい"
   },
   {
     "id": 486,
     "name": "戸棚",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "とだな"
   },
   {
     "id": 487,
     "name": "トタン（金属製）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。多量の場合は直接四日市市クリーンセンターもしくは楠衛生センターへ持ち込んでください。業者が解体したものは収集・処理できません。"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。多量の場合は直接四日市市クリーンセンターもしくは楠衛生センターへ持ち込んでください。業者が解体したものは収集・処理できません。",
+    "search": "とたん（きんぞくせい）"
   },
   {
     "id": 488,
     "name": "トタン（プラスチック製）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。多量の場合は直接四日市市クリーンセンターへ持ち込んでください。業者が解体したものは収集・処理できません。"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。多量の場合は直接四日市市クリーンセンターへ持ち込んでください。業者が解体したものは収集・処理できません。",
+    "search": "とたん（ぷらすちっくせい）"
   },
   {
     "id": 489,
     "name": "土鍋",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "どなべ"
   },
   {
     "id": 490,
     "name": "ドライバー（家庭用）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "どらいばー（かていよう）"
   },
   {
     "id": 491,
     "name": "ドライヤー",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "どらいやー"
   },
   {
     "id": 492,
     "name": "塗料",
     "garbageCategory": 4,
-    "note": "販売店等に問い合わせてください。少量の場合は紙や古布などに染み込ませ、可燃ごみに出してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "販売店等に問い合わせてください。少量の場合は紙や古布などに染み込ませ、可燃ごみに出してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "とりょう"
   },
   {
     "id": 493,
     "name": "塗料容器（缶）",
     "garbageCategory": 15,
-    "note": "中身は使い切ってください"
+    "note": "中身は使い切ってください",
+    "search": "とりょうようき（かん）"
   },
   {
     "id": 494,
     "name": "トレイ類（プラスチック製）",
     "garbageCategory": 2,
-    "note": "木製のものは可燃ごみです。金属製は資源物（金属類）です。　食品用トレイ（白色）はできるだけスーパーなどの回収ボックスを利用してください。"
+    "note": "木製のものは可燃ごみです。金属製は資源物（金属類）です。　食品用トレイ（白色）はできるだけスーパーなどの回収ボックスを利用してください。",
+    "search": "とれいるい（ぷらすちっくせい）"
   },
   {
     "id": 495,
     "name": "ドレッサー（鏡台）",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "どれっさー（きょうだい）"
   },
   {
     "id": 496,
     "name": "トロフィー",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "とろふぃー"
   },
   {
     "id": 497,
     "name": "とんかち（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "とんかち（きんぞくせい）"
   },
   {
     "id": 498,
     "name": "ナイフ",
     "garbageCategory": 15,
-    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください"
+    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください",
+    "search": "ないふ"
   },
   {
     "id": 499,
     "name": "長靴",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ながぐつ"
   },
   {
     "id": 500,
     "name": "納豆の容器",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "なっとうのようき"
   },
   {
     "id": 501,
     "name": "鍋（金属製、ホーロー製）",
     "garbageCategory": 15,
-    "note": "陶磁器製、耐熱ガラス製のものは破砕ごみです"
+    "note": "陶磁器製、耐熱ガラス製のものは破砕ごみです",
+    "search": "なべ（きんぞくせい、ほーろーせい）"
   },
   {
     "id": 502,
     "name": "鍋焼きうどんのアルミ鍋",
     "garbageCategory": 15,
-    "note": "軽く洗ってください"
+    "note": "軽く洗ってください",
+    "search": "なべやきうどんのあるみなべ"
   },
   {
     "id": 503,
     "name": "生ごみ",
     "garbageCategory": 2,
-    "note": "水分をよく切ってください"
+    "note": "水分をよく切ってください",
+    "search": "なまごみ"
   },
   {
     "id": 504,
     "name": "生ごみ処理機",
     "garbageCategory": 11,
-    "note": "電気を使用せず、表面の材質の大部分が金属の場合は資源物（金属類）です"
+    "note": "電気を使用せず、表面の材質の大部分が金属の場合は資源物（金属類）です",
+    "search": "なまごみしょりき"
   },
   {
     "id": 505,
     "name": "なわとび",
     "garbageCategory": 2,
-    "note": "５０ｃｍ以下に切ってください"
+    "note": "５０ｃｍ以下に切ってください",
+    "search": "なわとび"
   },
   {
     "id": 506,
     "name": "ニカド電池",
     "garbageCategory": 10,
-    "note": "販売店等に設置されている回収箱も利用してください"
+    "note": "販売店等に設置されている回収箱も利用してください",
+    "search": "にかどでんち"
   },
   {
     "id": 507,
     "name": "二次電池",
     "garbageCategory": 10,
-    "note": "販売店等に設置されている回収箱も利用してください"
+    "note": "販売店等に設置されている回収箱も利用してください",
+    "search": "にじでんち"
   },
   {
     "id": 508,
     "name": "人形（雛、五月人形含む）",
     "garbageCategory": 2,
-    "note": "金属部分は資源物（金属類）です"
+    "note": "金属部分は資源物（金属類）です",
+    "search": "にんぎょう（ひな、ごがつにんぎょうふくむ）"
   },
   {
     "id": 509,
     "name": "人形ケース（ガラス製）",
     "garbageCategory": 5,
-    "note": "危なくないよう、箱などに入れ『ガラス危険』と表示してください"
+    "note": "危なくないよう、箱などに入れ『ガラス危険』と表示してください",
+    "search": "にんぎょうけーす（がらすせい）"
   },
   {
     "id": 510,
     "name": "ぬいぐるみ",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです"
+    "note": "５０ｃｍを超えるものは破砕ごみです",
+    "search": "ぬいぐるみ"
   },
   {
     "id": 511,
     "name": "布くず",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぬのくず"
   },
   {
     "id": 512,
     "name": "布類",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "ぬのるい"
   },
   {
     "id": 513,
     "name": "ネクタイ",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "ねくたい"
   },
   {
     "id": 514,
     "name": "ネコ砂（砂以外）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ねこすな（すないがい）"
   },
   {
     "id": 515,
     "name": "ネジ",
     "garbageCategory": 15,
-    "note": "ふた付きの缶に入れてください"
+    "note": "ふた付きの缶に入れてください",
+    "search": "ねじ"
   },
   {
     "id": 516,
     "name": "寝袋",
     "garbageCategory": 5,
-    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください"
+    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください",
+    "search": "ねぶくろ"
   },
   {
     "id": 517,
     "name": "粘着カーペットクリーナー（シート紙）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ねんちゃくかーぺっとくりーなー（しーとし）"
   },
   {
     "id": 518,
     "name": "粘土",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ねんど"
   },
   {
     "id": 519,
     "name": "ノート",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "のーと"
   },
   {
     "id": 520,
     "name": "ノートパソコン",
     "garbageCategory": 11,
-    "note": "個人情報など削除したうえで出してください。ＰＣリサイクルもご活用ください。ガイドブックの２２頁を参照してください。"
+    "note": "個人情報など削除したうえで出してください。ＰＣリサイクルもご活用ください。ガイドブックの２２頁を参照してください。",
+    "search": "のーとぱそこん"
   },
   {
     "id": 521,
     "name": "農業用ビニール",
     "garbageCategory": 4,
-    "note": "農業に伴うものは、販売店や許可を持った処理業者に処分を依頼してください"
+    "note": "農業に伴うものは、販売店や許可を持った処理業者に処分を依頼してください",
+    "search": "のうぎょうようびにーる"
   },
   {
     "id": 522,
     "name": "農薬",
     "garbageCategory": 4,
-    "note": "販売店等に引き取りを依頼してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "販売店等に引き取りを依頼してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "のうやく"
   },
   {
     "id": 523,
     "name": "農薬びん",
     "garbageCategory": 7,
-    "note": "中身が残っているものは収集できません"
+    "note": "中身が残っているものは収集できません",
+    "search": "のうやくびん"
   },
   {
     "id": 524,
     "name": "のこぎり",
     "garbageCategory": 15,
-    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください"
+    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください",
+    "search": "のこぎり"
   },
   {
     "id": 525,
     "name": "のれん",
     "garbageCategory": 2,
-    "note": "布製のものは資源物(布・衣類）です"
+    "note": "布製のものは資源物(布・衣類）です",
+    "search": "のれん"
   },
   {
     "id": 526,
     "name": "ハードディスク",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "はーどでぃすく"
   },
   {
     "id": 527,
     "name": "バーベキューセット（金属製）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "ばーべきゅーせっと（きんぞくせい）"
   },
   {
     "id": 528,
     "name": "バーベル（金属製）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "ばーべる（きんぞくせい）"
   },
   {
     "id": 529,
     "name": "ハーモニカ",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "はーもにか"
   },
   {
     "id": 530,
     "name": "灰",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "はい"
   },
   {
     "id": 531,
     "name": "灰皿（陶器製・ガラス製）",
     "garbageCategory": 5,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "はいざら（とうきせい・がらすせい）"
   },
   {
     "id": 532,
     "name": "パイプ椅子（いす）",
     "garbageCategory": 15,
-    "note": "折りたたみができないものは、粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "折りたたみができないものは、粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "ぱいぷいす（いす）"
   },
   {
     "id": 533,
     "name": "パイプ管（ビニール製）",
     "garbageCategory": 5,
-    "note": "５０ｃｍ以下のものは可燃ごみです"
+    "note": "５０ｃｍ以下のものは可燃ごみです",
+    "search": "ぱいぷかん（びにーるせい）"
   },
   {
     "id": 534,
     "name": "パイプベッド",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "ぱいぷべっど"
   },
   {
     "id": 535,
     "name": "廃油（灯油・ガソリン・オイル類）",
     "garbageCategory": 4,
-    "note": "交換した所、販売店等に問い合わせてください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "交換した所、販売店等に問い合わせてください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "はいゆ（とうゆ・がそりん・おいるるい）"
   },
   {
     "id": 536,
     "name": "バインダー（プラスチック製）",
     "garbageCategory": 2,
-    "note": "金属部分は取って資源物（金属類）に出してください"
+    "note": "金属部分は取って資源物（金属類）に出してください",
+    "search": "ばいんだー（ぷらすちっくせい）"
   },
   {
     "id": 537,
     "name": "はがき",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "はがき"
   },
   {
     "id": 538,
     "name": "はかり（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "はかり（きんぞくせい）"
   },
   {
     "id": 539,
     "name": "ハケ（木製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "はけ（もくせい）"
   },
   {
     "id": 540,
     "name": "バケツ（プラスチック製）",
     "garbageCategory": 5,
-    "note": "５０ｃｍ以下ものは可燃ごみです。金属製のものは資源物（金属類）に出してください。"
+    "note": "５０ｃｍ以下ものは可燃ごみです。金属製のものは資源物（金属類）に出してください。",
+    "search": "ばけつ（ぷらすちっくせい）"
   },
   {
     "id": 541,
     "name": "箱類（木・プラスチック製）",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです。１ｍを超えるものは原形のままでは集積場に出せません。金属製のものは資源物（金属）に出してください。紙製のものは資源物（紙類）です。"
+    "note": "５０ｃｍを超えるものは破砕ごみです。１ｍを超えるものは原形のままでは集積場に出せません。金属製のものは資源物（金属）に出してください。紙製のものは資源物（紙類）です。",
+    "search": "はこるい（き・ぷらすちっくせい）"
   },
   {
     "id": 542,
     "name": "ハサミ（金属製）",
     "garbageCategory": 15,
-    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください"
+    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください",
+    "search": "はさみ（きんぞくせい）"
   },
   {
     "id": 543,
     "name": "箸",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "はし"
   },
   {
     "id": 544,
     "name": "はしご（金属製）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "はしご（きんぞくせい）"
   },
   {
     "id": 545,
     "name": "はしご（木製）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。５０ｃｍ以下に壊せば、可燃ごみに出すことができます。"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。５０ｃｍ以下に壊せば、可燃ごみに出すことができます。",
+    "search": "はしご（もくせい）"
   },
   {
     "id": 546,
     "name": "バスマット",
     "garbageCategory": 5,
-    "note": "タオル地のものは資源物（布・衣類）です"
+    "note": "タオル地のものは資源物（布・衣類）です",
+    "search": "ばすまっと"
   },
   {
     "id": 547,
     "name": "パソコン（家庭用）",
     "garbageCategory": 11,
-    "note": "個人情報など削除したうえで出してください。ＰＣリサイクルもご活用ください。ガイドブックの２２頁を参照してください。"
+    "note": "個人情報など削除したうえで出してください。ＰＣリサイクルもご活用ください。ガイドブックの２２頁を参照してください。",
+    "search": "ぱそこん（かていよう）"
   },
   {
     "id": 548,
     "name": "パソコンのパーツ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "ぱそこんのぱーつ"
   },
   {
     "id": 549,
     "name": "パソコンのプリンタ",
     "garbageCategory": 11,
-    "note": "インクカートリッジなどは販売店や地区市民センターの回収箱などもご利用ください"
+    "note": "インクカートリッジなどは販売店や地区市民センターの回収箱などもご利用ください",
+    "search": "ぱそこんのぷりんた"
   },
   {
     "id": 550,
     "name": "パソコンのディスプレイ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "ぱそこんのでぃすぷれい"
   },
   {
     "id": 551,
     "name": "バッテリー（車、オートバイ、原付自転車、アシスト自転車用）",
     "garbageCategory": 15,
-    "note": "オートバイ、原付自転車、アシスト自転車用のバッテリーは資源物(乾電池・水銀体温計)です"
+    "note": "オートバイ、原付自転車、アシスト自転車用のバッテリーは資源物(乾電池・水銀体温計)です",
+    "search": "ばってりー（くるま、おーとばい、げんつきじてんしゃ、あしすとじてんしゃよう）"
   },
   {
     "id": 552,
     "name": "バット（金属製）",
     "garbageCategory": 15,
-    "note": "木製のものやプラスチック製のものは破砕ごみです"
+    "note": "木製のものやプラスチック製のものは破砕ごみです",
+    "search": "ばっと（きんぞくせい）"
   },
   {
     "id": 553,
     "name": "発泡スチロール",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです。事業活動で発生したものは収集・処理しません。"
+    "note": "５０ｃｍを超えるものは破砕ごみです。事業活動で発生したものは収集・処理しません。",
+    "search": "はっぽうすちろーる"
   },
   {
     "id": 554,
     "name": "花火",
     "garbageCategory": 2,
-    "note": "水にしめらせてください"
+    "note": "水にしめらせてください",
+    "search": "はなび"
   },
   {
     "id": 555,
     "name": "パフ（化粧品）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぱふ（けしょうひん）"
   },
   {
     "id": 556,
     "name": "歯ブラシ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "はぶらし"
   },
   {
     "id": 557,
     "name": "歯磨きチューブ",
     "garbageCategory": 2,
-    "note": "中身を使い切ってください。金属製のものは資源物（金属類）に出してください。"
+    "note": "中身を使い切ってください。金属製のものは資源物（金属類）に出してください。",
+    "search": "はみがきちゅーぶ"
   },
   {
     "id": 558,
     "name": "刃物",
     "garbageCategory": 15,
-    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください"
+    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください",
+    "search": "はもの"
   },
   {
     "id": 559,
     "name": "針",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "はり"
   },
   {
     "id": 560,
     "name": "針金",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "はりがね"
   },
   {
     "id": 561,
     "name": "ハロゲンヒーター",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "はろげんひーたー"
   },
   {
     "id": 562,
     "name": "ハンガー（針金）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "はんがー（はりがね）"
   },
   {
     "id": 563,
     "name": "ハンカチ",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "はんかち"
   },
   {
     "id": 564,
     "name": "はんこ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "はんこ"
   },
   {
     "id": 565,
     "name": "半紙",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "はんし"
   },
   {
     "id": 566,
     "name": "パンスト",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "ぱんすと"
   },
   {
     "id": 567,
     "name": "絆創膏【ばんそうこう】",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ばんそうこう【ばんそうこう】"
   },
   {
     "id": 568,
     "name": "パンツ（下着）",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "ぱんつ（したぎ）"
   },
   {
     "id": 569,
     "name": "半纏【はんてん】",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "はんてん【はんてん】"
   },
   {
     "id": 570,
     "name": "ハンドバック",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "はんどばっく"
   },
   {
     "id": 571,
     "name": "ハンマー（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "はんまー（きんぞくせい）"
   },
   {
     "id": 572,
     "name": "ビーチパラソル（金属製）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "びーちぱらそる（きんぞくせい）"
   },
   {
     "id": 573,
     "name": "ビート板",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "びーといた"
   },
   {
     "id": 574,
     "name": "ビールびん",
     "garbageCategory": 7,
-    "note": "できるだけ販売店に返してください"
+    "note": "できるだけ販売店に返してください",
+    "search": "びーるびん"
   },
   {
     "id": 575,
     "name": "ピアニカ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぴあにか"
   },
   {
     "id": 576,
     "name": "ピアノ",
     "garbageCategory": 3,
-    "note": "販売店等に引き取りを依頼してください"
+    "note": "販売店等に引き取りを依頼してください",
+    "search": "ぴあの"
   },
   {
     "id": 577,
     "name": "美顔器",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "びがんき"
   },
   {
     "id": 578,
     "name": "ひげそり（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "ひげそり（きんぞくせい）"
   },
   {
     "id": 579,
     "name": "ビデオカメラ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "びでおかめら"
   },
   {
     "id": 580,
     "name": "ビデオテープ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "びでおてーぷ"
   },
   {
     "id": 581,
     "name": "ビデオデッキ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "びでおでっき"
   },
   {
     "id": 582,
     "name": "ビニールテープ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "びにーるてーぷ"
   },
   {
     "id": 583,
     "name": "ビニール袋",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "びにーるぶくろ"
   },
   {
     "id": 584,
     "name": "避妊具",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ひにんぐ"
   },
   {
     "id": 585,
     "name": "ひも（ビニール製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ひも（びにーるせい）"
   },
   {
     "id": 586,
     "name": "びん（化粧品用を除く）",
     "garbageCategory": 7,
-    "note": "中身を空にして軽く水洗いしてください"
+    "note": "中身を空にして軽く水洗いしてください",
+    "search": "びん（けしょうひんようをのぞく）"
   },
   {
     "id": 587,
     "name": "びん（化粧品用）",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "びん（けしょうひんよう）"
   },
   {
     "id": 588,
     "name": "便せん",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "びんせん"
   },
   {
     "id": 589,
     "name": "ファイル（紙製）",
     "garbageCategory": 13,
-    "note": "金属部分はとって、資源物（金属類）に出してください"
+    "note": "金属部分はとって、資源物（金属類）に出してください",
+    "search": "ふぁいる（かみせい）"
   },
   {
     "id": 590,
     "name": "ファイル（プラスチック製）",
     "garbageCategory": 2,
-    "note": "金属部分はとって、資源物（金属類）に出してください"
+    "note": "金属部分はとって、資源物（金属類）に出してください",
+    "search": "ふぁいる（ぷらすちっくせい）"
   },
   {
     "id": 591,
     "name": "ファックス付き電話",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "ふぁっくすつきでんわ"
   },
   {
     "id": 592,
     "name": "ファンヒーター",
     "garbageCategory": 11,
-    "note": "灯油は必ず抜いてください"
+    "note": "灯油は必ず抜いてください",
+    "search": "ふぁんひーたー"
   },
   {
     "id": 593,
     "name": "フィルム（ネガ）、フィルムケース",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ふぃるむ（ねが）、ふぃるむけーす"
   },
   {
     "id": 594,
     "name": "封筒",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください。窓あき部分のフィルムは可燃ごみです。"
+    "note": "十字にひもでしばってください。窓あき部分のフィルムは可燃ごみです。",
+    "search": "ふうとう"
   },
   {
     "id": 595,
     "name": "風鈴",
     "garbageCategory": 5,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "ふうりん"
   },
   {
     "id": 596,
     "name": "フォーク（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック・木・竹製のものは可燃ごみです"
+    "note": "プラスチック・木・竹製のものは可燃ごみです",
+    "search": "ふぉーく（きんぞくせい）"
   },
   {
     "id": 597,
     "name": "ふすま",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "ふすま"
   },
   {
     "id": 598,
     "name": "ブックエンド（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "ぶっくえんど（きんぞくせい）"
   },
   {
     "id": 599,
     "name": "筆",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ふで"
   },
   {
     "id": 600,
     "name": "ふとん",
     "garbageCategory": 5,
-    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください"
+    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください",
+    "search": "ふとん"
   },
   {
     "id": 601,
     "name": "ふとんカバー",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "ふとんかばー"
   },
   {
     "id": 602,
     "name": "ふとん乾燥機",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "ふとんかんそうき"
   },
   {
     "id": 603,
     "name": "フライパン",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "ふらいぱん"
   },
   {
     "id": 604,
     "name": "ブラインド（プラスチック製）",
     "garbageCategory": 5,
-    "note": "金属製のものは資源物（金属類）です。１ｍを超えるものは原形のままでは集積場に出せません。"
+    "note": "金属製のものは資源物（金属類）です。１ｍを超えるものは原形のままでは集積場に出せません。",
+    "search": "ぶらいんど（ぷらすちっくせい）"
   },
   {
     "id": 605,
     "name": "プラスチックボトル（ペットボトルは除く）",
     "garbageCategory": 2,
-    "note": "中身を空にして軽く水洗いしてください"
+    "note": "中身を空にして軽く水洗いしてください",
+    "search": "ぷらすちっくぼとる（ぺっとぼとるはのぞく）"
   },
   {
     "id": 606,
     "name": "プラスチック容器",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぷらすちっくようき"
   },
   {
     "id": 607,
     "name": "プラモデル",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぷらもでる"
   },
   {
     "id": 608,
     "name": "ブランコ（幼児用）（金属製）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "ぶらんこ（ようじよう）（きんぞくせい）"
   },
   {
     "id": 609,
     "name": "プランター（木製）",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものやプラスチック製・陶磁器製のものは破砕ごみです。金属製のものは資源物（金属類）に出してください。土は取り除いてください。"
+    "note": "５０ｃｍを超えるものやプラスチック製・陶磁器製のものは破砕ごみです。金属製のものは資源物（金属類）に出してください。土は取り除いてください。",
+    "search": "ぷらんたー（もくせい）"
   },
   {
     "id": 610,
     "name": "ブリキ製品",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "ぶりきせいひん"
   },
   {
     "id": 611,
     "name": "プリンター",
     "garbageCategory": 11,
-    "note": "インクカートリッジなどは販売店や地区市民センターの回収箱などもご利用ください"
+    "note": "インクカートリッジなどは販売店や地区市民センターの回収箱などもご利用ください",
+    "search": "ぷりんたー"
   },
   {
     "id": 612,
     "name": "ブルーシート",
     "garbageCategory": 5,
-    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください。５０ｃｍ以下のものは可燃ごみです。"
+    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください。５０ｃｍ以下のものは可燃ごみです。",
+    "search": "ぶるーしーと"
   },
   {
     "id": 613,
     "name": "ブルーレイディスク",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぶるーれいでぃすく"
   },
   {
     "id": 614,
     "name": "ブルーレイレコーダー（プレーヤー）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "ぶるーれいれこーだー（ぷれーやー）"
   },
   {
     "id": 615,
     "name": "古着・古布",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "ふるぎ・こふ"
   },
   {
     "id": 616,
     "name": "フロッピーディスク",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ふろっぴーでぃすく"
   },
   {
     "id": 617,
     "name": "風呂敷（布製）",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "ふろしき（ぬのせい）"
   },
   {
     "id": 618,
     "name": "風呂ぶた（プラスチック製）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "ふろぶた（ぷらすちっくせい）"
   },
   {
     "id": 619,
     "name": "風呂マット（浴室用）（プラスチック製）",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ふろまっと（よくしつよう）（ぷらすちっくせい）"
   },
   {
     "id": 620,
     "name": "文鎮（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "ぶんちん（きんぞくせい）"
   },
   {
     "id": 621,
     "name": "噴霧器",
     "garbageCategory": 5,
-    "note": "電気で起動するものは資源物(小型家電)です"
+    "note": "電気で起動するものは資源物(小型家電)です",
+    "search": "ふんむき"
   },
   {
     "id": 622,
     "name": "ヘアーブラシ（プラスチック製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "へあーぶらし（ぷらすちっくせい）"
   },
   {
     "id": 623,
     "name": "ヘアピン（金属製）",
     "garbageCategory": 15,
-    "note": "ふた付きの缶に入れてください"
+    "note": "ふた付きの缶に入れてください",
+    "search": "へあぴん（きんぞくせい）"
   },
   {
     "id": 624,
     "name": "ベッド",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "べっど"
   },
   {
     "id": 625,
     "name": "ペットボトル",
     "garbageCategory": 1,
-    "note": "キャップ、ラベルを取り、水洗いしてください"
+    "note": "キャップ、ラベルを取り、水洗いしてください",
+    "search": "ぺっとぼとる"
   },
   {
     "id": 626,
     "name": "ペットボトルのキャップ、ラベル",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぺっとぼとるのきゃっぷ、らべる"
   },
   {
     "id": 627,
     "name": "ヘッドホン",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "へっどほん"
   },
   {
     "id": 628,
     "name": "ベビーカー",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "べびーかー"
   },
   {
     "id": 629,
     "name": "ベビーゲート",
     "garbageCategory": 5,
-    "note": "金属製のものは資源物(金属類)です"
+    "note": "金属製のものは資源物(金属類)です",
+    "search": "べびーげーと"
   },
   {
     "id": 630,
     "name": "ヘルスメーター",
     "garbageCategory": 11,
-    "note": "電池は抜いてください"
+    "note": "電池は抜いてください",
+    "search": "へるすめーたー"
   },
   {
     "id": 631,
     "name": "ベルト",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "べると"
   },
   {
     "id": 632,
     "name": "ヘルメット",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "へるめっと"
   },
   {
     "id": 633,
     "name": "ペンキ",
     "garbageCategory": 4,
-    "note": "販売店等に問い合わせてください。少量の場合は紙や古布に染み込ませ、可燃ごみに出してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "販売店等に問い合わせてください。少量の場合は紙や古布に染み込ませ、可燃ごみに出してください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "ぺんき"
   },
   {
     "id": 634,
     "name": "便座（ウォシュレット等）",
     "garbageCategory": 5,
-    "note": "便座カバーは可燃ごみです。電動のものは資源物（小型家電）に出してください。業者が交換したものは収集・処理できません。"
+    "note": "便座カバーは可燃ごみです。電動のものは資源物（小型家電）に出してください。業者が交換したものは収集・処理できません。",
+    "search": "べんざ（うぉしゅれっととう）"
   },
   {
     "id": 635,
     "name": "弁当箱（プラスチック製）",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "べんとうばこ（ぷらすちっくせい）"
   },
   {
     "id": 636,
     "name": "ホース",
     "garbageCategory": 2,
-    "note": "５０ｃｍ以下に切断してください"
+    "note": "５０ｃｍ以下に切断してください",
+    "search": "ほーす"
   },
   {
     "id": 637,
     "name": "ホースリール",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ほーすりーる"
   },
   {
     "id": 638,
     "name": "ボーリングのボール",
     "garbageCategory": 5,
-    "note": "転がらないよう処置して、必ず『ボーリングボール』と表示してください"
+    "note": "転がらないよう処置して、必ず『ボーリングボール』と表示してください",
+    "search": "ぼーりんぐのぼーる"
   },
   {
     "id": 639,
     "name": "ボール（スポーツ用品）",
     "garbageCategory": 2,
-    "note": "空気は抜いてください"
+    "note": "空気は抜いてください",
+    "search": "ぼーる（すぽーつようひん）"
   },
   {
     "id": 640,
     "name": "ボールペン",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "ぼーるぺん"
   },
   {
     "id": 641,
     "name": "ホーロー鍋",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "ほーろーなべ"
   },
   {
     "id": 642,
     "name": "ほうき",
     "garbageCategory": 5,
-    "note": "５０ｃｍ以下のものは可燃ごみです"
+    "note": "５０ｃｍ以下のものは可燃ごみです",
+    "search": "ほうき"
   },
   {
     "id": 643,
     "name": "帽子",
     "garbageCategory": 12,
-    "note": null
+    "note": null,
+    "search": "ぼうし"
   },
   {
     "id": 644,
     "name": "包帯",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ほうたい"
   },
   {
     "id": 645,
     "name": "包丁（金属製）",
     "garbageCategory": 15,
-    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください"
+    "note": "刃の部分を厚紙やダンボールなどで包み、『刃物危険』と表示してください",
+    "search": "ほうちょう（きんぞくせい）"
   },
   {
     "id": 646,
     "name": "包丁研ぎ器",
     "garbageCategory": 2,
-    "note": "電動のものは資源物（小型家電）です"
+    "note": "電動のものは資源物（小型家電）です",
+    "search": "ほうちょうとぎき"
   },
   {
     "id": 647,
     "name": "ボウル（台所用品）（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "ぼうる（だいどころようひん）（きんぞくせい）"
   },
   {
     "id": 648,
     "name": "木刀",
     "garbageCategory": 5,
-    "note": "５０ｃｍ以下に切断すれば可燃ごみに出すことができます"
+    "note": "５０ｃｍ以下に切断すれば可燃ごみに出すことができます",
+    "search": "ぼくとう"
   },
   {
     "id": 649,
     "name": "歩行器（幼児用）",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ほこうき（ようじよう）"
   },
   {
     "id": 650,
     "name": "ポスター",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "ぽすたー"
   },
   {
     "id": 651,
     "name": "ポータブルトイレ",
     "garbageCategory": 2,
-    "note": "５０ｃｍ以下の簡易なものは汚物を取り除き、可燃ごみに出してください"
+    "note": "５０ｃｍ以下の簡易なものは汚物を取り除き、可燃ごみに出してください",
+    "search": "ぽーたぶるといれ"
   },
   {
     "id": 652,
     "name": "ボタン電池",
     "garbageCategory": 10,
-    "note": "販売店等に設置されている回収箱も利用してください。ビニールテープなどで絶縁してください。"
+    "note": "販売店等に設置されている回収箱も利用してください。ビニールテープなどで絶縁してください。",
+    "search": "ぼたんでんち"
   },
   {
     "id": 653,
     "name": "補聴器",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "ほちょうき"
   },
   {
     "id": 654,
     "name": "ホッチキスの針",
     "garbageCategory": 15,
-    "note": "ふた付きの缶に入れてください"
+    "note": "ふた付きの缶に入れてください",
+    "search": "ほっちきすのはり"
   },
   {
     "id": 655,
     "name": "ホッチキス",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "ほっちきす"
   },
   {
     "id": 656,
     "name": "ポット",
     "garbageCategory": 11,
-    "note": "プラスチック製品で小型家電ではないものは破砕ごみに出してください"
+    "note": "プラスチック製品で小型家電ではないものは破砕ごみに出してください",
+    "search": "ぽっと"
   },
   {
     "id": 657,
     "name": "ホットカーペット",
     "garbageCategory": 11,
-    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください"
+    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください",
+    "search": "ほっとかーぺっと"
   },
   {
     "id": 658,
     "name": "ホットカーラー",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "ほっとかーらー"
   },
   {
     "id": 659,
     "name": "ホットプレート",
     "garbageCategory": 11,
-    "note": "ふたなどガラス製のものは破砕ごみです"
+    "note": "ふたなどガラス製のものは破砕ごみです",
+    "search": "ほっとぷれーと"
   },
   {
     "id": 660,
     "name": "哺乳びん（プラスチック製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ほにゅうびん（ぷらすちっくせい）"
   },
   {
     "id": 661,
     "name": "哺乳びん（ガラス製）",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ほにゅうびん（がらすせい）"
   },
   {
     "id": 662,
     "name": "ホームフリーザー",
     "garbageCategory": 4,
-    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf"
+    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf",
+    "search": "ほーむふりーざー"
   },
   {
     "id": 663,
     "name": "ポリタンク",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ぽりたんく"
   },
   {
     "id": 664,
     "name": "ポリバケツ",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです"
+    "note": "５０ｃｍを超えるものは破砕ごみです",
+    "search": "ぽりばけつ"
   },
   {
     "id": 665,
     "name": "ポリ袋",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ぽりぶくろ"
   },
   {
     "id": 666,
     "name": "保冷剤",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ほれいざい"
   },
   {
     "id": 667,
     "name": "ホワイトボード",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原型のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原型のままでは集積場に出せません",
+    "search": "ほわいとぼーど"
   },
   {
     "id": 668,
     "name": "本",
     "garbageCategory": 13,
-    "note": null
+    "note": null,
+    "search": "ほん"
   },
   {
     "id": 669,
     "name": "本棚",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "ほんだな"
   },
   {
     "id": 670,
     "name": "麻雀パイ",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "まーじゃんぱい"
   },
   {
     "id": 671,
     "name": "マイク",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "まいく"
   },
   {
     "id": 672,
     "name": "マウス（パソコン用）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "まうす（ぱそこんよう）"
   },
   {
     "id": 673,
     "name": "巻尺（メジャー）",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "まきじゃく（めじゃー）"
   },
   {
     "id": 674,
     "name": "マグネット",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "まぐねっと"
   },
   {
     "id": 675,
     "name": "まくら",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです"
+    "note": "５０ｃｍを超えるものは破砕ごみです",
+    "search": "まくら"
   },
   {
     "id": 676,
     "name": "マジックペン",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "まじっくぺん"
   },
   {
     "id": 677,
     "name": "マスク（布）",
     "garbageCategory": 2,
-    "note": "洗って出してください"
+    "note": "洗って出してください",
+    "search": "ますく（ぬの）"
   },
   {
     "id": 678,
     "name": "マット",
     "garbageCategory": 2,
-    "note": "玄関マット・キッチンマット・風呂マット・トイレマット・デスクマットなど５０ｃｍを超えるものは破砕ごみです"
+    "note": "玄関マット・キッチンマット・風呂マット・トイレマット・デスクマットなど５０ｃｍを超えるものは破砕ごみです",
+    "search": "まっと"
   },
   {
     "id": 679,
     "name": "マットレス",
     "garbageCategory": 5,
-    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください。スプリングマットレスは粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "１ｍ以下になるよう小さくたたんで、ひもでしばってください。スプリングマットレスは粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "まっとれす"
   },
   {
     "id": 680,
     "name": "まな板",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです"
+    "note": "５０ｃｍを超えるものは破砕ごみです",
+    "search": "まないた"
   },
   {
     "id": 681,
     "name": "マニキュアのびん",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "まにきゅあのびん"
   },
   {
     "id": 682,
     "name": "魔法瓶",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "まほうびん"
   },
   {
     "id": 683,
     "name": "マヨネーズの容器",
     "garbageCategory": 2,
-    "note": "中身を使い切り、軽く水洗いしてください"
+    "note": "中身を使い切り、軽く水洗いしてください",
+    "search": "まよねーずのようき"
   },
   {
     "id": 684,
     "name": "丸太（太さ5cm以上）",
     "garbageCategory": 5,
-    "note": "長さ１ｍを超えるものや太さ２０ｃｍを超えるものは原形のままでは集積場に出せません。長さ５０ｃｍ以下で太さ５ｃｍ以下のものは可燃ごみに出すことができます。"
+    "note": "長さ１ｍを超えるものや太さ２０ｃｍを超えるものは原形のままでは集積場に出せません。長さ５０ｃｍ以下で太さ５ｃｍ以下のものは可燃ごみに出すことができます。",
+    "search": "まるた（ふとさ5cmいじょう）"
   },
   {
     "id": 685,
     "name": "万歩計",
     "garbageCategory": 11,
-    "note": "電池は抜いてください"
+    "note": "電池は抜いてください",
+    "search": "まんほけい"
   },
   {
     "id": 686,
     "name": "みかんなどを入れたネット",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "みかんなどをいれたねっと"
   },
   {
     "id": 687,
     "name": "ミキサー",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "みきさー"
   },
   {
     "id": 688,
     "name": "ミシン（足踏み式）",
     "garbageCategory": 15,
-    "note": "外した木製の台の部分は粗大ごみ戸別有料収集指定品目になります。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "外した木製の台の部分は粗大ごみ戸別有料収集指定品目になります。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "みしん（あしぶみしき）"
   },
   {
     "id": 689,
     "name": "ミシン（ポータブル）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "みしん（ぽーたぶる）"
   },
   {
     "id": 690,
     "name": "耳かき",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "みみかき"
   },
   {
     "id": 691,
     "name": "ミニコンポ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "みにこんぽ"
   },
   {
     "id": 692,
     "name": "麦わら帽子",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "むぎわらぼうし"
   },
   {
     "id": 693,
     "name": "虫かご",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "むしかご"
   },
   {
     "id": 694,
     "name": "蒸し器（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "むしき（きんぞくせい）"
   },
   {
     "id": 695,
     "name": "虫めがね",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "むしめがね"
   },
   {
     "id": 696,
     "name": "めがね（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "めがね（きんぞくせい）"
   },
   {
     "id": 697,
     "name": "目玉クリップ",
     "garbageCategory": 15,
-    "note": "ふた付きの缶に入れてください"
+    "note": "ふた付きの缶に入れてください",
+    "search": "めだまくりっぷ"
   },
   {
     "id": 698,
     "name": "毛布",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "もうふ"
   },
   {
     "id": 699,
     "name": "木片",
     "garbageCategory": 2,
-    "note": "５０ｃｍを超えるものは破砕ごみです。１ｍを超えるものは原形のままでは集積場に出せません。"
+    "note": "５０ｃｍを超えるものは破砕ごみです。１ｍを超えるものは原形のままでは集積場に出せません。",
+    "search": "もくへん"
   },
   {
     "id": 700,
     "name": "餅つき機",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "もちつきき"
   },
   {
     "id": 701,
     "name": "モップ（柄付モップ）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "もっぷ（えづけもっぷ）"
   },
   {
     "id": 702,
     "name": "モデルガン",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "もでるがん"
   },
   {
     "id": 703,
     "name": "モニター（パソコン用）",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "もにたー（ぱそこんよう）"
   },
   {
     "id": 704,
     "name": "物干し竿（金属製）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "ものほしさお（きんぞくせい）"
   },
   {
     "id": 705,
     "name": "物干し竿（プラスチック製）",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません",
+    "search": "ものほしさお（ぷらすちっくせい）"
   },
   {
     "id": 706,
     "name": "物干し台（金属製）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。根元の土台は外して破砕ごみに出してください。"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。根元の土台は外して破砕ごみに出してください。",
+    "search": "ものほしだい（きんぞくせい）"
   },
   {
     "id": 707,
     "name": "物干し台（コンクリート製の土台）",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "ものほしだい（こんくりーとせいのどだい）"
   },
   {
     "id": 708,
     "name": "モバイルバッテリー",
     "garbageCategory": 10,
-    "note": null
+    "note": null,
+    "search": "もばいるばってりー"
   },
   {
     "id": 709,
     "name": "やかん",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "やかん"
   },
   {
     "id": 710,
     "name": "野菜くず",
     "garbageCategory": 2,
-    "note": "水分をよく切ってください"
+    "note": "水分をよく切ってください",
+    "search": "やさいくず"
   },
   {
     "id": 711,
     "name": "やすり（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "やすり（きんぞくせい）"
   },
   {
     "id": 712,
     "name": "浴衣",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "ゆかた"
   },
   {
     "id": 713,
     "name": "湯たんぽ（金属製）",
     "garbageCategory": 15,
-    "note": "プラスチック製のものは可燃ごみです"
+    "note": "プラスチック製のものは可燃ごみです",
+    "search": "ゆたんぽ（きんぞくせい）"
   },
   {
     "id": 714,
     "name": "湯沸器（台所用）（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "ゆにえき（だいどころよう）（きんぞくせい）"
   },
   {
     "id": 715,
     "name": "浴槽",
     "garbageCategory": 3,
-    "note": "直接四日市市クリーンセンターへ持ち込んでください。業者の工事に伴うものは持ち込めません。"
+    "note": "直接四日市市クリーンセンターへ持ち込んでください。業者の工事に伴うものは持ち込めません。",
+    "search": "よくそう"
   },
   {
     "id": 716,
     "name": "よしず",
     "garbageCategory": 5,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。５０ｃｍ以下に切断すれば、可燃ごみに出すことができます。"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。５０ｃｍ以下に切断すれば、可燃ごみに出すことができます。",
+    "search": "よしず"
   },
   {
     "id": 717,
     "name": "ライター",
     "garbageCategory": 9,
-    "note": "必ず使い切り、ガスを抜いてください"
+    "note": "必ず使い切り、ガスを抜いてください",
+    "search": "らいたー"
   },
   {
     "id": 718,
     "name": "ラグマット",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "らぐまっと"
   },
   {
     "id": 719,
     "name": "ラケット",
     "garbageCategory": 5,
-    "note": null
+    "note": null,
+    "search": "らけっと"
   },
   {
     "id": 720,
     "name": "ラジオ、ラジカセ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "らじお、らじかせ"
   },
   {
     "id": 721,
     "name": "ラップ",
     "garbageCategory": 2,
-    "note": "汚れは落としてください"
+    "note": "汚れは落としてください",
+    "search": "らっぷ"
   },
   {
     "id": 722,
     "name": "ランチジャー",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "らんちじゃー"
   },
   {
     "id": 723,
     "name": "ランドセル",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "らんどせる"
   },
   {
     "id": 724,
     "name": "ランプ（金属製）",
     "garbageCategory": 15,
-    "note": "ガラス部分は外し、破砕ごみに出してください"
+    "note": "ガラス部分は外し、破砕ごみに出してください",
+    "search": "らんぷ（きんぞくせい）"
   },
   {
     "id": 725,
     "name": "リール（釣具）（金属製）",
     "garbageCategory": 15,
-    "note": null
+    "note": null,
+    "search": "りーる（つりぐ）（きんぞくせい）"
   },
   {
     "id": 726,
     "name": "リコーダー（笛）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "りこーだー（ふえ）"
   },
   {
     "id": 727,
     "name": "リモコン",
     "garbageCategory": 11,
-    "note": "電池は抜いてください"
+    "note": "電池は抜いてください",
+    "search": "りもこん"
   },
   {
     "id": 728,
     "name": "リヤカー",
     "garbageCategory": 3,
-    "note": "資源物（金属類）として四日市市クリーンセンターもしくは楠衛生センターへ持ち込んでください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf"
+    "note": "資源物（金属類）として四日市市クリーンセンターもしくは楠衛生センターへ持ち込んでください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/syorikonnnannbutu.pdf",
+    "search": "りやかー"
   },
   {
     "id": 729,
     "name": "リュックサック",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "りゅっくさっく"
   },
   {
     "id": 730,
     "name": "リンスの容器",
     "garbageCategory": 2,
-    "note": "中身を使い切り、軽く水洗いしてください"
+    "note": "中身を使い切り、軽く水洗いしてください",
+    "search": "りんすのようき"
   },
   {
     "id": 731,
     "name": "ルーズリーフ",
     "garbageCategory": 13,
-    "note": "十字にひもでしばってください"
+    "note": "十字にひもでしばってください",
+    "search": "るーずりーふ"
   },
   {
     "id": 732,
     "name": "ルームランナー",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "るーむらんなー"
   },
   {
     "id": 733,
     "name": "冷蔵庫・冷凍庫",
     "garbageCategory": 4,
-    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf"
+    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf",
+    "search": "れいぞうこ・れいとうこ"
   },
   {
     "id": 734,
     "name": "冷暖房器具（エアコン）",
     "garbageCategory": 4,
-    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf"
+    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf",
+    "search": "れいだんぼうきぐ（えあこん）"
   },
   {
     "id": 735,
     "name": "冷風機",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "れいふうき"
   },
   {
     "id": 736,
     "name": "レコード盤",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "れこーどばん"
   },
   {
     "id": 737,
     "name": "レジ袋",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "れじぶくろ"
   },
   {
     "id": 738,
     "name": "レジャーシート",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "れじゃーしーと"
   },
   {
     "id": 739,
     "name": "レトルトパック",
     "garbageCategory": 2,
-    "note": "軽く水洗いしてください"
+    "note": "軽く水洗いしてください",
+    "search": "れとるとぱっく"
   },
   {
     "id": 740,
     "name": "れんが",
     "garbageCategory": 5,
-    "note": "土のう袋に入れて片手で持てる量を２袋程度ずつ出してください。多量の場合は環境事業課に相談してください。業者が解体したものは収集・処理できません。"
+    "note": "土のう袋に入れて片手で持てる量を２袋程度ずつ出してください。多量の場合は環境事業課に相談してください。業者が解体したものは収集・処理できません。",
+    "search": "れんが"
   },
   {
     "id": 741,
     "name": "レンジフードフィルター（不織布）",
     "garbageCategory": 2,
-    "note": "枠付きのものは破砕ごみです"
+    "note": "枠付きのものは破砕ごみです",
+    "search": "れんじふーどふぃるたー（ふおぬの）"
   },
   {
     "id": 742,
     "name": "ローソク",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ろーそく"
   },
   {
     "id": 743,
     "name": "ロープ",
     "garbageCategory": 2,
-    "note": "５０ｃｍ以下に切断してください"
+    "note": "５０ｃｍ以下に切断してください",
+    "search": "ろーぷ"
   },
   {
     "id": 744,
     "name": "ローボード",
     "garbageCategory": 6,
-    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf"
+    "note": "粗大ごみ戸別有料収集指定品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/sodaigomikobetu.pdf",
+    "search": "ろーぼーど"
   },
   {
     "id": 745,
     "name": "ローラースケート",
     "garbageCategory": 2,
-    "note": "金属製のものは資源物（金属類）です"
+    "note": "金属製のものは資源物（金属類）です",
+    "search": "ろーらーすけーと"
   },
   {
     "id": 746,
     "name": "ろう引き紙",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "ろうびきし"
   },
   {
     "id": 747,
     "name": "ロッカー（金属製）",
     "garbageCategory": 15,
-    "note": "１ｍを超えるものは原形のままでは集積場に出せません。事業活動で発生したものは収集しません。"
+    "note": "１ｍを超えるものは原形のままでは集積場に出せません。事業活動で発生したものは収集しません。",
+    "search": "ろっかー（きんぞくせい）"
   },
   {
     "id": 748,
     "name": "ワープロ",
     "garbageCategory": 11,
-    "note": null
+    "note": null,
+    "search": "わーぷろ"
   },
   {
     "id": 749,
     "name": "ワイパー（ゴム製）",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "わいぱー（ごむせい）"
   },
   {
     "id": 750,
     "name": "ワインセラー",
     "garbageCategory": 4,
-    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf"
+    "note": "家電リサイクル法対象品目です。詳しくは以下のURLをご覧ください。https://www.city.yokkaichi.lg.jp/www/contents/1001000001550/simple/kadenrisaikuru.pdf",
+    "search": "わいんせらー"
   },
   {
     "id": 751,
     "name": "輪ゴム",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "わごむ"
   },
   {
     "id": 752,
     "name": "綿【わた】",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "めん【わた】"
   },
   {
     "id": 753,
     "name": "綿入れ半纏【はんてん】",
     "garbageCategory": 12,
-    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。"
+    "note": "まとめて透明または半透明の袋に入れてください。雨の日は出さないでください。汚れのひどいものは可燃ごみに出してください。",
+    "search": "わたいれはんてん【はんてん】"
   },
   {
     "id": 754,
     "name": "ワックスの缶",
     "garbageCategory": 15,
-    "note": "中身を使い切ってください"
+    "note": "中身を使い切ってください",
+    "search": "わっくすのかん"
   },
   {
     "id": 755,
     "name": "割りばし、割りばしの袋",
     "garbageCategory": 2,
-    "note": null
+    "note": null,
+    "search": "わりばし、わりばしのふくろ"
   }
 ]
