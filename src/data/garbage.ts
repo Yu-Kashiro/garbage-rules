@@ -39,6 +39,7 @@ export async function getGarbageItems(): Promise<GarbageItemWithCategory[]> {
     name: row.garbage_items.name,
     garbageCategory: row.garbage_categories.name,
     note: row.garbage_items.note,
+    search: row.garbage_items.search,
     createdAt: row.garbage_items.createdAt,
     updatedAt: row.garbage_items.updatedAt,
   }));
