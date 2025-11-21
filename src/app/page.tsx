@@ -1,24 +1,25 @@
 import { GarbageItemsTable } from "@/components/garbage-items-table";
 import { SearchForm } from "@/components/search-form";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Suspense } from "react";
 
 export default function GarbageRulesPage() {
-
   return (
-    <ScrollArea className="border rounded-md h-content">
-      <main className="flex items-start justify-center bg-background-main pt-10 md:pt-10">
-        <div className="container max-w-3xl px-4 space-y-10">
-          <h1 className="text-center text-xl font-bold md:text-3xl">
-            捨てたいごみを入力してください。
-          </h1>
+    <main className="flex flex-1 items-start justify-center bg-background-main pt-10 md:pt-10">
+      <div className="container max-w-3xl px-4 space-y-10">
+        <h1 className="text-center text-xl font-bold md:text-3xl">
+          捨てたいごみを入力してください。
+        </h1>
 
+        <div className="sticky top-14 z-10 bg-background-main pb-6 pt-2">
           <Suspense>
             <SearchForm />
-            <GarbageItemsTable />
           </Suspense>
         </div>
-      </main>
-    </ScrollArea>
+
+        <Suspense>
+          <GarbageItemsTable />
+        </Suspense>
+      </div>
+    </main>
   );
 }

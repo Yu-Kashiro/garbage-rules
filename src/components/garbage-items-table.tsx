@@ -1,5 +1,14 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import {
   Table,
   TableBody,
@@ -12,8 +21,9 @@ import { getCacheData, setCacheData } from "@/lib/cache-client";
 import { garbageFuseOptions } from "@/lib/fuse-config";
 import { GarbageItemWithCategory } from "@/types/garbage";
 import Fuse from "fuse.js";
+import { Info } from "lucide-react";
 import { useQueryState } from "nuqs";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function GarbageItemsTable() {
   const [search] = useQueryState("q", {
@@ -83,23 +93,54 @@ export function GarbageItemsTable() {
   }
 
   return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>品目名</TableHead>
-          <TableHead>分別区分</TableHead>
-          <TableHead>備考</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {filteredGarbageItems?.map((garbageItem) => (
-          <TableRow key={garbageItem.id}>
-            <TableCell>{garbageItem.name}</TableCell>
-            <TableCell>{garbageItem.garbageCategory}</TableCell>
-            <TableCell>{garbageItem.note}</TableCell>
+    <div className="border rounded-lg overflow-hidden">
+      <Table className="table-fixed">
+        <TableHeader>
+          <TableRow>
+            <TableHead className="border w-[50%]">品目名</TableHead>
+            <TableHead className="border w-[35%]">分別区分</TableHead>
+            <TableHead className="border w-[15%]">備考</TableHead>
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+        </TableHeader>
+        <TableBody>
+          {filteredGarbageItems?.map((garbageItem) => (
+            <TableRow key={garbageItem.id}>
+              <TableCell className="border truncate">
+                {garbageItem.name}
+              </TableCell>
+              <TableCell className="border truncate">
+                {garbageItem.garbageCategory}
+              </TableCell>
+              <TableCell className="border text-center">
+                {garbageItem.note ? (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-8 w-8"
+                        aria-label="備考を表示"
+                      >
+                        <Info className="h-4 w-4" />
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>{garbageItem.name}</DialogTitle>
+                        <DialogDescription className="">
+                          {garbageItem.note}
+                        </DialogDescription>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
+                ) : (
+                  <span className="text-muted-foreground">-</span>
+                )}
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </div>
   );
 }
