@@ -9,7 +9,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { getCacheData, setCacheData } from "@/lib/cache-client";
+import { garbageFuseOptions } from "@/lib/fuse-config";
 import { GarbageItemWithCategory } from "@/types/garbage";
+import Fuse from "fuse.js";
 import { useQueryState } from "nuqs";
 import { useEffect, useMemo, useState } from "react";
 
@@ -56,9 +58,21 @@ export function GarbageItemsTable() {
     fetchGarbageItems();
   }, []);
 
-  const filteredGarbageItems = useMemo(() => {
-    return items?.filter((garbageItem) => garbageItem.name.includes(search));
-  }, [items, search]);
+  // const filteredGarbageItems = useMemo(() => {
+  //   if (!search) {
+  //     // 検索クエリが空の場合は全件表示
+  //     return items;
+  //   }
+  //   // 検索クエリがある場合はFuse.jsで検索
+  //   const fuse = new Fuse(items, garbageFuseOptions);
+  //   return fuse.search(search).map((result) => result.item);
+  // }, [items, search]);
+
+  // 再レンダリングのたびに実行される
+  const fuse = new Fuse(items, garbageFuseOptions);
+  const filteredGarbageItems = search
+    ? fuse.search(search).map((result) => result.item)
+    : items;
 
   if (isLoading) {
     return (
