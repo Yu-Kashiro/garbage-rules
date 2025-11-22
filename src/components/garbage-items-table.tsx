@@ -21,7 +21,7 @@ import { getCacheData, setCacheData } from "@/lib/cache-client";
 import { garbageFuseOptions } from "@/lib/fuse-config";
 import { GarbageItemWithCategory } from "@/types/garbage";
 import Fuse from "fuse.js";
-import { Info } from "lucide-react";
+import { ArrowUp, Info } from "lucide-react";
 import { useQueryState } from "nuqs";
 import { useEffect, useState } from "react";
 
@@ -31,6 +31,7 @@ export function GarbageItemsTable() {
   });
   const [items, setItems] = useState<GarbageItemWithCategory[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
     const fetchGarbageItems = async () => {
@@ -68,6 +69,25 @@ export function GarbageItemsTable() {
     fetchGarbageItems();
   }, []);
 
+  // スクロール位置を監視
+  useEffect(() => {
+    const handleScroll = () => {
+      // 300px以上スクロールしたらボタンを表示
+      setShowScrollToTop(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // トップへスクロールする関数
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   // const filteredGarbageItems = useMemo(() => {
   //   if (!search) {
   //     // 検索クエリが空の場合は全件表示
@@ -93,54 +113,68 @@ export function GarbageItemsTable() {
   }
 
   return (
-    <div className="border rounded-lg overflow-hidden">
-      <Table className="table-fixed">
-        <TableHeader>
-          <TableRow>
-            <TableHead className="border w-[50%]">品目名</TableHead>
-            <TableHead className="border w-[35%]">分別区分</TableHead>
-            <TableHead className="border w-[15%]">備考</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {filteredGarbageItems?.map((garbageItem) => (
-            <TableRow key={garbageItem.id}>
-              <TableCell className="border truncate">
-                {garbageItem.name}
-              </TableCell>
-              <TableCell className="border truncate">
-                {garbageItem.garbageCategory}
-              </TableCell>
-              <TableCell className="border text-center">
-                {garbageItem.note ? (
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="h-auto w-auto p-0"
-                        aria-label="備考を表示"
-                      >
-                        <Info className="h-4 w-4" />
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent>
-                      <DialogHeader>
-                        <DialogTitle>{garbageItem.name}</DialogTitle>
-                        <DialogDescription className="text-left whitespace-pre-wrap">
-                          {garbageItem.note}
-                        </DialogDescription>
-                      </DialogHeader>
-                    </DialogContent>
-                  </Dialog>
-                ) : (
-                  <span className="text-muted-foreground">-</span>
-                )}
-              </TableCell>
+    <>
+      <div className="border rounded-lg overflow-hidden">
+        <Table className="table-fixed">
+          <TableHeader>
+            <TableRow>
+              <TableHead className="border w-[50%]">品目名</TableHead>
+              <TableHead className="border w-[35%]">分別区分</TableHead>
+              <TableHead className="border w-[15%]">備考</TableHead>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </div>
+          </TableHeader>
+          <TableBody>
+            {filteredGarbageItems?.map((garbageItem) => (
+              <TableRow key={garbageItem.id}>
+                <TableCell className="border truncate">
+                  {garbageItem.name}
+                </TableCell>
+                <TableCell className="border truncate">
+                  {garbageItem.garbageCategory}
+                </TableCell>
+                <TableCell className="border text-center">
+                  {garbageItem.note ? (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="h-auto w-auto p-0"
+                          aria-label="備考を表示"
+                        >
+                          <Info className="h-4 w-4" />
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="[&>button[data-slot='dialog-close']]:top-2">
+                        <DialogHeader>
+                          <DialogTitle>{garbageItem.name}</DialogTitle>
+                          <DialogDescription className="text-left whitespace-pre-wrap">
+                            {garbageItem.note}
+                          </DialogDescription>
+                        </DialogHeader>
+                      </DialogContent>
+                    </Dialog>
+                  ) : (
+                    <span className="text-muted-foreground">-</span>
+                  )}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+
+      {/* トップへ戻るボタン */}
+      <Button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 h-12 w-12 rounded-full shadow-lg transition-opacity duration-300 ${
+          showScrollToTop ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        size="icon"
+        aria-label="トップへ戻る"
+      >
+        <ArrowUp className="h-5 w-5" />
+      </Button>
+    </>
   );
 }
