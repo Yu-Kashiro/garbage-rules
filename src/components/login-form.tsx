@@ -155,7 +155,7 @@ export function LoginForm({ signUp = false }: { signUp?: boolean }) {
                 type="button"
                 onClick={() => {
                   authClient.signIn.anonymous().then(() => {
-                    router.push("/");
+                    router.push("/admin");
                   });
                 }}
               >
