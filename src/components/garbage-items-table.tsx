@@ -170,47 +170,55 @@ export function GarbageItemsTable() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {filteredGarbageItems?.map((garbageItem) => (
-              <TableRow key={garbageItem.id}>
-                <TableCell className="border truncate">
-                  {garbageItem.name}
-                </TableCell>
-                <TableCell className="border">
-                  <Badge
-                    variant={getCategoryStyle(garbageItem.garbageCategory).variant}
-                    className={`${getCategoryStyle(garbageItem.garbageCategory).className} max-w-full truncate`}
-                  >
-                    {garbageItem.garbageCategory}
-                  </Badge>
-                </TableCell>
-                <TableCell className="border text-center">
-                  {garbageItem.note ? (
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          className="h-auto w-auto p-0"
-                          aria-label="備考を表示"
-                        >
-                          <Info className="h-4 w-4" />
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="[&>button[data-slot='dialog-close']]:top-2">
-                        <DialogHeader>
-                          <DialogTitle>{garbageItem.name}</DialogTitle>
-                          <DialogDescription className="text-left whitespace-pre-wrap">
-                            {garbageItem.note}
-                          </DialogDescription>
-                        </DialogHeader>
-                      </DialogContent>
-                    </Dialog>
-                  ) : (
-                    <span className="text-muted-foreground">-</span>
-                  )}
+            {filteredGarbageItems.length === 0 ? (
+              <TableRow>
+                <TableCell colSpan={3} className="border text-center py-8 text-muted-foreground">
+                  品目名が見つかりませんでした
                 </TableCell>
               </TableRow>
-            ))}
+            ) : (
+              filteredGarbageItems.map((garbageItem) => (
+                <TableRow key={garbageItem.id}>
+                  <TableCell className="border truncate">
+                    {garbageItem.name}
+                  </TableCell>
+                  <TableCell className="border">
+                    <Badge
+                      variant={getCategoryStyle(garbageItem.garbageCategory).variant}
+                      className={`${getCategoryStyle(garbageItem.garbageCategory).className} max-w-full truncate`}
+                    >
+                      {garbageItem.garbageCategory}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="border text-center">
+                    {garbageItem.note ? (
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-auto w-auto p-0"
+                            aria-label="備考を表示"
+                          >
+                            <Info className="h-4 w-4" />
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="[&>button[data-slot='dialog-close']]:top-2">
+                          <DialogHeader>
+                            <DialogTitle>{garbageItem.name}</DialogTitle>
+                            <DialogDescription className="text-left whitespace-pre-wrap">
+                              {garbageItem.note}
+                            </DialogDescription>
+                          </DialogHeader>
+                        </DialogContent>
+                      </Dialog>
+                    ) : (
+                      <span className="text-muted-foreground">-</span>
+                    )}
+                  </TableCell>
+                </TableRow>
+              ))
+            )}
           </TableBody>
         </Table>
       </div>
