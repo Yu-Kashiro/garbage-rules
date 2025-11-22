@@ -14,6 +14,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { CITY_TITLE } from "@/lib/city";
 
 export const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -52,7 +53,7 @@ export const Header = () => {
               <line x1="10" y1="11" x2="10" y2="17" />
               <line x1="14" y1="11" x2="14" y2="17" />
             </svg>
-            <p className="text-sm md:text-base">〇〇市のごみ分別方法</p>
+            <p className="text-sm md:text-base">{CITY_TITLE}</p>
           </Link>
         </Button>
 
