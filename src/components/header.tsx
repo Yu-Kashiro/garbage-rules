@@ -111,16 +111,6 @@ export const Header = () => {
                 <SheetTitle>メニュー</SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-4 mt-6 px-4">
-                {/* Theme Toggle */}
-                <Button
-                  variant="outline"
-                  className="w-full justify-center"
-                  onClick={toggleTheme}
-                >
-                  <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                  <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                </Button>
-
                 {!isPending && (
                   <>
                     {session ? (
@@ -164,6 +154,16 @@ export const Header = () => {
                     )}
                   </>
                 )}
+
+                {/* Theme Toggle */}
+                <Button
+                  variant="secondary"
+                  className="w-full justify-center"
+                  onClick={toggleTheme}
+                >
+                  <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                </Button>
               </div>
             </SheetContent>
           </Sheet>
