@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { ThemeProvider } from "next-themes";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "@/components/ui/sonner";
+import { getBaseURL } from "@/lib/get-base-url";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
     template: "%s | 〇〇市",
     default: "〇〇市のごみ分別方法",
   },
+  metadataBase: new URL(getBaseURL()),
   description: "〇〇市のごみ分別方法を掲載しています。",
 };
 
