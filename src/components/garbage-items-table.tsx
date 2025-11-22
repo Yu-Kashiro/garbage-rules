@@ -165,8 +165,8 @@ export function GarbageItemsTable() {
           <TableHeader>
             <TableRow>
               <TableHead className="border w-[50%]">品目名</TableHead>
-              <TableHead className="border w-[35%]">分別区分</TableHead>
-              <TableHead className="border w-[15%]">備考</TableHead>
+              <TableHead className="border w-[41%]">分別区分</TableHead>
+              <TableHead className="border w-[9%]"></TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -218,7 +218,7 @@ export function GarbageItemsTable() {
       {/* トップへ戻るボタン */}
       <Button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 h-12 w-12 rounded-full shadow-lg transition-opacity duration-300 ${
+        className={`fixed bottom-8 right-8 z-50 h-12 w-12 rounded-full shadow-lg transition-opacity duration-300 ${
           showScrollToTop ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         size="icon"
