@@ -10,7 +10,7 @@ export default function GarbageRulesPage() {
           捨てたいごみを入力してください。
         </h1>
 
-        <div className="sticky top-14 z-10 bg-background-main md:pb-6 pt-2">
+        <div className="sticky top-14 z-10 bg-background-main pb-2 md:pb-6 pt-2">
           <Suspense>
             <SearchForm />
           </Suspense>
