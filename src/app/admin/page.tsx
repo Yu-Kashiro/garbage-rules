@@ -1,5 +1,10 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "管理者メニュー",
+}
 
 export default function RegisterPage() {
   return (
@@ -23,10 +28,10 @@ export default function RegisterPage() {
         <div className="space-y-5">
           <div className="flex flex-col md:flex-row gap-4">
             <Button variant="outline" className="flex-1 h-24 text-xl" asChild>
-              <Link href="/admin/data/categories">分別区分を管理</Link>
+              <Link href="/admin/data/categories">分別区分の管理</Link>
             </Button>
             <Button variant="outline" className="flex-1 h-24 text-xl" asChild>
-              <Link href="/admin/data/items">ごみ品目を管理</Link>
+              <Link href="/admin/data/items">ごみ品目の管理</Link>
             </Button>
           </div>
         </div>

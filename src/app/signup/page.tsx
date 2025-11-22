@@ -1,4 +1,9 @@
 import { LoginForm } from "@/components/login-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "新規登録",
+}
 
 export default function Page() {
   return (

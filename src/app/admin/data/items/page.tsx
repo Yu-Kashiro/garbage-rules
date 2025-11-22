@@ -2,7 +2,12 @@ import { CreateItemButton } from "@/components/forms/create-item-button";
 import { GarbageItemTable } from "@/components/forms/garbage-item-table";
 import { Button } from "@/components/ui/button";
 import { getGarbageCategories, getGarbageItemsWithId } from "@/data/garbage";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "ごみ品目の管理",
+};
 
 export default async function ItemEditPage() {
   const [items, categories] = await Promise.all([
