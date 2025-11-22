@@ -35,7 +35,7 @@ const getCategoryStyle = (category: string) => {
 
   // 破砕ごみ
   if (category === "破砕ごみ") {
-    return { variant: "outline" as const, className: "border-gray-500" };
+    return { variant: "outline" as const, className: "border-blue-500" };
   }
 
   // ペットボトル
