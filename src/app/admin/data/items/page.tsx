@@ -14,7 +14,7 @@ export default async function ItemEditPage() {
     <div className="container mx-auto px-4 py-10">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
-          <div className="grid grid-cols-3 items-center gap-4">
+          <div className="relative flex items-center justify-between">
             <div className="flex justify-start">
               <Link href="/admin">
                 <Button variant="outline">
@@ -22,7 +22,7 @@ export default async function ItemEditPage() {
                 </Button>
               </Link>
             </div>
-            <h1 className="text-lg font-bold md:text-3xl text-center whitespace-nowrap">
+            <h1 className="absolute left-1/2 -translate-x-1/2 text-lg font-bold md:text-3xl whitespace-nowrap">
               ごみ品目の管理
             </h1>
             <div className="flex justify-end">
