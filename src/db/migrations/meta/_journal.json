@@ -64,6 +64,13 @@
       "when": 1763704228131,
       "tag": "0008_light_boom_boom",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1763876599026,
+      "tag": "0009_brief_blue_blade",
+      "breakpoints": true
     }
   ]
 }

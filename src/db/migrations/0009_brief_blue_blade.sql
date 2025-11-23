@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `garbage_items_name_unique` ON `garbage_items` (`name`);
