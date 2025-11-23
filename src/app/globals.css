@@ -137,5 +137,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-wrap: anywhere; /* 収まらない場合に折り返す */
+    word-break: normal; /* 単語の分割はデフォルトに依存 */
+    line-break: strict; /* 禁則処理を厳格に適用 */
   }
+}
+
+@utility container {
+  @apply mx-auto px-4 md:px-6 lg:px-8;
 }
