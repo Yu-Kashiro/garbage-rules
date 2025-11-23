@@ -164,8 +164,8 @@ export function GarbageItemsTable() {
         <Table className="table-fixed">
           <TableHeader>
             <TableRow>
-              <TableHead className="border w-[50%]">品目名</TableHead>
-              <TableHead className="border w-[41%]">分別区分</TableHead>
+              <TableHead className="border w-[50%] text-center">品目名</TableHead>
+              <TableHead className="border w-[41%] text-center">分別区分</TableHead>
               <TableHead className="border w-[9%]"></TableHead>
             </TableRow>
           </TableHeader>
