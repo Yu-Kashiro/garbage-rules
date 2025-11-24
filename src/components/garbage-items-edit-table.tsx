@@ -8,13 +8,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import type {
-  GarbageCategory,
-  GarbageItem,
-} from "@/types/garbage";
+import type { GarbageCategory, GarbageItem } from "@/types/garbage";
 import { GarbageItemEditDialog } from "./garbage-item-edit-dialog";
 
-export function GarbageItemTable({
+export function GarbageItemsEditTable({
   items,
   categories,
 }: {
