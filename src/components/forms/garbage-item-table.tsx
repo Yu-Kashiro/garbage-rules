@@ -39,7 +39,7 @@ export function GarbageItemTable({
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">ID</TableHead>
+            <TableHead className="w-[100px]">番号</TableHead>
             <TableHead>品目名</TableHead>
             <TableHead>分別区分</TableHead>
             <TableHead className="hidden md:table-cell">備考</TableHead>
@@ -47,9 +47,9 @@ export function GarbageItemTable({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {items.map((item) => (
+          {items.map((item, index) => (
             <TableRow key={item.id}>
-              <TableCell className="font-medium">{item.id}</TableCell>
+              <TableCell className="font-medium">{index + 1}</TableCell>
               <TableCell className="truncate max-w-[200px]" title={item.name}>
                 {item.name}
               </TableCell>
