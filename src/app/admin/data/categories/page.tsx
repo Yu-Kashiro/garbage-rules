@@ -1,5 +1,5 @@
-import { CreateCategoryButton } from "@/components/forms/create-category-button";
-import { GarbageCategoryTable } from "@/components/forms/garbage-category-table";
+import { CreateCategoryButton } from "@/components/create-category-button";
+import { GarbageCategoryTable } from "@/components/garbage-category-table";
 import { Button } from "@/components/ui/button";
 import { getGarbageCategories } from "@/data/garbage";
 import { Metadata } from "next";
@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "分別区分の管理",
-}
+};
 
 export default async function CategoryEditPage() {
   const categories = await getGarbageCategories();
