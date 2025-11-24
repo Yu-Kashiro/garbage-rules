@@ -29,15 +29,15 @@ export function GarbageCategoryTable({
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-28">ID</TableHead>
+            <TableHead className="w-28">番号</TableHead>
             <TableHead>分別区分名</TableHead>
             <TableHead></TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {categories.map((category) => (
+          {categories.map((category, index) => (
             <TableRow key={category.id}>
-              <TableCell>{category.id}</TableCell>
+              <TableCell>{index + 1}</TableCell>
               <TableCell
                 className="truncate max-w-[300px]"
                 title={category.name}
