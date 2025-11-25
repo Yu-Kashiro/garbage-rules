@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/table";
 import type { GarbageCategory, GarbageItem } from "@/types/garbage";
 import { GarbageItemEditDialog } from "./garbage-item-edit-dialog";
+import { useQueryState } from "nuqs";
+import Fuse from "fuse.js";
 
 export function GarbageItemsEditTable({
   items,
@@ -18,10 +20,36 @@ export function GarbageItemsEditTable({
   items: GarbageItem[];
   categories: GarbageCategory[];
 }) {
+  const [search] = useQueryState("q", {
+    defaultValue: "",
+  });
+
   // カテゴリIDから名前を取得
   const getCategoryName = (categoryId: number) => {
     return categories.find((c) => c.id === categoryId)?.name || "不明";
   };
+
+  // Fuse.jsの設定とインスタンス作成
+  const searchableItems = items.map((item) => ({
+    ...item,
+    categoryName: getCategoryName(item.garbageCategory),
+  }));
+
+  const fuse = new Fuse(searchableItems, {
+    keys: [
+      { name: "name", weight: 2 }, // 品目名を重視
+      { name: "categoryName", weight: 1 },
+      { name: "note", weight: 1 },
+    ],
+    threshold: 0.4, // 0.0 (完全一致) ~ 1.0 (すべてマッチ)
+    ignoreLocation: true, // 文字列内の位置を無視
+    minMatchCharLength: 1,
+  });
+
+  // 検索フィルタリング
+  const filteredItems = search
+    ? fuse.search(search).map((result) => result.item)
+    : items;
 
   if (items.length === 0) {
     return (
@@ -44,26 +72,37 @@ export function GarbageItemsEditTable({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {items.map((item, index) => (
-            <TableRow key={item.id}>
-              <TableCell className="font-medium">{index + 1}</TableCell>
-              <TableCell className="truncate max-w-[200px]" title={item.name}>
-                {item.name}
-              </TableCell>
-              <TableCell className="whitespace-nowrap">
-                {getCategoryName(item.garbageCategory)}
-              </TableCell>
+          {filteredItems.length === 0 ? (
+            <TableRow>
               <TableCell
-                className="hidden md:table-cell truncate max-w-[200px]"
-                title={item.note || ""}
+                colSpan={5}
+                className="text-center py-8 text-muted-foreground"
               >
-                {item.note || "-"}
-              </TableCell>
-              <TableCell className="text-right whitespace-nowrap">
-                <GarbageItemEditDialog item={item} categories={categories} />
+                品目名が見つかりませんでした
               </TableCell>
             </TableRow>
-          ))}
+          ) : (
+            filteredItems.map((item, index) => (
+              <TableRow key={item.id}>
+                <TableCell className="font-medium">{index + 1}</TableCell>
+                <TableCell className="truncate max-w-[200px]" title={item.name}>
+                  {item.name}
+                </TableCell>
+                <TableCell className="whitespace-nowrap">
+                  {getCategoryName(item.garbageCategory)}
+                </TableCell>
+                <TableCell
+                  className="hidden md:table-cell truncate max-w-[200px]"
+                  title={item.note || ""}
+                >
+                  {item.note || "-"}
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap">
+                  <GarbageItemEditDialog item={item} categories={categories} />
+                </TableCell>
+              </TableRow>
+            ))
+          )}
         </TableBody>
       </Table>
     </div>

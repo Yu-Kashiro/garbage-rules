@@ -1,15 +1,18 @@
-import { CreateItemButton } from "@/components/forms/create-item-button";
-import { GarbageItemTable } from "@/components/forms/garbage-item-table";
+
+import { CreateItemButton } from "@/components/create-item-button";
+import { GarbageItemsEditTable } from "@/components/garbage-items-edit-table";
+import { SearchForm } from "@/components/search-form";
 import { Button } from "@/components/ui/button";
 import { getGarbageCategories, getGarbageItemsWithId } from "@/data/garbage";
 import { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "ごみ品目の管理",
 };
 
-export default async function ItemEditPage() {
+export default async function GarbageItemEditPage() {
   const [items, categories] = await Promise.all([
     getGarbageItemsWithId(),
     getGarbageCategories(),
@@ -36,7 +39,15 @@ export default async function ItemEditPage() {
           </div>
         </div>
 
-        <GarbageItemTable items={items} categories={categories} />
+        <div className="mb-6">
+          <Suspense>
+            <SearchForm />
+          </Suspense>
+        </div>
+
+        <Suspense>
+          <GarbageItemsEditTable items={items} categories={categories} />
+        </Suspense>
       </div>
     </div>
   );
