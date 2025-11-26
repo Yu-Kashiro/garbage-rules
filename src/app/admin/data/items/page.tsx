@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "ごみ品目の管理",
 };
 
-export default async function GarbageItemEditPage() {
+export default async function GarbageItemsEditPage() {
   const [items, categories] = await Promise.all([
     getGarbageItemsWithId(),
     getGarbageCategories(),
