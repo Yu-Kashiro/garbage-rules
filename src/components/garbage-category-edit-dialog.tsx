@@ -31,6 +31,7 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { ColorPicker } from "@/components/color-picker";
 import { garbageCategoryFormSchema } from "@/zod/garbage";
 import type { GarbageCategory, GarbageCategoryFormData } from "@/types/garbage";
 import {
@@ -52,13 +53,14 @@ export function GarbageCategoryEditDialog({
     resolver: zodResolver(garbageCategoryFormSchema),
     defaultValues: {
       name: category.name,
+      color: category.color,
     },
   });
 
   const handleOpenChange = (newOpen: boolean) => {
     setOpen(newOpen);
     if (newOpen) {
-      editForm.reset({ name: category.name });
+      editForm.reset({ name: category.name, color: category.color });
     } else {
       setShowDeleteConfirm(false);
       editForm.reset();
@@ -68,9 +70,7 @@ export function GarbageCategoryEditDialog({
   const handleUpdate = async (data: GarbageCategoryFormData) => {
     try {
       await updateGarbageCategory(category.id, data);
-      toast.success(
-        `「${category.name}」を「${data.name}」に更新しました`
-      );
+      toast.success(`「${category.name}」を「${data.name}」に更新しました`);
       setOpen(false);
     } catch (error) {
       toast.error(
@@ -116,7 +116,9 @@ export function GarbageCategoryEditDialog({
                 control={editForm.control}
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
-                    <FieldLabel htmlFor={`edit-garbage-category-name-${category.id}`}>
+                    <FieldLabel
+                      htmlFor={`edit-garbage-category-name-${category.id}`}
+                    >
                       分別区分名
                     </FieldLabel>
                     <Input
@@ -125,6 +127,22 @@ export function GarbageCategoryEditDialog({
                       aria-invalid={fieldState.invalid}
                       placeholder="例: 燃えるごみ、燃えないごみ"
                       autoComplete="off"
+                    />
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
+              <Controller
+                name="color"
+                control={editForm.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <ColorPicker
+                      label="色"
+                      value={field.value}
+                      onChange={field.onChange}
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />

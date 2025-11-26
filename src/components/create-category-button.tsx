@@ -16,6 +16,7 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { ColorPicker } from "@/components/color-picker";
 import type { GarbageCategoryFormData } from "@/types/garbage";
 import { garbageCategoryFormSchema } from "@/zod/garbage";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -30,6 +31,7 @@ export function CreateCategoryButton() {
     resolver: zodResolver(garbageCategoryFormSchema),
     defaultValues: {
       name: "",
+      color: "#808080",
     },
   });
 
@@ -78,6 +80,22 @@ export function CreateCategoryButton() {
                       aria-invalid={fieldState.invalid}
                       placeholder="例: 燃えるごみ、燃えないごみ"
                       autoComplete="off"
+                    />
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
+              <Controller
+                name="color"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <ColorPicker
+                      label="色"
+                      value={field.value}
+                      onChange={field.onChange}
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
