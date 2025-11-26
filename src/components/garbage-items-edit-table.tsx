@@ -38,7 +38,7 @@ export function GarbageItemsEditTable({
   const fuse = new Fuse(searchableItems, {
     keys: [
       { name: "name", weight: 2 }, // 品目名を重視
-      { name: "categoryName", weight: 1 },
+      { name: "search", weight: 1 },
       { name: "note", weight: 1 },
     ],
     threshold: 0.4, // 0.0 (完全一致) ~ 1.0 (すべてマッチ)
