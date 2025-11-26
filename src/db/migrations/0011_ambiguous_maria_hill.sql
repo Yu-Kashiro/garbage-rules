@@ -1,0 +1,1 @@
+ALTER TABLE `garbage_categories` ADD `color` text DEFAULT '#808080' NOT NULL;

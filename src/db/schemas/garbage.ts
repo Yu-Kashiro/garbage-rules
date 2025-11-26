@@ -4,6 +4,7 @@ import { timestamps } from "../column-helper";
 export const garbageCategories = sqliteTable("garbage_categories", {
   id: integer("id").primaryKey(),
   name: text("name").notNull().unique(),
+  color: text("color").notNull().default("#808080"),
   ...timestamps,
 });
 
