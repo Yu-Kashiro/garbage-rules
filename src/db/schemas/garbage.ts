@@ -3,7 +3,7 @@ import { timestamps } from "../column-helper";
 
 export const garbageCategories = sqliteTable("garbage_categories", {
   id: integer("id").primaryKey(),
-  name: text("name").notNull(),
+  name: text("name").notNull().unique(),
   ...timestamps,
 });
 
