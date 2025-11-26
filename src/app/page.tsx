@@ -16,7 +16,9 @@ export default function GarbageRulesPage() {
           </Suspense>
         </div>
 
+        <Suspense>
           <GarbageItemsTable />
+        </Suspense>
       </div>
     </main>
   );
