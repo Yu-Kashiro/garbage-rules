@@ -16,6 +16,7 @@ export const garbageItemFormSchema = createInsertSchema(garbageItems, {
   name: z.string().trim().min(1, "品目名は1文字以上入力してください"),
   garbageCategory: z.number().int().positive("分別区分を選択してください"),
   note: z.string().optional(),
+  search: z.string().trim().min(1, "検索キーワードは1文字以上入力してください"),
 }).omit({
   id: true,
 });
