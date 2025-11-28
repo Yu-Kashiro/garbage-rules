@@ -33,11 +33,12 @@ export async function getGarbageItems(): Promise<GarbageItemWithCategory[]> {
       eq(garbageItems.garbageCategory, garbageCategories.id)
     );
 
-  // フラットな構造にマップし、カテゴリIDをカテゴリ名に変換
+  // フラットな構造にマップし、カテゴリIDをカテゴリ名に変換、カテゴリ色を追加
   return result.map((row) => ({
     id: row.garbage_items.id,
     name: row.garbage_items.name,
     garbageCategory: row.garbage_categories.name,
+    categoryColor: row.garbage_categories.color,
     note: row.garbage_items.note,
     search: row.garbage_items.search,
     createdAt: row.garbage_items.createdAt,

@@ -7,10 +7,22 @@ async function seedCategories() {
   try {
     console.log("Starting to seed garbage categories...");
 
-    await db.insert(garbageCategories).values(garbageCategoriesData);
+    for (const category of garbageCategoriesData) {
+      await db
+        .insert(garbageCategories)
+        .values(category)
+        .onConflictDoUpdate({
+          target: garbageCategories.id,
+          set: {
+            name: category.name,
+            color: category.color,
+            updatedAt: new Date(),
+          },
+        });
+    }
 
     console.log(
-      `✓ Successfully inserted ${garbageCategoriesData.length} categories`
+      `✓ Successfully seeded ${garbageCategoriesData.length} categories`
     );
   } catch (error) {
     console.error("Error seeding categories:", error);
