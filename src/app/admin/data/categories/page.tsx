@@ -13,7 +13,7 @@ export default async function CategoryEditPage() {
   const categories = await getGarbageCategories();
 
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div className="container py-10">
       <div className="max-w-2xl mx-auto">
         <div className="mb-8">
           <div className="relative flex items-center justify-between">
