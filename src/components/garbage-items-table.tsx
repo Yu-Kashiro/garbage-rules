@@ -19,7 +19,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { getCacheData, setCacheData } from "@/lib/cache-client";
-import { getCategoryStyle } from "@/lib/category-styles";
 import { garbageFuseOptions } from "@/lib/fuse-config";
 import { GarbageItemWithCategory } from "@/types/garbage";
 import Fuse from "fuse.js";
@@ -90,17 +89,6 @@ export function GarbageItemsTable() {
     });
   };
 
-  // const filteredGarbageItems = useMemo(() => {
-  //   if (!search) {
-  //     // 検索クエリが空の場合は全件表示
-  //     return items;
-  //   }
-  //   // 検索クエリがある場合はFuse.jsで検索
-  //   const fuse = new Fuse(items, garbageFuseOptions);
-  //   return fuse.search(search).map((result) => result.item);
-  // }, [items, search]);
-
-  // 再レンダリングのたびに実行される
   const fuse = new Fuse(items, garbageFuseOptions);
   const filteredGarbageItems = search
     ? fuse.search(search).map((result) => result.item)
@@ -142,21 +130,21 @@ export function GarbageItemsTable() {
             ) : (
               filteredGarbageItems.map((garbageItem) => (
                 <TableRow key={garbageItem.id}>
+                  {/* 品目名 */}
                   <TableCell className="border truncate">
                     {garbageItem.name}
                   </TableCell>
+                  {/* 分別区分 */}
                   <TableCell className="border">
                     <Badge
-                      variant={
-                        getCategoryStyle(garbageItem.garbageCategory).variant
-                      }
-                      className={`${
-                        getCategoryStyle(garbageItem.garbageCategory).className
-                      } max-w-full truncate`}
+                      variant="outline"
+                      className="max-w-full truncate"
+                      style={{ borderColor: garbageItem.categoryColor }}
                     >
                       {garbageItem.garbageCategory}
                     </Badge>
                   </TableCell>
+                  {/* 分別区分 */}
                   <TableCell className="border text-center">
                     {garbageItem.note ? (
                       <Dialog>
@@ -193,7 +181,7 @@ export function GarbageItemsTable() {
       {/* トップへ戻るボタン */}
       <Button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 z-50 h-12 w-12 rounded-full shadow-lg transition-opacity duration-300 ${
+        className={`fixed bottom-8 right-8 z-50 h-12 w-12 rounded-full transition-opacity duration-300 ${
           showScrollToTop ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         size="icon"
