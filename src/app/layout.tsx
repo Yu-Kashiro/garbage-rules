@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex flex-col min-h-dvh antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} flex flex-col min-h-dvh`}
       >
         <NuqsAdapter>
           <ThemeProvider
