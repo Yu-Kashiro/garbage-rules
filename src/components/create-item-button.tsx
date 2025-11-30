@@ -46,6 +46,7 @@ export function CreateItemButton({
       name: "",
       garbageCategory: 2,
       note: "",
+      search: "",
     },
   });
 
@@ -169,14 +170,34 @@ export function CreateItemButton({
                   </Field>
                 )}
               />
+
+              <Controller
+                name="search"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <FieldLabel htmlFor="create-garbage-item-search">
+                      検索キーワード（任意）
+                    </FieldLabel>
+                    <Textarea
+                      {...field}
+                      id="create-garbage-item-search"
+                      aria-invalid={fieldState.invalid}
+                      placeholder="振り仮名等の他の読み方があれば記載してください"
+                      className="min-h-[100px]"
+                    />
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
             </FieldGroup>
             <DialogFooter className="mt-6">
               <Button type="button" variant="outline" onClick={handleClose}>
                 キャンセル
               </Button>
-              <Button type="submit" disabled={form.formState.isSubmitting}>
-                登録
-              </Button>
+              <Button type="submit">登録</Button>
             </DialogFooter>
           </form>
         </DialogContent>
