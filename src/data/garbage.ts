@@ -14,6 +14,7 @@ import { cacheLife, cacheTag } from "next/cache";
 export async function getGarbageCategories(): Promise<GarbageCategory[]> {
   "use cache";
   cacheLife("days");
+  cacheTag("garbage-categories");
 
   const result = await db.select().from(garbageCategories);
   return result;
