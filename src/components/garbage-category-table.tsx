@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Table,
   TableBody,
@@ -8,14 +6,12 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import type { GarbageCategory } from "@/types/garbage";
 import { GarbageCategoryEditDialog } from "./garbage-category-edit-dialog";
+import { getGarbageCategories } from "@/data/garbage";
 
-export function GarbageCategoryTable({
-  categories,
-}: {
-  categories: GarbageCategory[];
-}) {
+export async function GarbageCategoryTable() {
+  const categories = await getGarbageCategories();
+
   if (categories.length === 0) {
     return (
       <div className="text-center text-muted-foreground py-10">
