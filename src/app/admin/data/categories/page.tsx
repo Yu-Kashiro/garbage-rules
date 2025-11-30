@@ -1,7 +1,6 @@
-import { CreateCategoryButton } from "@/components/create-category-button";
+import { GarbageCategoryEditDialog } from "@/components/garbage-category-edit-dialog";
 import { GarbageCategoryTable } from "@/components/garbage-category-table";
 import { Button } from "@/components/ui/button";
-import { getGarbageCategories } from "@/data/garbage";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -10,8 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default async function CategoryEditPage() {
-  const categories = await getGarbageCategories();
-
   return (
     <div className="container py-10">
       <div className="max-w-2xl mx-auto">
@@ -28,12 +25,12 @@ export default async function CategoryEditPage() {
               分別区分の管理
             </h1>
             <div className="flex justify-end">
-              <CreateCategoryButton />
+              <GarbageCategoryEditDialog />
             </div>
           </div>
         </div>
 
-        <GarbageCategoryTable categories={categories} />
+        <GarbageCategoryTable />
       </div>
     </div>
   );
