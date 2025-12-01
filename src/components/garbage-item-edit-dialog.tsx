@@ -44,56 +44,68 @@ import { garbageItemFormSchema } from "@/zod/garbage";
 import type {
   GarbageCategory,
   GarbageItem,
-  GarbageItemFormSchema,
+  GarbageItemFormData,
 } from "@/types/garbage";
 import {
+  createGarbageItem,
   deleteGarbageItem,
   updateGarbageItem,
 } from "@/actions/garbage";
 
-interface GarbageItemEditDialogProps {
-  item: GarbageItem;
+interface GarbageItemFormDialogProps {
+  item?: GarbageItem;
   categories: GarbageCategory[];
 }
 
 export function GarbageItemEditDialog({
   item,
   categories,
-}: GarbageItemEditDialogProps) {
+}: GarbageItemFormDialogProps) {
+  const isEditMode = !!item;
   const [open, setOpen] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
-  const editForm = useForm<GarbageItemFormSchema>({
+  const form = useForm<GarbageItemFormData>({
     resolver: zodResolver(garbageItemFormSchema),
     defaultValues: {
-      name: item.name,
-      garbageCategory: item.garbageCategory,
-      note: item.note || "",
+      name: item?.name ?? "",
+      garbageCategory: item?.garbageCategory ?? 2,
+      note: item?.note ?? "",
+      search: item?.search ?? "",
     },
   });
 
   const handleOpenChange = (newOpen: boolean) => {
     setOpen(newOpen);
     if (newOpen) {
-      editForm.reset({
-        name: item.name,
-        garbageCategory: item.garbageCategory,
-        note: item.note || "",
+      form.reset({
+        name: item?.name ?? "",
+        garbageCategory: item?.garbageCategory ?? 2,
+        note: item?.note ?? "",
+        search: item?.search ?? "",
       });
     } else {
       setShowDeleteConfirm(false);
-      editForm.reset();
     }
   };
 
-  const handleUpdate = async (data: GarbageItemFormSchema) => {
+  const handleSubmit = async (data: GarbageItemFormData) => {
     try {
-      await updateGarbageItem(item.id, data);
-      toast.success(`「${item.name}」を更新しました`);
+      if (isEditMode) {
+        await updateGarbageItem(item.id, data);
+        toast.success(`「${item.name}」を更新しました`);
+      } else {
+        await createGarbageItem(data);
+        toast.success(`「${data.name}」を登録しました`);
+      }
       setOpen(false);
     } catch (error) {
       toast.error(
-        error instanceof Error ? error.message : "更新に失敗しました"
+        error instanceof Error
+          ? error.message
+          : isEditMode
+          ? "更新に失敗しました"
+          : "登録に失敗しました"
       );
     }
   };
@@ -103,6 +115,8 @@ export function GarbageItemEditDialog({
   };
 
   const handleDeleteConfirm = async () => {
+    if (!isEditMode) return;
+
     try {
       await deleteGarbageItem(item.id);
       toast.success(`「${item.name}」を削除しました`);
@@ -119,30 +133,50 @@ export function GarbageItemEditDialog({
     <>
       <Dialog open={open} onOpenChange={handleOpenChange}>
         <DialogTrigger asChild>
-          <Button variant="outline" size="sm">
-            編集
-          </Button>
+          {isEditMode ? (
+            <Button variant="outline" size="sm">
+              編集
+            </Button>
+          ) : (
+            <Button>
+              <span className="md:hidden">+</span>
+              <span className="hidden md:inline">新規登録</span>
+            </Button>
+          )}
         </DialogTrigger>
+
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>ごみ品目の編集</DialogTitle>
+            <DialogTitle>
+              ごみ品目の{isEditMode ? "編集" : "新規登録"}
+            </DialogTitle>
             <DialogDescription>
-              ごみ品目の情報を編集してください
+              ごみ品目の情報を{isEditMode ? "編集" : "入力"}してください
             </DialogDescription>
           </DialogHeader>
-          <form onSubmit={editForm.handleSubmit(handleUpdate)}>
+          <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FieldGroup>
               <Controller
                 name="name"
-                control={editForm.control}
+                control={form.control}
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
-                    <FieldLabel htmlFor={`edit-garbage-item-name-${item.id}`}>
+                    <FieldLabel
+                      htmlFor={
+                        isEditMode
+                          ? `edit-garbage-item-name-${item.id}`
+                          : "create-garbage-item-name"
+                      }
+                    >
                       品目名
                     </FieldLabel>
                     <Input
                       {...field}
-                      id={`edit-garbage-item-name-${item.id}`}
+                      id={
+                        isEditMode
+                          ? `edit-garbage-item-name-${item.id}`
+                          : "create-garbage-item-name"
+                      }
                       aria-invalid={fieldState.invalid}
                       placeholder="例: ペットボトル、新聞紙"
                       autoComplete="off"
@@ -156,14 +190,20 @@ export function GarbageItemEditDialog({
 
               <Controller
                 name="garbageCategory"
-                control={editForm.control}
+                control={form.control}
                 render={({ field, fieldState }) => (
                   <Field
                     orientation="responsive"
                     data-invalid={fieldState.invalid}
                   >
                     <FieldContent>
-                      <FieldLabel htmlFor={`edit-garbage-item-category-${item.id}`}>
+                      <FieldLabel
+                        htmlFor={
+                          isEditMode
+                            ? `edit-garbage-item-category-${item.id}`
+                            : "create-garbage-item-category"
+                        }
+                      >
                         分別区分
                       </FieldLabel>
                       {fieldState.invalid && (
@@ -176,7 +216,11 @@ export function GarbageItemEditDialog({
                       onValueChange={(value) => field.onChange(Number(value))}
                     >
                       <SelectTrigger
-                        id={`edit-garbage-item-category-${item.id}`}
+                        id={
+                          isEditMode
+                            ? `edit-garbage-item-category-${item.id}`
+                            : "create-garbage-item-category"
+                        }
                         aria-invalid={fieldState.invalid}
                         className="min-w-[200px]"
                       >
@@ -199,15 +243,25 @@ export function GarbageItemEditDialog({
 
               <Controller
                 name="note"
-                control={editForm.control}
+                control={form.control}
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
-                    <FieldLabel htmlFor={`edit-garbage-item-note-${item.id}`}>
+                    <FieldLabel
+                      htmlFor={
+                        isEditMode
+                          ? `edit-garbage-item-note-${item.id}`
+                          : "create-garbage-item-note"
+                      }
+                    >
                       備考（任意）
                     </FieldLabel>
                     <Textarea
                       {...field}
-                      id={`edit-garbage-item-note-${item.id}`}
+                      id={
+                        isEditMode
+                          ? `edit-garbage-item-note-${item.id}`
+                          : "create-garbage-item-note"
+                      }
                       aria-invalid={fieldState.invalid}
                       placeholder="捨て方の注意点などを入力してください"
                       className="min-h-[100px]"
@@ -218,53 +272,87 @@ export function GarbageItemEditDialog({
                   </Field>
                 )}
               />
+
+              <Controller
+                name="search"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <FieldLabel
+                      htmlFor={
+                        isEditMode
+                          ? `edit-garbage-item-search-${item.id}`
+                          : "create-garbage-item-search"
+                      }
+                    >
+                      検索キーワード（任意）
+                    </FieldLabel>
+                    <Textarea
+                      {...field}
+                      id={
+                        isEditMode
+                          ? `edit-garbage-item-search-${item.id}`
+                          : "create-garbage-item-search"
+                      }
+                      aria-invalid={fieldState.invalid}
+                      placeholder="振り仮名等の他の読み方があれば記載してください"
+                      className="min-h-[100px]"
+                    />
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
             </FieldGroup>
-            <DialogFooter className="mt-6 flex justify-between">
-              <Button
-                type="button"
-                variant="destructive"
-                onClick={handleDeleteClick}
-              >
-                削除
-              </Button>
-              <div className="flex gap-2">
+            <DialogFooter className="mt-6 flex-row gap-2 justify-end">
+              {isEditMode && (
                 <Button
                   type="button"
-                  variant="outline"
-                  onClick={() => setOpen(false)}
+                  variant="destructive"
+                  onClick={handleDeleteClick}
                 >
-                  キャンセル
+                  削除
                 </Button>
-                <Button
-                  type="submit"
-                  disabled={editForm.formState.isSubmitting}
-                >
-                  更新
-                </Button>
-              </div>
+              )}
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => setOpen(false)}
+              >
+                キャンセル
+              </Button>
+              <Button type="submit" disabled={form.formState.isSubmitting}>
+                {isEditMode ? "更新" : "登録"}
+              </Button>
             </DialogFooter>
           </form>
         </DialogContent>
       </Dialog>
 
       {/* 削除確認ダイアログ */}
-      <AlertDialog open={showDeleteConfirm} onOpenChange={setShowDeleteConfirm}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>本当に削除しますか?</AlertDialogTitle>
-            <AlertDialogDescription>
-              この操作は取り消せません。「{item.name}
-              」を完全に削除します。
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>キャンセル</AlertDialogCancel>
-            <AlertDialogAction onClick={handleDeleteConfirm}>
-              削除する
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      {isEditMode && (
+        <AlertDialog
+          open={showDeleteConfirm}
+          onOpenChange={setShowDeleteConfirm}
+        >
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>本当に削除しますか?</AlertDialogTitle>
+              <AlertDialogDescription>
+                この操作は取り消せません。「{item.name}
+                」を完全に削除します。
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>キャンセル</AlertDialogCancel>
+              <AlertDialogAction onClick={handleDeleteConfirm}>
+                削除する
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      )}
     </>
   );
 }
