@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -35,46 +34,60 @@ import { ColorPicker } from "@/components/color-picker";
 import { garbageCategoryFormSchema } from "@/zod/garbage";
 import type { GarbageCategory, GarbageCategoryFormData } from "@/types/garbage";
 import {
+  createGarbageCategory,
   deleteGarbageCategory,
   updateGarbageCategory,
 } from "@/actions/garbage";
 
-interface GarbageCategoryEditDialogProps {
-  category: GarbageCategory;
+interface GarbageCategoryFormDialogProps {
+  category?: GarbageCategory;
 }
 
 export function GarbageCategoryEditDialog({
   category,
-}: GarbageCategoryEditDialogProps) {
+}: GarbageCategoryFormDialogProps) {
+  const isEditMode = !!category;
   const [open, setOpen] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
-  const editForm = useForm<GarbageCategoryFormData>({
+  const form = useForm<GarbageCategoryFormData>({
     resolver: zodResolver(garbageCategoryFormSchema),
     defaultValues: {
-      name: category.name,
-      color: category.color,
+      name: category?.name ?? "",
+      color: category?.color ?? "#808080",
     },
   });
 
   const handleOpenChange = (newOpen: boolean) => {
     setOpen(newOpen);
     if (newOpen) {
-      editForm.reset({ name: category.name, color: category.color });
+      form.reset({
+        name: category?.name ?? "",
+        color: category?.color ?? "#808080",
+      });
     } else {
       setShowDeleteConfirm(false);
-      editForm.reset();
+      form.reset();
     }
   };
 
-  const handleUpdate = async (data: GarbageCategoryFormData) => {
+  const handleSubmit = async (data: GarbageCategoryFormData) => {
     try {
-      await updateGarbageCategory(category.id, data);
-      toast.success(`「${category.name}」を「${data.name}」に更新しました`);
+      if (isEditMode) {
+        await updateGarbageCategory(category.id, data);
+        toast.success(`「${category.name}」を更新しました`);
+      } else {
+        await createGarbageCategory(data);
+        toast.success(`「${data.name}」を登録しました`);
+      }
       setOpen(false);
     } catch (error) {
       toast.error(
-        error instanceof Error ? error.message : "更新に失敗しました"
+        error instanceof Error
+          ? error.message
+          : isEditMode
+          ? "更新に失敗しました"
+          : "登録に失敗しました"
       );
     }
   };
@@ -84,6 +97,8 @@ export function GarbageCategoryEditDialog({
   };
 
   const handleDeleteConfirm = async () => {
+    if (!isEditMode) return;
+
     try {
       await deleteGarbageCategory(category.id);
       toast.success(`「${category.name}」を削除しました`);
@@ -99,31 +114,48 @@ export function GarbageCategoryEditDialog({
   return (
     <>
       <Dialog open={open} onOpenChange={handleOpenChange}>
-        <DialogTrigger asChild>
-          <Button variant="outline" size="sm">
-            編集
+        {isEditMode ? (
+          <DialogTrigger asChild>
+            <Button variant="outline" size="sm">
+              編集
+            </Button>
+          </DialogTrigger>
+        ) : (
+          <Button onClick={() => setOpen(true)}>
+            <span className="md:hidden">+</span>
+            <span className="hidden md:inline">新規登録</span>
           </Button>
-        </DialogTrigger>
+        )}
+
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>分別区分の編集</DialogTitle>
-            <DialogDescription>分別区分名を編集してください</DialogDescription>
+            <DialogTitle>
+              分別区分の{isEditMode ? "編集" : "新規登録"}
+            </DialogTitle>
           </DialogHeader>
-          <form onSubmit={editForm.handleSubmit(handleUpdate)}>
+          <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FieldGroup>
               <Controller
                 name="name"
-                control={editForm.control}
+                control={form.control}
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel
-                      htmlFor={`edit-garbage-category-name-${category.id}`}
+                      htmlFor={
+                        isEditMode
+                          ? `edit-garbage-category-name-${category.id}`
+                          : "create-garbage-category-name"
+                      }
                     >
                       分別区分名
                     </FieldLabel>
                     <Input
                       {...field}
-                      id={`edit-garbage-category-name-${category.id}`}
+                      id={
+                        isEditMode
+                          ? `edit-garbage-category-name-${category.id}`
+                          : "create-garbage-category-name"
+                      }
                       aria-invalid={fieldState.invalid}
                       placeholder="例: 燃えるごみ、燃えないごみ"
                       autoComplete="off"
@@ -136,7 +168,7 @@ export function GarbageCategoryEditDialog({
               />
               <Controller
                 name="color"
-                control={editForm.control}
+                control={form.control}
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
                     <ColorPicker
@@ -152,13 +184,15 @@ export function GarbageCategoryEditDialog({
               />
             </FieldGroup>
             <DialogFooter className="mt-6 flex-row gap-2 justify-end">
-              <Button
-                type="button"
-                variant="destructive"
-                onClick={handleDeleteClick}
-              >
-                削除
-              </Button>
+              {isEditMode && (
+                <Button
+                  type="button"
+                  variant="destructive"
+                  onClick={handleDeleteClick}
+                >
+                  削除
+                </Button>
+              )}
               <Button
                 type="button"
                 variant="outline"
@@ -166,8 +200,8 @@ export function GarbageCategoryEditDialog({
               >
                 キャンセル
               </Button>
-              <Button type="submit" disabled={editForm.formState.isSubmitting}>
-                更新
+              <Button type="submit" disabled={form.formState.isSubmitting}>
+                {isEditMode ? "更新" : "登録"}
               </Button>
             </DialogFooter>
           </form>
@@ -175,23 +209,28 @@ export function GarbageCategoryEditDialog({
       </Dialog>
 
       {/* 削除確認ダイアログ */}
-      <AlertDialog open={showDeleteConfirm} onOpenChange={setShowDeleteConfirm}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>本当に削除しますか?</AlertDialogTitle>
-            <AlertDialogDescription>
-              削除すると、「{category.name}
-              」の「ごみ品目」も全て削除されます。
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>キャンセル</AlertDialogCancel>
-            <AlertDialogAction onClick={handleDeleteConfirm}>
-              削除する
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      {isEditMode && (
+        <AlertDialog
+          open={showDeleteConfirm}
+          onOpenChange={setShowDeleteConfirm}
+        >
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>本当に削除しますか?</AlertDialogTitle>
+              <AlertDialogDescription>
+                削除すると、「{category.name}
+                」の「ごみ品目」も全て削除されます。
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>キャンセル</AlertDialogCancel>
+              <AlertDialogAction onClick={handleDeleteConfirm}>
+                削除する
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      )}
     </>
   );
 }
