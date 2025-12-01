@@ -6,9 +6,12 @@ import { updateCacheVersion } from "@/lib/cache";
 import { verifySession } from "@/lib/session";
 import type {
   GarbageCategoryFormData,
-  GarbageItemFormSchema,
+  GarbageItemFormData,
 } from "@/types/garbage";
-import { garbageCategoryFormSchema } from "@/zod/garbage";
+import {
+  garbageCategoryFormSchema,
+  garbageItemFormSchema,
+} from "@/zod/garbage";
 import { eq } from "drizzle-orm";
 import { updateTag } from "next/cache";
 
@@ -65,17 +68,12 @@ export async function deleteGarbageCategory(id: number) {
 }
 
 // ごみ品目新規登録
-export async function createGarbageItem(data: GarbageItemFormSchema) {
+export async function createGarbageItem(formData: GarbageItemFormData) {
+  const data = garbageItemFormSchema.parse(formData);
   await verifySession();
 
   try {
-    await db.insert(garbageItems).values({
-      name: data.name,
-      garbageCategory: data.garbageCategory,
-      note: data.note || null,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    });
+    await db.insert(garbageItems).values({ ...data });
     updateCacheVersion();
     updateTag("garbage-items");
     updateTag("garbage-items-admin");
@@ -88,19 +86,15 @@ export async function createGarbageItem(data: GarbageItemFormSchema) {
 // ごみ品目修正
 export async function updateGarbageItem(
   id: number,
-  data: GarbageItemFormSchema
+  formData: GarbageItemFormData
 ) {
+  const data = garbageItemFormSchema.parse(formData);
   await verifySession();
 
   try {
     await db
       .update(garbageItems)
-      .set({
-        name: data.name,
-        garbageCategory: data.garbageCategory,
-        note: data.note || null,
-        updatedAt: new Date(),
-      })
+      .set({ ...data })
       .where(eq(garbageItems.id, id));
     updateCacheVersion();
     updateTag("garbage-items");
