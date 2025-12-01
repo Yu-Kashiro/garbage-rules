@@ -45,3 +45,6 @@ next-env.d.ts
 
 # scripts
 scripts/.add-search-field.ts
+
+# documentation
+doc/flicker-issue-analysis.md
