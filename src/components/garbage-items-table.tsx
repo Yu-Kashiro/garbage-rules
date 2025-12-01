@@ -145,31 +145,33 @@ export function GarbageItemsTable() {
                     </Badge>
                   </TableCell>
                   {/* 分別区分 */}
-                  <TableCell className="border text-center">
-                    {garbageItem.note ? (
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            className="h-auto w-auto p-0"
-                            aria-label="備考を表示"
-                          >
-                            <Info className="h-4 w-4" />
-                          </Button>
-                        </DialogTrigger>
-                        <DialogContent className="[&>button[data-slot='dialog-close']]:top-2">
-                          <DialogHeader>
-                            <DialogTitle>{garbageItem.name}</DialogTitle>
-                            <DialogDescription className="text-left whitespace-pre-wrap">
-                              {garbageItem.note}
-                            </DialogDescription>
-                          </DialogHeader>
-                        </DialogContent>
-                      </Dialog>
-                    ) : (
-                      <span className="text-muted-foreground">-</span>
-                    )}
+                  <TableCell className="border">
+                    <div className="flex items-center justify-center">
+                      {garbageItem.note ? (
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              className="h-auto w-auto p-0"
+                              aria-label="備考を表示"
+                            >
+                              <Info className="h-4 w-4" />
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent className="[&>button[data-slot='dialog-close']]:top-2">
+                            <DialogHeader>
+                              <DialogTitle>{garbageItem.name}</DialogTitle>
+                              <DialogDescription className="text-left whitespace-pre-wrap">
+                                {garbageItem.note}
+                              </DialogDescription>
+                            </DialogHeader>
+                          </DialogContent>
+                        </Dialog>
+                      ) : (
+                        <span className="text-muted-foreground">-</span>
+                      )}
+                    </div>
                   </TableCell>
                 </TableRow>
               ))
