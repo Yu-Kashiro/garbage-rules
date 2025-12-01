@@ -1,5 +1,4 @@
-
-import { CreateItemButton } from "@/components/create-item-button";
+import { GarbageItemEditDialog } from "@/components/garbage-item-edit-dialog";
 import { GarbageItemsEditTable } from "@/components/garbage-items-edit-table";
 import { SearchForm } from "@/components/search-form";
 import { Button } from "@/components/ui/button";
@@ -34,7 +33,7 @@ export default async function GarbageItemsEditPage() {
               ごみ品目の管理
             </h1>
             <div className="flex justify-end">
-              <CreateItemButton categories={categories} />
+              <GarbageItemEditDialog categories={categories} />
             </div>
           </div>
         </div>
