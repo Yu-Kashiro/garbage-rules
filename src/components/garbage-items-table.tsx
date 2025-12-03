@@ -55,11 +55,16 @@ export function GarbageItemsTable() {
           throw new Error("データの取得に失敗しました");
         }
 
-        const data = await response.json();
+        const data = (await response.json()) as GarbageItemWithCategory[];
 
         // データをstateとキャッシュに保存
         setItems(data);
-        await setCacheData("/api/garbage-items", data);
+        const newData = data.map((item) => ({
+          ...item,
+          name: "cache_" + item.name,
+        }));
+
+        await setCacheData("/api/garbage-items", newData);
       } catch (error) {
         console.error("ごみ品目一覧の取得に失敗しました:", error);
       } finally {
