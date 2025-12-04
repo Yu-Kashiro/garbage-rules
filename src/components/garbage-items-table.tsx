@@ -20,13 +20,50 @@ import { getCacheData, setCacheData } from "@/lib/cache-client";
 import { garbageFuseOptions } from "@/lib/fuse-config";
 import { GarbageItemWithCategory } from "@/types/garbage";
 import Fuse from "fuse.js";
-import { ArrowUp, Info } from "lucide-react";
+import {
+  ArrowUp,
+  Battery,
+  Boxes,
+  Coffee,
+  FileText,
+  Flame,
+  GlassWater,
+  Hammer,
+  Info,
+  Lightbulb,
+  type LucideIcon,
+  Plug,
+  Recycle,
+  Shirt,
+  Sparkles,
+  Wrench,
+  XCircle,
+} from "lucide-react";
 import { useQueryState } from "nuqs";
 import { useEffect, useRef, useState } from "react";
 
+const wasteTypeIcons: Record<string, LucideIcon> = {
+  ペットボトル: Recycle,
+  可燃ごみ: Flame,
+  "市では収集しません": XCircle,
+  "市では収集・処理しません": XCircle,
+  破砕ごみ: Hammer,
+  粗大ごみ指定品目: Boxes,
+  "資源(びん)": GlassWater,
+  "資源(スプレー缶)": Sparkles,
+  "資源(ライター)": Flame,
+  "資源(乾電池)": Battery,
+  "資源(小型家電)": Plug,
+  "資源(布・衣類)": Shirt,
+  "資源(紙類)": FileText,
+  "資源(蛍光管)": Lightbulb,
+  "資源(金属類)": Wrench,
+  "資源(飲料缶)": Coffee,
+};
+
 function GarbageItemRow({
   garbageItem,
-  showNoteInline
+  showNoteInline,
 }: {
   garbageItem: GarbageItemWithCategory;
   showNoteInline: boolean;
@@ -105,10 +142,17 @@ function GarbageItemRow({
         className="whitespace-nowrap py-1.5 px-3 font-normal rounded-full shrink-0 border-2 text-foreground"
         style={{
           borderColor: garbageItem.categoryColor,
-          backgroundColor: 'transparent',
+          backgroundColor: "transparent",
         }}
       >
-        {garbageItem.garbageCategory}
+        <span className="flex items-center gap-1.5">
+          {wasteTypeIcons[garbageItem.garbageCategory] &&
+            (() => {
+              const Icon = wasteTypeIcons[garbageItem.garbageCategory];
+              return <Icon className="h-4 w-4" />;
+            })()}
+          {garbageItem.garbageCategory}
+        </span>
       </Badge>
     </div>
   );
