@@ -13,7 +13,7 @@ export function SearchForm() {
     <div className="relative">
       <Input
         type="text"
-        placeholder="例：バッテリー、かばん、ペットボトル..."
+        placeholder="例：バッテリー、エアコン..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         className="pr-10"
