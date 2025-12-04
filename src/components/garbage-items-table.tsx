@@ -11,20 +11,93 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { getCacheData, setCacheData } from "@/lib/cache-client";
 import { garbageFuseOptions } from "@/lib/fuse-config";
 import { GarbageItemWithCategory } from "@/types/garbage";
 import Fuse from "fuse.js";
 import { ArrowUp, Info } from "lucide-react";
 import { useQueryState } from "nuqs";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+function GarbageItemRow({ garbageItem }: { garbageItem: GarbageItemWithCategory }) {
+  const textRef = useRef<HTMLSpanElement>(null);
+  const [isTruncated, setIsTruncated] = useState(false);
+
+  useEffect(() => {
+    const element = textRef.current;
+    if (element) {
+      setIsTruncated(element.scrollWidth > element.clientWidth);
+    }
+  }, [garbageItem.name]);
+
+  return (
+    <div className="flex items-center justify-between gap-4 py-4 border-b hover:bg-muted/30 transition-colors">
+      {/* 品目名 */}
+      <div className="flex items-center gap-2 min-w-0 flex-1">
+        <Popover>
+          <PopoverTrigger asChild>
+            <span
+              ref={textRef}
+              className="font-medium text-base truncate cursor-pointer"
+              style={{
+                cursor: isTruncated ? "pointer" : "default",
+              }}
+            >
+              {garbageItem.name}
+            </span>
+          </PopoverTrigger>
+          {isTruncated && (
+            <PopoverContent
+              className="w-auto max-w-md p-3"
+              side="top"
+              align="start"
+            >
+              <p className="font-medium">{garbageItem.name}</p>
+            </PopoverContent>
+          )}
+        </Popover>
+        {garbageItem.note && (
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-6 w-6 shrink-0 hover:bg-muted"
+                aria-label="備考を表示"
+              >
+                <Info className="h-4 w-4" />
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="[&>button[data-slot='dialog-close']]:top-2">
+              <DialogHeader>
+                <DialogTitle>{garbageItem.name}</DialogTitle>
+                <DialogDescription className="text-left whitespace-pre-wrap">
+                  {garbageItem.note}
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
+        )}
+      </div>
+
+      {/* 分別区分 */}
+      <Badge
+        variant="outline"
+        className="whitespace-nowrap py-1.5 px-3 font-normal rounded-full shrink-0 border-2 text-foreground"
+        style={{
+          borderColor: garbageItem.categoryColor,
+          backgroundColor: 'transparent',
+        }}
+      >
+        {garbageItem.garbageCategory}
+      </Badge>
+    </div>
+  );
+}
 
 export function GarbageItemsTable() {
   const [search] = useQueryState("q", {
@@ -61,7 +134,7 @@ export function GarbageItemsTable() {
         setItems(data);
         const newData = data.map((item) => ({
           ...item,
-          name: "cache_" + item.name,
+          name: "_" + item.name,
         }));
 
         await setCacheData("/api/garbage-items", newData);
@@ -109,80 +182,16 @@ export function GarbageItemsTable() {
 
   return (
     <>
-      <div className="border rounded-lg overflow-hidden">
-        <Table className="table-fixed">
-          <TableHeader>
-            <TableRow>
-              <TableHead className="border w-[50%] text-center">
-                品目名
-              </TableHead>
-              <TableHead className="border w-[41%] text-center">
-                分別区分
-              </TableHead>
-              <TableHead className="border w-[9%]"></TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {filteredGarbageItems.length === 0 ? (
-              <TableRow>
-                <TableCell
-                  colSpan={3}
-                  className="border text-center py-8 text-muted-foreground"
-                >
-                  品目名が見つかりませんでした
-                </TableCell>
-              </TableRow>
-            ) : (
-              filteredGarbageItems.map((garbageItem) => (
-                <TableRow key={garbageItem.id}>
-                  {/* 品目名 */}
-                  <TableCell className="border truncate">
-                    {garbageItem.name}
-                  </TableCell>
-                  {/* 分別区分 */}
-                  <TableCell className="border">
-                    <Badge
-                      variant="outline"
-                      className="max-w-full truncate"
-                      style={{ borderColor: garbageItem.categoryColor }}
-                    >
-                      {garbageItem.garbageCategory}
-                    </Badge>
-                  </TableCell>
-                  {/* 分別区分 */}
-                  <TableCell className="border">
-                    <div className="flex items-center justify-center">
-                      {garbageItem.note ? (
-                        <Dialog>
-                          <DialogTrigger asChild>
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              className="h-auto w-auto p-0"
-                              aria-label="備考を表示"
-                            >
-                              <Info className="h-4 w-4" />
-                            </Button>
-                          </DialogTrigger>
-                          <DialogContent className="[&>button[data-slot='dialog-close']]:top-2">
-                            <DialogHeader>
-                              <DialogTitle>{garbageItem.name}</DialogTitle>
-                              <DialogDescription className="text-left whitespace-pre-wrap">
-                                {garbageItem.note}
-                              </DialogDescription>
-                            </DialogHeader>
-                          </DialogContent>
-                        </Dialog>
-                      ) : (
-                        <span className="text-muted-foreground">-</span>
-                      )}
-                    </div>
-                  </TableCell>
-                </TableRow>
-              ))
-            )}
-          </TableBody>
-        </Table>
+      <div className="divide-y">
+        {filteredGarbageItems.length === 0 ? (
+          <div className="text-center py-8 text-muted-foreground">
+            品目名が見つかりませんでした
+          </div>
+        ) : (
+          filteredGarbageItems.map((garbageItem) => (
+            <GarbageItemRow key={garbageItem.id} garbageItem={garbageItem} />
+          ))
+        )}
       </div>
 
       {/* トップへ戻るボタン */}
