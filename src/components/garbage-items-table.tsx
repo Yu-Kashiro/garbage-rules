@@ -43,12 +43,12 @@ import { useQueryState } from "nuqs";
 import { useEffect, useRef, useState } from "react";
 
 const wasteTypeIcons: Record<string, LucideIcon> = {
-  ペットボトル: Recycle,
-  可燃ごみ: Flame,
-  "市では収集しません": XCircle,
-  "市では収集・処理しません": XCircle,
-  破砕ごみ: Hammer,
-  粗大ごみ指定品目: Boxes,
+  "ペットボトル": Recycle,
+  "可燃ごみ": Flame,
+  "収集不可": XCircle,
+  "収集不可2": XCircle,
+  "破砕ごみ": Hammer,
+  "粗大ごみ": Boxes,
   "資源(びん)": GlassWater,
   "資源(スプレー缶)": Sparkles,
   "資源(ライター)": Flame,
