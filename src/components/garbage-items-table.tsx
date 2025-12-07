@@ -15,7 +15,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getCacheData, setCacheData } from "@/lib/cache-client";
 import { garbageFuseOptions } from "@/lib/fuse-config";
 import { GarbageItemWithCategory } from "@/types/garbage";
@@ -231,6 +230,10 @@ export function GarbageItemsTable() {
     ? fuse.search(search).map((result) => result.item)
     : items;
 
+  // 環境変数から表示モードを取得 (compact: アイコン表示, detailed: 備考表示)
+  const displayMode = process.env.NEXT_PUBLIC_DISPLAY_MODE || "compact";
+  const showNoteInline = displayMode === "detailed";
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">
@@ -241,48 +244,21 @@ export function GarbageItemsTable() {
 
   return (
     <>
-      <Tabs defaultValue="compact" className="w-full">
-        <TabsList className="grid w-full grid-cols-2 mb-4">
-          <TabsTrigger value="compact">アイコン表示</TabsTrigger>
-          <TabsTrigger value="detailed">備考表示</TabsTrigger>
-        </TabsList>
-
-        <TabsContent value="compact" className="mt-0">
-          <div className="divide-y">
-            {filteredGarbageItems.length === 0 ? (
-              <div className="text-center py-8 text-muted-foreground">
-                品目名が見つかりませんでした
-              </div>
-            ) : (
-              filteredGarbageItems.map((garbageItem) => (
-                <GarbageItemRow
-                  key={garbageItem.id}
-                  garbageItem={garbageItem}
-                  showNoteInline={false}
-                />
-              ))
-            )}
+      <div className="divide-y">
+        {filteredGarbageItems.length === 0 ? (
+          <div className="text-center py-8 text-muted-foreground">
+            品目名が見つかりませんでした
           </div>
-        </TabsContent>
-
-        <TabsContent value="detailed" className="mt-0">
-          <div className="divide-y">
-            {filteredGarbageItems.length === 0 ? (
-              <div className="text-center py-8 text-muted-foreground">
-                品目名が見つかりませんでした
-              </div>
-            ) : (
-              filteredGarbageItems.map((garbageItem) => (
-                <GarbageItemRow
-                  key={garbageItem.id}
-                  garbageItem={garbageItem}
-                  showNoteInline={true}
-                />
-              ))
-            )}
-          </div>
-        </TabsContent>
-      </Tabs>
+        ) : (
+          filteredGarbageItems.map((garbageItem) => (
+            <GarbageItemRow
+              key={garbageItem.id}
+              garbageItem={garbageItem}
+              showNoteInline={showNoteInline}
+            />
+          ))
+        )}
+      </div>
 
       {/* トップへ戻るボタン */}
       <Button
