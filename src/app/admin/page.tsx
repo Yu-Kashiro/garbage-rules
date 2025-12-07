@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "管理者メニュー",
+  title: "管理者画面",
 }
 
 export default function RegisterPage() {
@@ -20,7 +20,7 @@ export default function RegisterPage() {
               </Button>
             </div>
             <h1 className="absolute left-1/2 -translate-x-1/2 text-xl font-bold md:text-3xl whitespace-nowrap">
-              管理者メニュー
+              管理者画面
             </h1>
           </div>
         </div>

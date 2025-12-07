@@ -9,12 +9,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { authClient } from "@/lib/auth-client";
-import { LogOut, Menu, Moon, Sun } from "lucide-react";
+import { CITY_TITLE } from "@/lib/city";
+import { Loader2, Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { CITY_TITLE } from "@/lib/city";
 
 export const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -66,30 +66,39 @@ export const Header = () => {
             <span className="sr-only">テーマ切り替え</span>
           </Button>
 
-          {!isPending && (
+          {isPending ? (
+            <>
+              {/* Loading state */}
+              <Button variant="outline" disabled className="w-[120px]">
+                <Loader2 className="h-4 w-4 animate-spin" />
+              </Button>
+              <Button disabled className="w-[120px]">
+                <Loader2 className="h-4 w-4 animate-spin" />
+              </Button>
+            </>
+          ) : (
             <>
               {session ? (
                 <>
                   {/* Admin Register Button */}
-                  <Button variant="outline" asChild>
+                  <Button variant="outline" asChild className="w-[120px]">
                     <Link href="/admin">管理者メニュー</Link>
                   </Button>
 
                   {/* Logout Button */}
-                  <Button variant="outline" onClick={handleSignOut}>
-                    <LogOut className="h-4 w-4 mr-2" />
+                  <Button variant="outline" onClick={handleSignOut} className="w-[120px]">
                     ログアウト
                   </Button>
                 </>
               ) : (
                 <>
                   {/* Login Button */}
-                  <Button variant="outline" asChild>
+                  <Button variant="outline" asChild className="w-[120px]">
                     <Link href="/login">ログイン</Link>
                   </Button>
 
                   {/* Sign Up Button */}
-                  <Button asChild>
+                  <Button asChild className="w-[120px]">
                     <Link href="/signup">新規登録</Link>
                   </Button>
                 </>
@@ -112,14 +121,24 @@ export const Header = () => {
                 <SheetTitle>メニュー</SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-4 mt-6 px-4">
-                {!isPending && (
+                {isPending ? (
+                  <>
+                    {/* Loading state */}
+                    <Button variant="outline" disabled className="w-full">
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    </Button>
+                    <Button disabled className="w-full">
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    </Button>
+                  </>
+                ) : (
                   <>
                     {session ? (
                       <>
                         {/* Admin Register Button */}
                         <Button variant="outline" asChild className="w-full">
                           <Link href="/admin" onClick={() => setIsOpen(false)}>
-                            管理者メニュー
+                            管理者画面
                           </Link>
                         </Button>
 
@@ -132,7 +151,6 @@ export const Header = () => {
                             handleSignOut();
                           }}
                         >
-                          <LogOut className="h-4 w-4 mr-2" />
                           ログアウト
                         </Button>
                       </>
