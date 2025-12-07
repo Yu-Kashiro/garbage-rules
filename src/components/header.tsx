@@ -98,7 +98,7 @@ export const Header = () => {
                   </Button>
 
                   {/* Sign Up Button */}
-                  <Button asChild className="w-[120px]">
+                  <Button variant="outline" asChild className="w-[120px]">
                     <Link href="/signup">新規登録</Link>
                   </Button>
                 </>
@@ -164,7 +164,7 @@ export const Header = () => {
                         </Button>
 
                         {/* Sign Up Button */}
-                        <Button asChild className="w-full">
+                        <Button variant="outline" asChild className="w-full">
                           <Link href="/signup" onClick={() => setIsOpen(false)}>
                             新規登録
                           </Link>
