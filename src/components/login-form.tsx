@@ -54,6 +54,8 @@ export function LoginForm({ signUp = false }: { signUp?: boolean }) {
           },
         }
       );
+      // signUp成功時はcallbackURLでリダイレクトされるため、ここで終了
+      return;
     }
 
     await authClient.signIn.email(
