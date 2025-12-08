@@ -24,7 +24,6 @@ export async function createGarbageCategory(formData: GarbageCategoryFormData) {
     await db.insert(garbageCategories).values({ ...data });
     updateCacheVersion();
     updateTag("garbage-categories");
-    updateTag("garbage-items");
     updateTag("cache-metadata");
   } catch (error) {
     console.error("Failed to create garbage category:", error);
@@ -47,8 +46,8 @@ export async function updateGarbageCategory(
       .where(eq(garbageCategories.id, id));
     updateCacheVersion();
     updateTag("garbage-categories");
-    updateTag("garbage-items");
-    updateTag("cache-metadata");
+    updateTag("garbage-items");/* next.js側のキャッシュ更新 */
+    updateTag("cache-metadata");/* ブラウザ側のキャッシュ更新 */
   } catch (error) {
     console.error("ごみ分別区分の更新に失敗しました。:", error);
     throw new Error("ごみ分別区分の更新に失敗しました");
@@ -62,8 +61,8 @@ export async function deleteGarbageCategory(id: number) {
     await db.delete(garbageCategories).where(eq(garbageCategories.id, id));
     updateCacheVersion();
     updateTag("garbage-categories");
-    updateTag("garbage-items");
-    updateTag("cache-metadata");
+    updateTag("garbage-items");/* next.js側のキャッシュ更新 */
+    updateTag("cache-metadata");/* ブラウザ側のキャッシュ更新 */
   } catch (error) {
     console.error("ごみ分別区分の削除に失敗しました。:", error);
     throw new Error("ごみ分別区分の削除に失敗しました");
@@ -79,7 +78,6 @@ export async function createGarbageItem(formData: GarbageItemFormData) {
     await db.insert(garbageItems).values({ ...data });
     updateCacheVersion();
     updateTag("garbage-items");
-    updateTag("garbage-categories");
     updateTag("garbage-items-admin");
     updateTag("cache-metadata");
   } catch (error) {
@@ -103,7 +101,6 @@ export async function updateGarbageItem(
       .where(eq(garbageItems.id, id));
     updateCacheVersion();
     updateTag("garbage-items");
-    updateTag("garbage-categories");
     updateTag("garbage-items-admin");
     updateTag("cache-metadata");
   } catch (error) {
@@ -120,7 +117,6 @@ export async function deleteGarbageItem(id: number) {
     await db.delete(garbageItems).where(eq(garbageItems.id, id));
     updateCacheVersion();
     updateTag("garbage-items");
-    updateTag("garbage-categories");
     updateTag("garbage-items-admin");
     updateTag("cache-metadata");
   } catch (error) {
