@@ -79,6 +79,7 @@ export async function createGarbageItem(formData: GarbageItemFormData) {
     await db.insert(garbageItems).values({ ...data });
     updateCacheVersion();
     updateTag("garbage-items");
+    updateTag("garbage-categories");
     updateTag("garbage-items-admin");
     updateTag("cache-metadata");
   } catch (error) {
@@ -102,6 +103,7 @@ export async function updateGarbageItem(
       .where(eq(garbageItems.id, id));
     updateCacheVersion();
     updateTag("garbage-items");
+    updateTag("garbage-categories");
     updateTag("garbage-items-admin");
     updateTag("cache-metadata");
   } catch (error) {
@@ -118,6 +120,7 @@ export async function deleteGarbageItem(id: number) {
     await db.delete(garbageItems).where(eq(garbageItems.id, id));
     updateCacheVersion();
     updateTag("garbage-items");
+    updateTag("garbage-categories");
     updateTag("garbage-items-admin");
     updateTag("cache-metadata");
   } catch (error) {
