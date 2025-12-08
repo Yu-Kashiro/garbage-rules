@@ -72,7 +72,7 @@ export const Header = () => {
               <Button variant="outline" disabled className="w-[120px]">
                 <Loader2 className="h-4 w-4 animate-spin" />
               </Button>
-              <Button disabled className="w-[120px]">
+              <Button variant="outline" disabled className="w-[120px]">
                 <Loader2 className="h-4 w-4 animate-spin" />
               </Button>
             </>
@@ -86,7 +86,11 @@ export const Header = () => {
                   </Button>
 
                   {/* Logout Button */}
-                  <Button variant="outline" onClick={handleSignOut} className="w-[120px]">
+                  <Button
+                    variant="outline"
+                    onClick={handleSignOut}
+                    className="w-[120px]"
+                  >
                     ログアウト
                   </Button>
                 </>
@@ -127,7 +131,7 @@ export const Header = () => {
                     <Button variant="outline" disabled className="w-full">
                       <Loader2 className="h-4 w-4 animate-spin" />
                     </Button>
-                    <Button disabled className="w-full">
+                    <Button variant="outline" disabled className="w-full">
                       <Loader2 className="h-4 w-4 animate-spin" />
                     </Button>
                   </>
