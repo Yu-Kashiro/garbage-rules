@@ -17,8 +17,8 @@ import { updateTag } from "next/cache";
 
 // カテゴリー新規登録
 export async function createGarbageCategory(formData: GarbageCategoryFormData) {
-  const data = garbageCategoryFormSchema.parse(formData);
   await verifySession();
+  const data = garbageCategoryFormSchema.parse(formData);
 
   try {
     await db.insert(garbageCategories).values({ ...data });
@@ -37,8 +37,8 @@ export async function updateGarbageCategory(
   id: number,
   formData: GarbageCategoryFormData
 ) {
-  const data = garbageCategoryFormSchema.parse(formData);
   await verifySession();
+  const data = garbageCategoryFormSchema.parse(formData);
 
   try {
     await db
@@ -72,8 +72,8 @@ export async function deleteGarbageCategory(id: number) {
 
 // ごみ品目新規登録
 export async function createGarbageItem(formData: GarbageItemFormData) {
-  const data = garbageItemFormSchema.parse(formData);
   await verifySession();
+  const data = garbageItemFormSchema.parse(formData);
 
   try {
     await db.insert(garbageItems).values({ ...data });
@@ -93,8 +93,8 @@ export async function updateGarbageItem(
   id: number,
   formData: GarbageItemFormData
 ) {
-  const data = garbageItemFormSchema.parse(formData);
   await verifySession();
+  const data = garbageItemFormSchema.parse(formData);
 
   try {
     await db
