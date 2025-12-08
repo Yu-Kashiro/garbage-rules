@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
@@ -27,6 +28,7 @@ import { Input } from "@/components/ui/input";
 import { Spinner } from "@/components/ui/spinner";
 
 export function SignupForm() {
+  const router = useRouter();
   const form = useForm<LoginFormData>({
     resolver: zodResolver(loginFormSchema),
     defaultValues: {
@@ -42,15 +44,16 @@ export function SignupForm() {
         email: data.email,
         password: data.password,
         name: data.email,
-        callbackURL: "/admin",
       },
       {
+        onSuccess() {
+          router.push("/admin");
+        },
         onError(ctx) {
           toast.error(ctx.error.message);
         },
       }
     );
-    // signUp成功時はcallbackURLでリダイレクトされる
   }
 
   // テスト用のランダムデータをセット
