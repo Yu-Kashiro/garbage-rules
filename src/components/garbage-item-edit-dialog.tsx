@@ -65,11 +65,14 @@ export function GarbageItemEditDialog({
   const [open, setOpen] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
+  // 新規作成時のデフォルトカテゴリ（カテゴリリストの最初のID、または未定義）
+  const defaultCategoryId = categories[0]?.id;
+
   const form = useForm<GarbageItemFormData>({
     resolver: zodResolver(garbageItemFormSchema),
     defaultValues: {
       name: item?.name ?? "",
-      garbageCategory: item?.garbageCategory ?? 2,
+      garbageCategory: item?.garbageCategory ?? defaultCategoryId,
       note: item?.note ?? "",
       search: item?.search ?? "",
     },
@@ -80,7 +83,7 @@ export function GarbageItemEditDialog({
     if (newOpen) {
       form.reset({
         name: item?.name ?? "",
-        garbageCategory: item?.garbageCategory ?? 2,
+        garbageCategory: item?.garbageCategory ?? defaultCategoryId,
         note: item?.note ?? "",
         search: item?.search ?? "",
       });
