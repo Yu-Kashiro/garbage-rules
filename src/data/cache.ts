@@ -1,8 +1,13 @@
 import "server-only";
 import { db } from "@/db";
 import { cache_metadata } from "@/db/schemas/cache";
+import { cacheLife, cacheTag } from "next/cache";
 
 export const getCacheVersion = async () => {
+  "use cache";
+  cacheLife("days");
+  cacheTag("cache-metadata");
+
   const cachedData = await db.query.cache_metadata.findFirst();
   if (!cachedData) {
     return 1;

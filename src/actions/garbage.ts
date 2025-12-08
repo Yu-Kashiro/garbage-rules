@@ -25,6 +25,7 @@ export async function createGarbageCategory(formData: GarbageCategoryFormData) {
     updateCacheVersion();
     updateTag("garbage-categories");
     updateTag("garbage-items");
+    updateTag("cache-metadata");
   } catch (error) {
     console.error("Failed to create garbage category:", error);
     throw new Error("ごみ分別区分の登録に失敗しました");
@@ -47,6 +48,7 @@ export async function updateGarbageCategory(
     updateCacheVersion();
     updateTag("garbage-categories");
     updateTag("garbage-items");
+    updateTag("cache-metadata");
   } catch (error) {
     console.error("ごみ分別区分の更新に失敗しました。:", error);
     throw new Error("ごみ分別区分の更新に失敗しました");
@@ -61,6 +63,7 @@ export async function deleteGarbageCategory(id: number) {
     updateCacheVersion();
     updateTag("garbage-categories");
     updateTag("garbage-items");
+    updateTag("cache-metadata");
   } catch (error) {
     console.error("ごみ分別区分の削除に失敗しました。:", error);
     throw new Error("ごみ分別区分の削除に失敗しました");
@@ -77,6 +80,7 @@ export async function createGarbageItem(formData: GarbageItemFormData) {
     updateCacheVersion();
     updateTag("garbage-items");
     updateTag("garbage-items-admin");
+    updateTag("cache-metadata");
   } catch (error) {
     console.error("Failed to create garbage item:", error);
     throw new Error("ごみ品目の登録に失敗しました");
@@ -99,6 +103,7 @@ export async function updateGarbageItem(
     updateCacheVersion();
     updateTag("garbage-items");
     updateTag("garbage-items-admin");
+    updateTag("cache-metadata");
   } catch (error) {
     console.error("ごみ品目の更新に失敗しました。:", error);
     throw new Error("ごみ品目の更新に失敗しました");
@@ -114,6 +119,7 @@ export async function deleteGarbageItem(id: number) {
     updateCacheVersion();
     updateTag("garbage-items");
     updateTag("garbage-items-admin");
+    updateTag("cache-metadata");
   } catch (error) {
     console.error("ごみ品目の削除に失敗しました。:", error);
     throw new Error("ごみ品目の削除に失敗しました");
