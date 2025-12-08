@@ -15,50 +15,14 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { wasteTypeIcons } from "@/lib/waste-type-icons";
 import { getCacheData, setCacheData } from "@/lib/cache-client";
 import { garbageFuseOptions } from "@/lib/fuse-config";
 import { GarbageItemWithCategory } from "@/types/garbage";
 import Fuse from "fuse.js";
-import {
-  ArrowUp,
-  Battery,
-  BottleWine,
-  Boxes,
-  CupSoda,
-  FileText,
-  Flame,
-  Hammer,
-  Info,
-  Lightbulb,
-  type LucideIcon,
-  Plug,
-  Recycle,
-  Shirt,
-  SprayCan,
-  Wrench,
-  XCircle,
-} from "lucide-react";
+import { ArrowUp, Info } from "lucide-react";
 import { useQueryState } from "nuqs";
 import { useEffect, useRef, useState } from "react";
-
-const wasteTypeIcons: Record<string, LucideIcon> = {
-  ペットボトル: Recycle,
-  可燃ごみ: Flame,
-  収集不可: XCircle,
-  収集不可2: XCircle,
-  破砕ごみ: Hammer,
-  粗大ごみ: Boxes,
-  "資源(びん)": BottleWine,
-  "資源(スプレー缶)": SprayCan,
-  "資源(ライター)": Flame,
-  "資源(乾電池)": Battery,
-  "資源(小型家電)": Plug,
-  "資源(布・衣類)": Shirt,
-  "資源(紙類)": FileText,
-  "資源(蛍光管)": Lightbulb,
-  "資源(金属類)": Wrench,
-  "資源(飲料缶)": CupSoda,
-};
 
 function GarbageItemRow({
   garbageItem,
@@ -188,6 +152,7 @@ export function GarbageItemsTable() {
         const data = (await response.json()) as GarbageItemWithCategory[];
 
         // データをstateとキャッシュに保存
+        // デバッグ用のため、本番環境では削除
         setItems(data);
         const newData = data.map((item) => ({
           ...item,
