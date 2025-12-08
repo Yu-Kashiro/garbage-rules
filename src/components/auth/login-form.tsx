@@ -45,9 +45,11 @@ export function LoginForm() {
       {
         email: data.email,
         password: data.password,
-        callbackURL: "/admin",
       },
       {
+        onSuccess() {
+          router.push("/admin");
+        },
         onError(ctx) {
           toast.error(
             ctx.error.status === 401
