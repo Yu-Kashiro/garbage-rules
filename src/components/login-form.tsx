@@ -5,6 +5,7 @@ import { LoginFormData } from "@/types/auth";
 import { loginFormSchema } from "@/zod/login-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { Button } from "./ui/button";
@@ -29,6 +30,7 @@ import { Spinner } from "./ui/spinner";
 
 export function LoginForm({ signUp = false }: { signUp?: boolean }) {
   const router = useRouter();
+  const [isGuestLoading, setIsGuestLoading] = useState(false);
   const form = useForm<LoginFormData>({
     resolver: zodResolver(loginFormSchema),
     defaultValues: {
@@ -122,13 +124,10 @@ export function LoginForm({ signUp = false }: { signUp?: boolean }) {
             <Button
               disabled={form.formState.isSubmitting}
               type="submit"
-              className="w-full md:w-auto"
+              className="w-full md:w-[120px]"
             >
               {form.formState.isSubmitting ? (
-                <div className="flex items-center gap-2">
-                  <Spinner className="size-4" />
-                  <span>{signUp ? "登録" : "ログイン"}中...</span>
-                </div>
+                <Spinner className="size-4" />
               ) : signUp ? (
                 "新規登録"
               ) : (
@@ -150,16 +149,27 @@ export function LoginForm({ signUp = false }: { signUp?: boolean }) {
               </Button>
             ) : (
               <Button
-                className="w-full md:w-auto md:ml-auto"
+                className="w-full md:w-[140px] md:ml-auto"
                 variant="outline"
                 type="button"
-                onClick={() => {
-                  authClient.signIn.anonymous().then(() => {
+                disabled={isGuestLoading}
+                onClick={async () => {
+                  setIsGuestLoading(true);
+                  try {
+                    await authClient.signIn.anonymous();
                     router.push("/admin");
-                  });
+                  } catch {
+                    toast.error("ゲストログインに失敗しました");
+                  } finally {
+                    setIsGuestLoading(false);
+                  }
                 }}
               >
-                ゲストログイン
+                {isGuestLoading ? (
+                  <Spinner className="size-4" />
+                ) : (
+                  "ゲストログイン"
+                )}
               </Button>
             )}
           </CardFooter>
