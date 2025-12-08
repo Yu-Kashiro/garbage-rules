@@ -15,7 +15,6 @@ export async function getGarbageCategories(): Promise<GarbageCategory[]> {
   "use cache";
   cacheLife("days");
   cacheTag("garbage-categories");
-  cacheTag("garbage-items");
 
   const result = await db.select().from(garbageCategories);
   return result;
