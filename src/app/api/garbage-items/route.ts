@@ -1,5 +1,5 @@
 import { getGarbageItems } from "@/data/garbage";
-import { getCacheVersion } from "@/lib/cache";
+import { getCacheVersion } from "@/data/cache";
 import { NextResponse } from "next/server";
 
 export async function GET() {

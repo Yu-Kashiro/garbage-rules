@@ -2,7 +2,7 @@
 
 import { db } from "@/db";
 import { garbageCategories, garbageItems } from "@/db/schemas/garbage";
-import { updateCacheVersion } from "@/lib/cache";
+import { updateCacheVersion } from "@/data/cache";
 import { verifySession } from "@/lib/session";
 import type {
   GarbageCategoryFormData,
