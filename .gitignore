@@ -48,3 +48,11 @@ scripts/.add-search-field.ts
 
 # documentation
 doc/flicker-issue-analysis.md
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
