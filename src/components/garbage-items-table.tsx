@@ -262,7 +262,7 @@ export function GarbageItemsTable() {
       {/* トップへ戻るボタン */}
       <Button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 z-50 h-12 w-12 rounded-full transition-opacity duration-300 ${
+        className={`fixed bottom-8 right-8 lg:right-[max(2rem,calc((100vw-48rem)/2-4rem))] z-50 h-12 w-12 rounded-full transition-opacity duration-300 ${
           showScrollToTop ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         size="icon"
