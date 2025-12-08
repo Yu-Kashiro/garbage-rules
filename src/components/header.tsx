@@ -31,10 +31,12 @@ export const Header = () => {
     router.push("/");
   };
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container flex h-14 items-center mx-auto justify-between">
-        {/* title */}
+        {/* ロゴ・タイトル */}
         <Button variant="ghost" asChild>
           <Link href="/" className="flex gap-4 items-center">
             <svg
@@ -57,18 +59,18 @@ export const Header = () => {
           </Link>
         </Button>
 
-        {/* Desktop navigation */}
+        {/* ========== デスクトップナビゲーション ========== */}
         <div className="hidden md:flex gap-2">
-          {/* Theme Toggle */}
+          {/* テーマ切り替えボタン */}
           <Button variant="ghost" size="icon" onClick={toggleTheme}>
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">テーマ切り替え</span>
           </Button>
 
-          {isPending ? (
+          {/* ローディング中 */}
+          {isPending && (
             <>
-              {/* Loading state */}
               <Button variant="outline" disabled className="w-[120px]">
                 <Loader2 className="h-4 w-4 animate-spin" />
               </Button>
@@ -76,42 +78,38 @@ export const Header = () => {
                 <Loader2 className="h-4 w-4 animate-spin" />
               </Button>
             </>
-          ) : (
+          )}
+
+          {/* ログイン済み */}
+          {!isPending && session && (
             <>
-              {session ? (
-                <>
-                  {/* Admin Register Button */}
-                  <Button variant="outline" asChild className="w-[120px]">
-                    <Link href="/admin">管理者メニュー</Link>
-                  </Button>
+              <Button variant="outline" asChild className="w-[120px]">
+                <Link href="/admin">管理者メニュー</Link>
+              </Button>
+              <Button
+                variant="outline"
+                onClick={handleSignOut}
+                className="w-[120px]"
+              >
+                ログアウト
+              </Button>
+            </>
+          )}
 
-                  {/* Logout Button */}
-                  <Button
-                    variant="outline"
-                    onClick={handleSignOut}
-                    className="w-[120px]"
-                  >
-                    ログアウト
-                  </Button>
-                </>
-              ) : (
-                <>
-                  {/* Login Button */}
-                  <Button variant="outline" asChild className="w-[120px]">
-                    <Link href="/login">ログイン</Link>
-                  </Button>
-
-                  {/* Sign Up Button */}
-                  <Button variant="outline" asChild className="w-[120px]">
-                    <Link href="/signup">新規登録</Link>
-                  </Button>
-                </>
-              )}
+          {/* 未ログイン */}
+          {!isPending && !session && (
+            <>
+              <Button variant="outline" asChild className="w-[120px]">
+                <Link href="/login">ログイン</Link>
+              </Button>
+              <Button variant="outline" asChild className="w-[120px]">
+                <Link href="/signup">新規登録</Link>
+              </Button>
             </>
           )}
         </div>
 
-        {/* Mobile hamburger menu */}
+        {/* ========== モバイルナビゲーション ========== */}
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -125,60 +123,56 @@ export const Header = () => {
                 <SheetTitle>メニュー</SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-4 mt-6 px-4">
-                {isPending ? (
+                {/* ローディング中 */}
+                {isPending && (
                   <>
-                    {/* Loading state */}
                     <Button variant="outline" disabled className="w-full">
                       <Loader2 className="h-4 w-4 animate-spin" />
                     </Button>
                     <Button variant="outline" disabled className="w-full">
                       <Loader2 className="h-4 w-4 animate-spin" />
                     </Button>
-                  </>
-                ) : (
-                  <>
-                    {session ? (
-                      <>
-                        {/* Admin Register Button */}
-                        <Button variant="outline" asChild className="w-full">
-                          <Link href="/admin" onClick={() => setIsOpen(false)}>
-                            管理者画面
-                          </Link>
-                        </Button>
-
-                        {/* Logout Button */}
-                        <Button
-                          variant="outline"
-                          className="w-full"
-                          onClick={() => {
-                            setIsOpen(false);
-                            handleSignOut();
-                          }}
-                        >
-                          ログアウト
-                        </Button>
-                      </>
-                    ) : (
-                      <>
-                        {/* Login Button */}
-                        <Button variant="outline" asChild className="w-full">
-                          <Link href="/login" onClick={() => setIsOpen(false)}>
-                            ログイン
-                          </Link>
-                        </Button>
-
-                        {/* Sign Up Button */}
-                        <Button variant="outline" asChild className="w-full">
-                          <Link href="/signup" onClick={() => setIsOpen(false)}>
-                            新規登録
-                          </Link>
-                        </Button>
-                      </>
-                    )}
                   </>
                 )}
 
-                {/* Theme Toggle */}
+                {/* ログイン済み */}
+                {!isPending && session && (
+                  <>
+                    <Button variant="outline" asChild className="w-full">
+                      <Link href="/admin" onClick={closeMenu}>
+                        管理者画面
+                      </Link>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="w-full"
+                      onClick={() => {
+                        closeMenu();
+                        handleSignOut();
+                      }}
+                    >
+                      ログアウト
+                    </Button>
+                  </>
+                )}
+
+                {/* 未ログイン */}
+                {!isPending && !session && (
+                  <>
+                    <Button variant="outline" asChild className="w-full">
+                      <Link href="/login" onClick={closeMenu}>
+                        ログイン
+                      </Link>
+                    </Button>
+                    <Button variant="outline" asChild className="w-full">
+                      <Link href="/signup" onClick={closeMenu}>
+                        新規登録
+                      </Link>
+                    </Button>
+                  </>
+                )}
+
+                {/* テーマ切り替えボタン */}
                 <Button
                   variant="secondary"
                   className="w-full justify-center"
