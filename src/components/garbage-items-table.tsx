@@ -22,11 +22,11 @@ import Fuse from "fuse.js";
 import {
   ArrowUp,
   Battery,
+  BottleWine,
   Boxes,
-  Coffee,
+  CupSoda,
   FileText,
   Flame,
-  GlassWater,
   Hammer,
   Info,
   Lightbulb,
@@ -34,7 +34,7 @@ import {
   Plug,
   Recycle,
   Shirt,
-  Sparkles,
+  SprayCan,
   Wrench,
   XCircle,
 } from "lucide-react";
@@ -42,14 +42,14 @@ import { useQueryState } from "nuqs";
 import { useEffect, useRef, useState } from "react";
 
 const wasteTypeIcons: Record<string, LucideIcon> = {
-  "ペットボトル": Recycle,
-  "可燃ごみ": Flame,
-  "収集不可": XCircle,
-  "収集不可2": XCircle,
-  "破砕ごみ": Hammer,
-  "粗大ごみ": Boxes,
-  "資源(びん)": GlassWater,
-  "資源(スプレー缶)": Sparkles,
+  ペットボトル: Recycle,
+  可燃ごみ: Flame,
+  収集不可: XCircle,
+  収集不可2: XCircle,
+  破砕ごみ: Hammer,
+  粗大ごみ: Boxes,
+  "資源(びん)": BottleWine,
+  "資源(スプレー缶)": SprayCan,
   "資源(ライター)": Flame,
   "資源(乾電池)": Battery,
   "資源(小型家電)": Plug,
@@ -57,7 +57,7 @@ const wasteTypeIcons: Record<string, LucideIcon> = {
   "資源(紙類)": FileText,
   "資源(蛍光管)": Lightbulb,
   "資源(金属類)": Wrench,
-  "資源(飲料缶)": Coffee,
+  "資源(飲料缶)": CupSoda,
 };
 
 function GarbageItemRow({
@@ -169,9 +169,8 @@ export function GarbageItemsTable() {
     const fetchGarbageItems = async () => {
       try {
         // まずキャッシュからデータを取得
-        const cachedData = await getCacheData<GarbageItemWithCategory[]>(
-          "/api/garbage-items"
-        );
+        const cachedData =
+          await getCacheData<GarbageItemWithCategory[]>("/api/garbage-items");
 
         if (cachedData) {
           // キャッシュにデータがあれば使用
