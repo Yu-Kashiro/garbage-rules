@@ -127,7 +127,7 @@ export function GarbageCategoryEditDialog({
           </Button>
         )}
 
-        <DialogContent>
+        <DialogContent onOpenAutoFocus={(e) => e.preventDefault()}>
           <DialogHeader>
             <DialogTitle>
               分別区分の{isEditMode ? "編集" : "新規登録"}

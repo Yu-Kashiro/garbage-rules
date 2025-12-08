@@ -145,7 +145,7 @@ export function GarbageItemEditDialog({
           )}
         </DialogTrigger>
 
-        <DialogContent>
+        <DialogContent onOpenAutoFocus={(e) => e.preventDefault()}>
           <DialogHeader>
             <DialogTitle>
               ごみ品目の{isEditMode ? "編集" : "新規登録"}
