@@ -89,28 +89,26 @@ export function GarbageItemEditDialog({
       });
     } else {
       setShowDeleteConfirm(false);
+      form.reset();
     }
   };
 
   const handleSubmit = async (data: GarbageItemFormData) => {
-    try {
-      if (isEditMode) {
-        await updateGarbageItem(item.id, data);
-        toast.success(`「${item.name}」を更新しました`);
-      } else {
-        await createGarbageItem(data);
-        toast.success(`「${data.name}」を登録しました`);
-      }
-      setOpen(false);
-    } catch (error) {
-      toast.error(
-        error instanceof Error
-          ? error.message
-          : isEditMode
-          ? "更新に失敗しました"
-          : "登録に失敗しました"
-      );
+    const result = isEditMode
+      ? await updateGarbageItem(item.id, data)
+      : await createGarbageItem(data);
+
+    if (!result.success) {
+      toast.error(result.error);
+      return;
     }
+
+    toast.success(
+      isEditMode
+        ? `「${item.name}」を更新しました`
+        : `「${data.name}」を登録しました`
+    );
+    setOpen(false);
   };
 
   const handleDeleteClick = () => {
@@ -120,16 +118,16 @@ export function GarbageItemEditDialog({
   const handleDeleteConfirm = async () => {
     if (!isEditMode) return;
 
-    try {
-      await deleteGarbageItem(item.id);
-      toast.success(`「${item.name}」を削除しました`);
-      setOpen(false);
-    } catch (error) {
-      toast.error(
-        error instanceof Error ? error.message : "削除に失敗しました"
-      );
+    const result = await deleteGarbageItem(item.id);
+
+    if (!result.success) {
+      toast.error(result.error);
       setShowDeleteConfirm(false);
+      return;
     }
+
+    toast.success(`「${item.name}」を削除しました`);
+    setOpen(false);
   };
 
   return (

@@ -15,6 +15,12 @@ import {
 import { eq } from "drizzle-orm";
 import { updateTag } from "next/cache";
 
+function isUniqueConstraintError(error: unknown): boolean {
+  if (!(error instanceof Error)) return false;
+  const cause = error.cause as { code?: string } | undefined;
+  return cause?.code === "SQLITE_CONSTRAINT";
+}
+
 // カテゴリー新規登録
 export async function createGarbageCategory(formData: GarbageCategoryFormData) {
   await verifySession();
@@ -25,9 +31,13 @@ export async function createGarbageCategory(formData: GarbageCategoryFormData) {
     updateCacheVersion();
     updateTag("garbage-categories");
     updateTag("cache-metadata");
+    return { success: true } as const;
   } catch (error) {
     console.error("Failed to create garbage category:", error);
-    throw new Error("ごみ分別区分の登録に失敗しました");
+    if (isUniqueConstraintError(error)) {
+      return { success: false, error: "同じ名前の分別区分が既に存在します" } as const;
+    }
+    return { success: false, error: "ごみ分別区分の登録に失敗しました" } as const;
   }
 }
 
@@ -48,9 +58,13 @@ export async function updateGarbageCategory(
     updateTag("garbage-categories");
     updateTag("garbage-items");/* next.js側のキャッシュ更新 */
     updateTag("cache-metadata");/* ブラウザ側のキャッシュ更新 */
+    return { success: true } as const;
   } catch (error) {
     console.error("ごみ分別区分の更新に失敗しました。:", error);
-    throw new Error("ごみ分別区分の更新に失敗しました");
+    if (isUniqueConstraintError(error)) {
+      return { success: false, error: "同じ名前の分別区分が既に存在します" } as const;
+    }
+    return { success: false, error: "ごみ分別区分の更新に失敗しました" } as const;
   }
 }
 
@@ -63,9 +77,10 @@ export async function deleteGarbageCategory(id: number) {
     updateTag("garbage-categories");
     updateTag("garbage-items");/* next.js側のキャッシュ更新 */
     updateTag("cache-metadata");/* ブラウザ側のキャッシュ更新 */
+    return { success: true } as const;
   } catch (error) {
     console.error("ごみ分別区分の削除に失敗しました。:", error);
-    throw new Error("ごみ分別区分の削除に失敗しました");
+    return { success: false, error: "ごみ分別区分の削除に失敗しました" } as const;
   }
 }
 
@@ -80,9 +95,13 @@ export async function createGarbageItem(formData: GarbageItemFormData) {
     updateTag("garbage-items");
     updateTag("garbage-items-admin");
     updateTag("cache-metadata");
+    return { success: true } as const;
   } catch (error) {
     console.error("Failed to create garbage item:", error);
-    throw new Error("ごみ品目の登録に失敗しました");
+    if (isUniqueConstraintError(error)) {
+      return { success: false, error: "同じ名前のごみ品目が既に存在します" } as const;
+    }
+    return { success: false, error: "ごみ品目の登録に失敗しました" } as const;
   }
 }
 
@@ -103,9 +122,13 @@ export async function updateGarbageItem(
     updateTag("garbage-items");
     updateTag("garbage-items-admin");
     updateTag("cache-metadata");
+    return { success: true } as const;
   } catch (error) {
     console.error("ごみ品目の更新に失敗しました。:", error);
-    throw new Error("ごみ品目の更新に失敗しました");
+    if (isUniqueConstraintError(error)) {
+      return { success: false, error: "同じ名前のごみ品目が既に存在します" } as const;
+    }
+    return { success: false, error: "ごみ品目の更新に失敗しました" } as const;
   }
 }
 
@@ -119,8 +142,9 @@ export async function deleteGarbageItem(id: number) {
     updateTag("garbage-items");
     updateTag("garbage-items-admin");
     updateTag("cache-metadata");
+    return { success: true } as const;
   } catch (error) {
     console.error("ごみ品目の削除に失敗しました。:", error);
-    throw new Error("ごみ品目の削除に失敗しました");
+    return { success: false, error: "ごみ品目の削除に失敗しました" } as const;
   }
 }
