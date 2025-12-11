@@ -1,0 +1,7 @@
+{
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/page.*": "(${dirname})/page.${extname}",
+    "**/app/**/layout.*": "(${dirname})/layout.${extname}",
+    "**/index.*": "${dirname}/index.${extname}"
+  }
+}
