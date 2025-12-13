@@ -1,16 +1,24 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSessionCookie } from "better-auth/cookies";
 
-const publicRoutes = ["/", "/login", "/signup" ];
+const publicRoutes = ["/", "/login", "/signup"];
+const authRoutes = ["/login", "/signup"];
 
 export async function proxy(request: NextRequest) {
   const sessionCookie = getSessionCookie(request);
-  const isPrivateRoute = !publicRoutes.includes(request.nextUrl.pathname);
+  const pathname = request.nextUrl.pathname;
+  const isPrivateRoute = !publicRoutes.includes(pathname);
+  const isAuthRoute = authRoutes.includes(pathname);
+
+  // ログイン済みユーザーが認証ページにアクセスした場合はadminにリダイレクト
+  if (sessionCookie && isAuthRoute) {
+    return NextResponse.redirect(new URL("/admin", request.url));
+  }
 
   // THIS IS NOT SECURE!
   // This is the recommended approach to optimistically redirect users
   // We recommend handling auth checks in each page/route
-  if (!sessionCookie && isPrivateRoute ) {
+  if (!sessionCookie && isPrivateRoute) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
@@ -28,6 +36,6 @@ export const config = {
      * - llms.txt (LLM documentation file)
      * - images and other static assets
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|llms.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    "/((?!api|_next/static|_next/image|favicon.ico|llms.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };
