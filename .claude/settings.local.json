@@ -4,7 +4,9 @@
       "Bash(rm:*)",
       "Bash(npm run dev:*)",
       "Bash(lsof:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(pnpm exec playwright test:*)",
+      "Bash(mkdir:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
