@@ -12,7 +12,7 @@ import { defineConfig, devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: "./e2e",
+  testDir: "src/e2e",
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -34,19 +34,45 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    // リセットセットアップ（最初に実行）
+    {
+      name: "reset",
+      testMatch: /reset-setup\.ts/,
+    },
+
+    // 認証セットアップ（リセット後に実行）
+    {
+      name: "setup",
+      testMatch: /auth-setup\.ts/,
+      dependencies: ["reset"],
+    },
+
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
+      dependencies: ["setup"],
     },
 
     {
       name: "firefox",
       use: { ...devices["Desktop Firefox"] },
+      dependencies: ["setup"],
     },
 
     {
       name: "webkit",
       use: { ...devices["Desktop Safari"] },
+      dependencies: ["setup"],
+    },
+
+    // 認証が必要なテスト用プロジェクト
+    {
+      name: "chromium-authenticated",
+      use: {
+        ...devices["Desktop Chrome"],
+        storageState: "src/e2e/.auth/user.json",
+      },
+      dependencies: ["setup"],
     },
 
     /* Test against mobile viewports. */
