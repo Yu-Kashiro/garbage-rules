@@ -93,7 +93,7 @@ export function GarbageCategoryEditDialog({
     setShowDeleteConfirm(true);
   };
 
-  const handleDeleteConfirm = async () => {
+  const handleDelete = async () => {
     if (!isEditMode) return;
 
     const result = await deleteGarbageCategory(category.id);
@@ -221,7 +221,7 @@ export function GarbageCategoryEditDialog({
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel>キャンセル</AlertDialogCancel>
-              <AlertDialogAction onClick={handleDeleteConfirm}>
+              <AlertDialogAction onClick={handleDelete}>
                 削除する
               </AlertDialogAction>
             </AlertDialogFooter>
