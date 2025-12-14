@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "分別区分の管理",
 };
 
-export default async function CategoryEditPage() {
+export default function CategoryEditPage() {
   return (
     <div className="container py-10">
       <div className="max-w-2xl mx-auto">
