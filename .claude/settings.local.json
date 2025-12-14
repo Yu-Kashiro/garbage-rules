@@ -8,9 +8,5 @@
       "Bash(pnpm exec playwright test:*)",
       "Bash(mkdir:*)"
     ]
-  },
-  "enableAllProjectMcpServers": true,
-  "enabledMcpjsonServers": [
-    "shadcn"
-  ]
+  }
 }
