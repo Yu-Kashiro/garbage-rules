@@ -1,5 +1,5 @@
-import { GarbageCategoryEditDialog } from "@/components/garbage-category-edit-dialog";
-import { GarbageCategoryTable } from "@/components/garbage-category-table";
+import { GarbageCategoryEditDialog } from "@/components/admin/garbage-category-edit-dialog";
+import { GarbageCategoryTable } from "@/components/admin/garbage-category-table";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 import Link from "next/link";

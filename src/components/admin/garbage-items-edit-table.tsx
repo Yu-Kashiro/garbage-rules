@@ -90,8 +90,12 @@ export function GarbageItemsEditTable({
             <TableRow>
               <TableHead className="w-[10%]">番号</TableHead>
               <TableHead className="w-[30%]">品目名</TableHead>
-              <TableHead className="hidden md:table-cell md:w-[20%]">分別区分</TableHead>
-              <TableHead className="hidden md:table-cell md:w-[30%]">備考</TableHead>
+              <TableHead className="hidden md:table-cell md:w-[20%]">
+                分別区分
+              </TableHead>
+              <TableHead className="hidden md:table-cell md:w-[30%]">
+                備考
+              </TableHead>
               <TableHead className="w-[10%]"></TableHead>
             </TableRow>
           </TableHeader>
@@ -108,11 +112,19 @@ export function GarbageItemsEditTable({
             ) : (
               filteredItems.map((item, index) => (
                 <TableRow key={item.id}>
-                  <TableCell className="font-medium w-[10%]">{index + 1}</TableCell>
-                  <TableCell className="truncate max-w-0 w-[30%]" title={item.name}>
+                  <TableCell className="font-medium w-[10%]">
+                    {index + 1}
+                  </TableCell>
+                  <TableCell
+                    className="truncate max-w-0 w-[30%]"
+                    title={item.name}
+                  >
                     {item.name}
                   </TableCell>
-                  <TableCell className="hidden md:table-cell truncate max-w-0 md:w-[20%]" title={getCategoryName(item.garbageCategory)}>
+                  <TableCell
+                    className="hidden md:table-cell truncate max-w-0 md:w-[20%]"
+                    title={getCategoryName(item.garbageCategory)}
+                  >
                     {getCategoryName(item.garbageCategory)}
                   </TableCell>
                   <TableCell
@@ -122,7 +134,10 @@ export function GarbageItemsEditTable({
                     {item.note || "-"}
                   </TableCell>
                   <TableCell className="text-right w-[10%]">
-                    <GarbageItemEditDialog item={item} categories={categories} />
+                    <GarbageItemEditDialog
+                      item={item}
+                      categories={categories}
+                    />
                   </TableCell>
                 </TableRow>
               ))

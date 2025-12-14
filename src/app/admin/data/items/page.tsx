@@ -1,5 +1,5 @@
-import { GarbageItemEditDialog } from "@/components/garbage-item-edit-dialog";
-import { GarbageItemsEditTable } from "@/components/garbage-items-edit-table";
+import { GarbageItemEditDialog } from "@/components/admin/garbage-item-edit-dialog";
+import { GarbageItemsEditTable } from "@/components/admin/garbage-items-edit-table";
 import { SearchForm } from "@/components/search-form";
 import { Button } from "@/components/ui/button";
 import { getGarbageCategories, getGarbageItemsWithId } from "@/data/garbage";
