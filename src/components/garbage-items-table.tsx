@@ -3,14 +3,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import {
   Popover,
   PopoverContent,
   PopoverTrigger,
@@ -20,26 +12,25 @@ import { getCacheData, setCacheData } from "@/lib/cache-client";
 import { garbageFuseOptions } from "@/lib/fuse-config";
 import { GarbageItemWithCategory } from "@/types/garbage";
 import Fuse from "fuse.js";
-import { ArrowUp, Info } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { useQueryState } from "nuqs";
 import { useEffect, useRef, useState } from "react";
 
 function GarbageItemRow({
   garbageItem,
-  showNoteInline,
 }: {
   garbageItem: GarbageItemWithCategory;
-  showNoteInline: boolean;
 }) {
   const textRef = useRef<HTMLSpanElement>(null);
   const [isTruncated, setIsTruncated] = useState(false);
 
+  // 品目名が省略されているかどうかを判定
   useEffect(() => {
     const element = textRef.current;
     if (element) {
       setIsTruncated(element.scrollWidth > element.clientWidth);
     }
-  }, [garbageItem.name]);
+  }, []);
 
   return (
     <div className="flex items-center justify-between gap-4 py-4 border-b hover:bg-muted/30 transition-colors">
@@ -68,31 +59,8 @@ function GarbageItemRow({
               </PopoverContent>
             )}
           </Popover>
-          {garbageItem.note && !showNoteInline && (
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-6 w-6 shrink-0 hover:bg-muted"
-                  aria-label="備考を表示"
-                >
-                  <Info className="h-4 w-4" />
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="[&>button[data-slot='dialog-close']]:top-2">
-                <DialogHeader>
-                  <DialogTitle>{garbageItem.name}</DialogTitle>
-                  <DialogDescription className="text-left whitespace-pre-wrap">
-                    {garbageItem.note}
-                  </DialogDescription>
-                </DialogHeader>
-              </DialogContent>
-            </Dialog>
-          )}
         </div>
-        {/* インライン表示時の備考 */}
-        {garbageItem.note && showNoteInline && (
+        {garbageItem.note && (
           <p className="text-sm text-muted-foreground whitespace-pre-wrap">
             {garbageItem.note}
           </p>
@@ -100,23 +68,24 @@ function GarbageItemRow({
       </div>
 
       {/* 分別区分 */}
-      <Badge
-        variant="outline"
-        className="whitespace-nowrap py-1.5 px-3 font-normal rounded-full shrink-0 border-2 text-foreground"
-        style={{
-          borderColor: garbageItem.categoryColor,
-          backgroundColor: "transparent",
-        }}
-      >
-        <span className="flex items-center gap-1.5">
-          {wasteTypeIcons[garbageItem.garbageCategory] &&
-            (() => {
-              const Icon = wasteTypeIcons[garbageItem.garbageCategory];
-              return <Icon className="h-4 w-4" />;
-            })()}
-          {garbageItem.garbageCategory}
-        </span>
-      </Badge>
+      {(() => {
+        const Icon = wasteTypeIcons[garbageItem.garbageCategory];
+        return (
+          <Badge
+            variant="outline"
+            className="whitespace-nowrap py-1.5 px-3 font-normal rounded-full shrink-0 border-2 text-foreground"
+            style={{
+              borderColor: garbageItem.categoryColor,
+              backgroundColor: "transparent",
+            }}
+          >
+            <span className="flex items-center gap-1.5">
+              {Icon && <Icon className="h-4 w-4" />}
+              {garbageItem.garbageCategory}
+            </span>
+          </Badge>
+        );
+      })()}
     </div>
   );
 }
@@ -189,14 +158,11 @@ export function GarbageItemsTable() {
     });
   };
 
+  // Fuse.jsで検索
   const fuse = new Fuse(items, garbageFuseOptions);
   const filteredGarbageItems = search
     ? fuse.search(search).map((result) => result.item)
     : items;
-
-  // 環境変数から表示モードを取得 (compact: アイコン表示, detailed: 備考表示)
-  const displayMode = process.env.NEXT_PUBLIC_DISPLAY_MODE || "compact";
-  const showNoteInline = displayMode === "detailed";
 
   if (isLoading) {
     return (
@@ -208,6 +174,7 @@ export function GarbageItemsTable() {
 
   return (
     <>
+      {/* テーブル */}
       <div className="divide-y">
         {filteredGarbageItems.length === 0 ? (
           <div className="text-center py-8 text-muted-foreground">
@@ -215,11 +182,7 @@ export function GarbageItemsTable() {
           </div>
         ) : (
           filteredGarbageItems.map((garbageItem) => (
-            <GarbageItemRow
-              key={garbageItem.id}
-              garbageItem={garbageItem}
-              showNoteInline={showNoteInline}
-            />
+            <GarbageItemRow key={garbageItem.id} garbageItem={garbageItem} />
           ))
         )}
       </div>
