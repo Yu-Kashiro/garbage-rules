@@ -1,10 +1,21 @@
 import type { IFuseOptions } from "fuse.js";
-import type { GarbageItemWithCategory } from "@/types/garbage";
+import type { GarbageItem, GarbageItemWithCategory } from "@/types/garbage";
 
-export const garbageFuseOptions: IFuseOptions<GarbageItemWithCategory> = {
-  keys: ["name", "note", "search"], // 名前と備考を検索対象に
-  threshold: 0.3, // 0.3の閾値で適度なあいまい検索
+// 共通のFuse.js設定
+const baseFuseOptions = {
+  keys: ["name", "note", "search"],
+  threshold: 0.3,
   distance: 100,
   minMatchCharLength: 1,
   includeScore: true,
+};
+
+// ユーザー向け表示用（GarbageItemWithCategory型）
+export const garbageFuseOptions: IFuseOptions<GarbageItemWithCategory> = {
+  ...baseFuseOptions,
+};
+
+// 管理画面編集用（GarbageItem型）
+export const garbageItemFuseOptions: IFuseOptions<GarbageItem> = {
+  ...baseFuseOptions,
 };

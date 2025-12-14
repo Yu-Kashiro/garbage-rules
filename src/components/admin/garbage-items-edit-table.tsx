@@ -10,6 +10,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import type { GarbageCategory, GarbageItem } from "@/types/garbage";
+import { garbageItemFuseOptions } from "@/lib/fuse-config";
 import { GarbageItemEditDialog } from "./garbage-item-edit-dialog";
 import { useQueryState } from "nuqs";
 import Fuse from "fuse.js";
@@ -52,22 +53,8 @@ export function GarbageItemsEditTable({
     return categories.find((c) => c.id === categoryId)?.name || "不明";
   };
 
-  // Fuse.jsの設定とインスタンス作成
-  const searchableItems = items.map((item) => ({
-    ...item,
-    categoryName: getCategoryName(item.garbageCategory),
-  }));
-
-  const fuse = new Fuse(searchableItems, {
-    keys: [
-      { name: "name", weight: 2 }, // 品目名を重視
-      { name: "search", weight: 1 },
-      { name: "note", weight: 1 },
-    ],
-    threshold: 0.4, // 0.0 (完全一致) ~ 1.0 (すべてマッチ)
-    ignoreLocation: true, // 文字列内の位置を無視
-    minMatchCharLength: 1,
-  });
+  // Fuse.jsで検索
+  const fuse = new Fuse(items, garbageItemFuseOptions);
 
   // 検索フィルタリング
   const filteredItems = search
