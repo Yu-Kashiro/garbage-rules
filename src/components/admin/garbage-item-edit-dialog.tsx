@@ -115,7 +115,7 @@ export function GarbageItemEditDialog({
     setShowDeleteConfirm(true);
   };
 
-  const handleDeleteConfirm = async () => {
+  const handleDelete = async () => {
     if (!isEditMode) return;
 
     const result = await deleteGarbageItem(item.id);
@@ -213,7 +213,7 @@ export function GarbageItemEditDialog({
                     </FieldContent>
                     <Select
                       name={field.name}
-                      value={field.value.toString()}
+                      value={field.value?.toString() ?? ""}
                       onValueChange={(value) => field.onChange(Number(value))}
                     >
                       <SelectTrigger
@@ -347,7 +347,7 @@ export function GarbageItemEditDialog({
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel>キャンセル</AlertDialogCancel>
-              <AlertDialogAction onClick={handleDeleteConfirm}>
+              <AlertDialogAction onClick={handleDelete}>
                 削除する
               </AlertDialogAction>
             </AlertDialogFooter>
