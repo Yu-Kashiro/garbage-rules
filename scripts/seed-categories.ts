@@ -1,7 +1,7 @@
 import "dotenv/config";
 import { db } from "../src/db";
 import { garbageCategories } from "../src/db/schemas/garbage";
-import garbageCategoriesData from "../src/components/garbage-data/garbage_categories.json";
+import garbageCategoriesData from "../src/lib/garbage-data/garbage_categories.json";
 
 async function seedCategories() {
   try {
