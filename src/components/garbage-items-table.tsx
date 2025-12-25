@@ -121,14 +121,8 @@ export function GarbageItemsTable() {
         const data = (await response.json()) as GarbageItemWithCategory[];
 
         // データをstateとキャッシュに保存
-        // デバッグ用のため、本番環境では削除
         setItems(data);
-        const newData = data.map((item) => ({
-          ...item,
-          name: "_" + item.name,
-        }));
-
-        await setCacheData("/api/garbage-items", newData);
+        await setCacheData("/api/garbage-items", data);
       } catch (error) {
         console.error("ごみ品目一覧の取得に失敗しました:", error);
       } finally {
