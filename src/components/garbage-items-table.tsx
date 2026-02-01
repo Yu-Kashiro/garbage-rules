@@ -13,10 +13,11 @@ import { garbageFuseOptions } from "@/lib/fuse-config";
 import { GarbageItemWithCategory } from "@/types/garbage";
 import Fuse from "fuse.js";
 import { ArrowUp } from "lucide-react";
+import Image from "next/image";
 import { useQueryState } from "nuqs";
 import { useEffect, useRef, useState } from "react";
 
-function GarbageItemRow({
+function GarbageItemCard({
   garbageItem,
 }: {
   garbageItem: GarbageItemWithCategory;
@@ -24,7 +25,6 @@ function GarbageItemRow({
   const textRef = useRef<HTMLSpanElement>(null);
   const [isTruncated, setIsTruncated] = useState(false);
 
-  // 品目名が省略されているかどうかを判定
   useEffect(() => {
     const element = textRef.current;
     if (element) {
@@ -32,60 +32,96 @@ function GarbageItemRow({
     }
   }, []);
 
-  return (
-    <div className="flex items-center justify-between gap-4 py-4 border-b hover:bg-muted/30 transition-colors">
-      {/* 品目名 */}
-      <div className="flex flex-col gap-2 min-w-0 flex-1">
-        <div className="flex items-center gap-2 min-w-0">
-          <Popover>
-            <PopoverTrigger asChild>
-              <span
-                ref={textRef}
-                className="font-medium text-base truncate cursor-pointer"
-                style={{
-                  cursor: isTruncated ? "pointer" : "default",
-                }}
-              >
-                {garbageItem.name}
-              </span>
-            </PopoverTrigger>
-            {isTruncated && (
-              <PopoverContent
-                className="w-auto max-w-md p-3"
-                side="top"
-                align="start"
-              >
-                <p className="font-medium">{garbageItem.name}</p>
-              </PopoverContent>
-            )}
-          </Popover>
-        </div>
-        {garbageItem.note && (
-          <p className="text-sm text-muted-foreground whitespace-pre-wrap">
-            {garbageItem.note}
-          </p>
-        )}
-      </div>
+  const Icon = wasteTypeIcons[garbageItem.garbageCategory];
 
-      {/* 分別区分 */}
-      {(() => {
-        const Icon = wasteTypeIcons[garbageItem.garbageCategory];
-        return (
+  return (
+    <div
+      className="group relative bg-card rounded-xl border border-border shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] hover:border-primary/50"
+    >
+      {/* 左端のカテゴリカラーアクセントライン */}
+      <div
+        className="absolute left-0 top-0 bottom-0 w-1 transition-all duration-300 group-hover:w-1.5"
+        style={{ backgroundColor: garbageItem.categoryColor }}
+      />
+
+      <div className="flex items-center justify-between gap-4 p-4 pl-5">
+        {/* 品目名 */}
+        <div className="flex flex-col gap-2 min-w-0 flex-1">
+          <div className="flex items-center gap-2 min-w-0">
+            <Popover>
+              <PopoverTrigger asChild>
+                <span
+                  ref={textRef}
+                  className="font-semibold text-base truncate cursor-pointer text-card-foreground"
+                  style={{
+                    cursor: isTruncated ? "pointer" : "default",
+                  }}
+                >
+                  {garbageItem.name}
+                </span>
+              </PopoverTrigger>
+              {isTruncated && (
+                <PopoverContent
+                  className="w-auto max-w-md p-3"
+                  side="top"
+                  align="start"
+                >
+                  <p className="font-medium">{garbageItem.name}</p>
+                </PopoverContent>
+              )}
+            </Popover>
+          </div>
+          {garbageItem.note && (
+            <p className="text-sm text-muted-foreground whitespace-pre-wrap">
+              {garbageItem.note}
+            </p>
+          )}
+        </div>
+
+        {/* 分別区分（アイコン強調） */}
+        <div className="flex items-center gap-2 shrink-0">
+          {Icon && (
+            <div
+              className="flex items-center justify-center h-12 w-12 rounded-xl transition-transform duration-300 group-hover:scale-110"
+              style={{
+                backgroundColor: `${garbageItem.categoryColor}15`,
+              }}
+            >
+              <Icon
+                className="h-7 w-7"
+                style={{ color: garbageItem.categoryColor }}
+              />
+            </div>
+          )}
           <Badge
             variant="outline"
-            className="whitespace-nowrap py-1.5 px-3 font-normal rounded-full shrink-0 border-2 text-foreground"
+            className="whitespace-nowrap py-2 px-4 text-sm font-semibold rounded-full border-2 text-foreground"
             style={{
               borderColor: garbageItem.categoryColor,
               backgroundColor: "transparent",
             }}
           >
-            <span className="flex items-center gap-1.5">
-              {Icon && <Icon className="h-4 w-4" />}
-              {garbageItem.garbageCategory}
-            </span>
+            {garbageItem.garbageCategory}
           </Badge>
-        );
-      })()}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SkeletonCard() {
+  return (
+    <div className="bg-card rounded-xl border border-border shadow-sm overflow-hidden animate-pulse">
+      <div className="flex items-center justify-between gap-4 p-4 pl-5">
+        <div className="flex flex-col gap-2 flex-1">
+          <div className="h-5 bg-muted rounded w-3/4" />
+          <div className="h-4 bg-muted rounded w-1/2" />
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 bg-muted rounded-lg" />
+          <div className="h-7 w-20 bg-muted rounded-full" />
+        </div>
+      </div>
     </div>
   );
 }
@@ -101,18 +137,15 @@ export function GarbageItemsTable() {
   useEffect(() => {
     const fetchGarbageItems = async () => {
       try {
-        // まずキャッシュからデータを取得
         const cachedData =
           await getCacheData<GarbageItemWithCategory[]>("/api/garbage-items");
 
         if (cachedData) {
-          // キャッシュにデータがあれば使用
           setItems(cachedData);
           setIsLoading(false);
           return;
         }
 
-        // キャッシュにデータがない場合はAPIからフェッチ
         const response = await fetch("/api/garbage-items");
         if (!response.ok) {
           throw new Error("データの取得に失敗しました");
@@ -120,7 +153,6 @@ export function GarbageItemsTable() {
 
         const data = (await response.json()) as GarbageItemWithCategory[];
 
-        // データをstateとキャッシュに保存
         setItems(data);
         await setCacheData("/api/garbage-items", data);
       } catch (error) {
@@ -133,10 +165,8 @@ export function GarbageItemsTable() {
     fetchGarbageItems();
   }, []);
 
-  // スクロール位置を監視
   useEffect(() => {
     const handleScroll = () => {
-      // 300px以上スクロールしたらボタンを表示
       setShowScrollToTop(window.scrollY > 300);
     };
 
@@ -144,7 +174,6 @@ export function GarbageItemsTable() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // トップへスクロールする関数
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -152,7 +181,6 @@ export function GarbageItemsTable() {
     });
   };
 
-  // Fuse.jsで検索
   const fuse = new Fuse(items, garbageFuseOptions);
   const filteredGarbageItems = search
     ? fuse.search(search).map((result) => result.item)
@@ -160,23 +188,37 @@ export function GarbageItemsTable() {
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center py-8">
-        <p className="text-muted-foreground">読み込み中...</p>
+      <div className="flex flex-col gap-3">
+        {[...Array(5)].map((_, i) => (
+          <SkeletonCard key={i} />
+        ))}
       </div>
     );
   }
 
   return (
     <>
-      {/* テーブル */}
-      <div className="divide-y">
+      {/* カードリスト */}
+      <div className="flex flex-col gap-3">
         {filteredGarbageItems.length === 0 ? (
-          <div className="text-center py-8 text-muted-foreground">
-            品目名が見つかりませんでした
+          <div className="flex flex-col items-center justify-center py-12 text-center bg-card rounded-xl border border-border">
+            <Image
+              src="/images/thinking-face.svg"
+              alt="考える顔"
+              width={140}
+              height={140}
+              className="mb-4"
+            />
+            <p className="text-muted-foreground">
+              該当する品目が見つかりませんでした
+            </p>
           </div>
         ) : (
           filteredGarbageItems.map((garbageItem) => (
-            <GarbageItemRow key={garbageItem.id} garbageItem={garbageItem} />
+            <GarbageItemCard
+              key={garbageItem.id}
+              garbageItem={garbageItem}
+            />
           ))
         )}
       </div>
@@ -184,8 +226,10 @@ export function GarbageItemsTable() {
       {/* トップへ戻るボタン */}
       <Button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 lg:right-[max(2rem,calc((100vw-48rem)/2-4rem))] z-50 h-12 w-12 rounded-full transition-opacity duration-300 ${
-          showScrollToTop ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`fixed bottom-8 right-8 lg:right-[max(2rem,calc((100vw-48rem)/2-4rem))] z-50 h-12 w-12 rounded-full shadow-lg transition-all duration-300 ${
+          showScrollToTop
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-4 pointer-events-none"
         }`}
         size="icon"
         aria-label="トップへ戻る"
