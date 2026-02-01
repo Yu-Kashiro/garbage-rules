@@ -29,17 +29,17 @@ export const Header = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container flex h-14 items-center mx-auto justify-between">
         {/* ロゴ・タイトル */}
         <Button variant="ghost" asChild>
           <Link href="/" className="flex gap-2 items-center">
             <Image
-              src="/images/earth-leaf.svg"
-              alt="地球と葉"
-              width={28}
-              height={28}
-              className="h-7 w-7"
+              src="/images/header-icon.svg"
+              alt="分別イラスト"
+              width={44}
+              height={44}
+              className="h-11 w-11"
             />
             <p className="text-sm md:text-base">{CITY_TITLE}</p>
           </Link>
