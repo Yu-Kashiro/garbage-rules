@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -94,41 +92,6 @@
   --sidebar-accent-foreground: oklch(0.25 0.05 145);
   --sidebar-border: oklch(0.90 0.03 145);
   --sidebar-ring: oklch(0.55 0.15 145);
-}
-
-.dark {
-  --background: oklch(0.15 0.015 150); /* 深いグリーンブラック */
-  --foreground: oklch(0.95 0.01 145);
-  --background-main: oklch(0.18 0.02 150); /* ダークモード用の背景色 */
-  --card: oklch(0.20 0.02 150);
-  --card-foreground: oklch(0.95 0.01 145);
-  --popover: oklch(0.20 0.02 150);
-  --popover-foreground: oklch(0.95 0.01 145);
-  --primary: oklch(0.70 0.15 145); /* 明るいグリーン */
-  --primary-foreground: oklch(0.15 0.02 150);
-  --secondary: oklch(0.25 0.03 150);
-  --secondary-foreground: oklch(0.95 0.01 145);
-  --muted: oklch(0.25 0.025 150);
-  --muted-foreground: oklch(0.65 0.05 145);
-  --accent: oklch(0.30 0.04 150);
-  --accent-foreground: oklch(0.95 0.01 145);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(0.35 0.03 150);
-  --input: oklch(0.30 0.025 150);
-  --ring: oklch(0.70 0.15 145);
-  --chart-1: oklch(0.70 0.15 145);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.18 0.02 150);
-  --sidebar-foreground: oklch(0.95 0.01 145);
-  --sidebar-primary: oklch(0.70 0.15 145);
-  --sidebar-primary-foreground: oklch(0.15 0.02 150);
-  --sidebar-accent: oklch(0.30 0.04 150);
-  --sidebar-accent-foreground: oklch(0.95 0.01 145);
-  --sidebar-border: oklch(0.35 0.03 150);
-  --sidebar-ring: oklch(0.70 0.15 145);
 }
 
 @layer base {

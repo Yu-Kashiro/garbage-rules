@@ -10,22 +10,16 @@ import {
 } from "@/components/ui/sheet";
 import { authClient } from "@/lib/auth-client";
 import { CITY_TITLE } from "@/lib/city";
-import { Loader2, Menu, Moon, Sun } from "lucide-react";
+import { Loader2, Menu } from "lucide-react";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export const Header = () => {
-  const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const { data: session, isPending } = authClient.useSession();
   const router = useRouter();
-
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
 
   const handleSignOut = async () => {
     await authClient.signOut();
@@ -53,13 +47,6 @@ export const Header = () => {
 
         {/* ========== デスクトップナビゲーション ========== */}
         <div className="hidden md:flex gap-2">
-          {/* テーマ切り替えボタン */}
-          <Button variant="ghost" size="icon" onClick={toggleTheme}>
-            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">テーマ切り替え</span>
-          </Button>
-
           {/* ローディング中 */}
           {isPending && (
             <>
@@ -163,16 +150,6 @@ export const Header = () => {
                     </Button>
                   </>
                 )}
-
-                {/* テーマ切り替えボタン */}
-                <Button
-                  variant="secondary"
-                  className="w-full justify-center"
-                  onClick={toggleTheme}
-                >
-                  <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                  <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                </Button>
               </div>
             </SheetContent>
           </Sheet>

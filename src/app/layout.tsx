@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { ThemeProvider } from "next-themes";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "@/components/ui/sonner";
 import { getBaseURL } from "@/lib/get-base-url";
@@ -39,17 +38,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-dvh`}
       >
         <NuqsAdapter>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Header />
-            {children}
-            <Toaster />
-            <Footer />
-          </ThemeProvider>
+          <Header />
+          {children}
+          <Toaster />
+          <Footer />
         </NuqsAdapter>
       </body>
     </html>
