@@ -36,10 +36,10 @@ export const Header = () => {
           <Link href="/" className="flex gap-2 items-center">
             <Image
               src="/images/header-icon.svg"
-              alt="分別イラスト"
-              width={44}
-              height={44}
-              className="h-11 w-11"
+              alt="リサイクルマーク"
+              width={32}
+              height={32}
+              className="h-8 w-8"
             />
             <p className="text-sm md:text-base">{CITY_TITLE}</p>
           </Link>
