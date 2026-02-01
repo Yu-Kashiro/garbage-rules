@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 export default function GarbageRulesPage() {
   return (
-    <main className="flex flex-1 bg-gradient-to-b from-background via-background-main to-accent/30 pt-4 md:pt-10">
+    <main className="flex flex-1 bg-[#fafafa] pt-4 md:pt-10">
       <div className="container max-w-3xl space-y-5">
         {/* ヘッダーセクション（フェードインアニメーション） */}
         <div className="text-center space-y-2 animate-in fade-in slide-in-from-bottom-2 duration-500">

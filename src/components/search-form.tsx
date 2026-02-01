@@ -18,7 +18,7 @@ export function SearchForm() {
         placeholder="例：バッテリー、エアコン..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="h-11 pl-12 pr-10 rounded-xl border-2 border-input focus:border-primary transition-colors"
+        className="h-11 pl-12 pr-10 rounded-xl border border-input bg-white shadow-sm hover:shadow-md focus:shadow-md transition-shadow"
       />
       {/* クリアボタン（フェードインアニメーション付き） */}
       {search && (
