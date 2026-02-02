@@ -15,6 +15,7 @@ export default function GarbageRulesPage() {
               alt="リサイクル"
               width={100}
               height={100}
+              className="w-16 md:w-[100px]"
             />
           </div>
           <h1 className="text-xl font-bold md:text-3xl text-foreground">
