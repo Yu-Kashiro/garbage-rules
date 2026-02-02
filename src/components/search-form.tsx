@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import { Input } from "./ui/input";
 import { useQueryState } from "nuqs";
 import { Search, X } from "lucide-react";
@@ -8,13 +9,22 @@ export function SearchForm() {
   const [search, setSearch] = useQueryState("q", {
     defaultValue: "",
   });
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    inputRef.current?.blur();
+  };
 
   return (
-    <div className="relative">
+    <form onSubmit={handleSubmit}>
+      <div className="relative">
       {/* 左側の検索アイコン */}
       <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" />
       <Input
+        ref={inputRef}
         type="text"
+        enterKeyHint="search"
         placeholder="例：バッテリー、エアコン..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
@@ -31,6 +41,7 @@ export function SearchForm() {
           <X className="h-4 w-4" />
         </button>
       )}
-    </div>
+      </div>
+    </form>
   );
 }
