@@ -1,3 +1,5 @@
+"use client";
+
 import { CITY_OFFICE_NAME } from "@/lib/city";
 import Link from "next/link";
 
