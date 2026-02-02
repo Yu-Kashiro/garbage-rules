@@ -129,6 +129,7 @@ function SkeletonCard() {
 export function GarbageItemsTable() {
   const [search] = useQueryState("q", {
     defaultValue: "",
+    scroll: false,
   });
   const [items, setItems] = useState<GarbageItemWithCategory[]>([]);
   const [isLoading, setIsLoading] = useState(true);

@@ -8,6 +8,7 @@ import { Search, X } from "lucide-react";
 export function SearchForm() {
   const [search, setSearch] = useQueryState("q", {
     defaultValue: "",
+    scroll: false,
   });
   const inputRef = useRef<HTMLInputElement>(null);
 
