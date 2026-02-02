@@ -32,7 +32,7 @@ export const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container flex h-14 items-center mx-auto justify-between">
         {/* ロゴ・タイトル */}
-        <Button variant="ghost" asChild>
+        <Button variant="ghost" asChild className="-ml-4">
           <Link href="/" className="flex gap-2 items-center">
             <Image
               src="/images/header-icon.svg"
