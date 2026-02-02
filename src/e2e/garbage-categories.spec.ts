@@ -2,13 +2,8 @@ import { test, expect } from '@playwright/test';
 
 test.describe('分別区分の管理', () => {
   test.beforeEach(async ({ page }) => {
-    // ゲストログインして管理者画面へ
-    await page.goto('/login');
-    await page.getByRole('button', { name: 'ゲストログイン' }).click();
-    await expect(page).toHaveURL('/admin');
-
-    // 分別区分の管理ページへ移動
-    await page.getByRole('link', { name: '分別区分の管理' }).click();
+    // 認証済み状態で開始するため、直接遷移
+    await page.goto('/admin/data/categories');
     await expect(page).toHaveURL('/admin/data/categories');
   });
 

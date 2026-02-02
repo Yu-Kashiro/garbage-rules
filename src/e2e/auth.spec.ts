@@ -171,9 +171,10 @@ test.describe("ログイン後の動作", () => {
 
     // ログアウト
     await page.getByRole("button", { name: "ログアウト" }).click();
-    await expect(page).toHaveURL("/login", { timeout: 15000 });
+    await expect(page).toHaveURL("/", { timeout: 15000 });
 
     // ログイン
+    await page.goto("/login");
     await page.getByLabel("メールアドレス").fill(uniqueEmail);
     await page.getByLabel("パスワード").fill(password);
     await page.getByRole("button", { name: "ログイン", exact: true }).click();

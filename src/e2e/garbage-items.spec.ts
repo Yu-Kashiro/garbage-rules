@@ -4,13 +4,9 @@ test.describe('ごみ品目の管理', () => {
   let testCategoryName: string;
 
   test.beforeEach(async ({ page }) => {
-    // ゲストログインして管理者画面へ
-    await page.goto('/login');
-    await page.getByRole('button', { name: 'ゲストログイン' }).click();
-    await expect(page).toHaveURL('/admin');
-
+    // 認証済み状態で開始するため、直接遷移
     // まず分別区分を作成（ごみ品目の登録に必要）
-    await page.getByRole('link', { name: '分別区分の管理' }).click();
+    await page.goto('/admin/data/categories');
     testCategoryName = `テストカテゴリ${Date.now()}`;
     await page.getByRole('button', { name: '新規登録' }).or(page.getByRole('button', { name: '+' })).click();
     await page.getByLabel('分別区分名').fill(testCategoryName);

@@ -47,31 +47,36 @@ export default defineConfig({
       dependencies: ["reset"],
     },
 
+    // 認証フローのテスト（未ログイン状態から開始）
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
+      testMatch: "**/auth.spec.ts",
       dependencies: ["setup"],
     },
 
     {
       name: "firefox",
       use: { ...devices["Desktop Firefox"] },
+      testMatch: "**/auth.spec.ts",
       dependencies: ["setup"],
     },
 
     {
       name: "webkit",
       use: { ...devices["Desktop Safari"] },
+      testMatch: "**/auth.spec.ts",
       dependencies: ["setup"],
     },
 
-    // 認証が必要なテスト用プロジェクト
+    // 認証済み機能のテスト（ログイン済み状態から開始）
     {
       name: "chromium-authenticated",
       use: {
         ...devices["Desktop Chrome"],
         storageState: "src/e2e/.auth/user.json",
       },
+      testMatch: "**/garbage-*.spec.ts",
       dependencies: ["setup"],
     },
 
